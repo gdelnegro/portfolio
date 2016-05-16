@@ -125,7 +125,7 @@ msgid "Brazilian Portuguese"
 msgstr "Português Brasil"
 
 msgid "about_me"
-msgstr "<p> Sou um desenvoledor altamente profissional <br> Envolvido com as últimas tecnologias e padrões de desenvolvimento<br> entre em contato :</p>"
+msgstr "<p> Sou um desenvolvedor altamente profissional <br> Envolvido com as últimas tecnologias e padrões de desenvolvimento<br> entre em contato :</p>"
 
 msgid "home"
 msgstr "Início"
