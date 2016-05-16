@@ -383,8 +383,8 @@
     <ul class="list-inline" id="filter">
         <li><a class="active" data-group="all">{% trans "all" %}</a></li>
         {% for project_type in projects_types  %}
-            <li><a data-group="{{ project_type.name }}"> {{ project_type.name }}</a></li>
-        {% endfor %}        
+            <li><a data-group="{{ project_type.name }}"> {% if  user_lang or not project_type.en_name%}{{ project_type.name }}{% else %}{{ project_type.en_name }}{% endif %}</a></li>
+        {% endfor %}
     </ul>
 
     <div class="row">

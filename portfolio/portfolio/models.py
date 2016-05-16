@@ -92,8 +92,8 @@ class Technologies(BaseTechnologyModel):
 class ProjectTypes(BaseModel):
     name = models.CharField(_("Name"), max_length=100)
     description = models.TextField(_("Description"),null=True, blank=True)
-    _name = models.CharField(_("En Name"), max_length=100, null=True)
-    _description = models.TextField(_("En Description"),null=True, blank=True)
+    en_name = models.CharField(_("En Name"), max_length=100, null=True)
+    en_description = models.TextField(_("En Description"),null=True, blank=True)
 
     def __str__(self):
         return "%s" % (self.name)
