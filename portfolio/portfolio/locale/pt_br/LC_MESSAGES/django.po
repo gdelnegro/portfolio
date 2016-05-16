@@ -19,27 +19,27 @@ msgstr ""
 
 #: portfolio/portfolio/models.py:9
 msgid "Created at"
-msgstr ""
+msgstr "Criado em"
 
 #: portfolio/portfolio/models.py:10
 msgid "Updated at"
-msgstr ""
+msgstr "Atualizado em"
 
 #: portfolio/portfolio/models.py:17
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: portfolio/portfolio/models.py:18 portfolio/portfolio/models.py:36
 msgid "Image"
-msgstr ""
+msgstr "Imagem"
 
 #: portfolio/portfolio/models.py:35
 msgid "Images"
-msgstr ""
+msgstr "Imagens"
 
 #: portfolio/portfolio/models.py:39 portfolio/portfolio/models.py:93
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #: portfolio/portfolio/models.py:40
 msgid "Site"
@@ -47,15 +47,15 @@ msgstr ""
 
 #: portfolio/portfolio/models.py:41
 msgid "Proficiency"
-msgstr ""
+msgstr "Proeficiência"
 
 #: portfolio/portfolio/models.py:60
 msgid "Progamming Language"
-msgstr ""
+msgstr "Linguagem de Programação"
 
 #: portfolio/portfolio/models.py:61
 msgid "Progamming Languages"
-msgstr ""
+msgstr "Linguagens de Programação"
 
 #: portfolio/portfolio/models.py:66
 msgid "Framework"
@@ -67,56 +67,56 @@ msgstr ""
 
 #: portfolio/portfolio/models.py:72
 msgid "Database"
-msgstr ""
+msgstr "Banco de Dados"
 
 #: portfolio/portfolio/models.py:73
 msgid "Databases"
-msgstr ""
+msgstr "Bancos de Dados"
 
 #: portfolio/portfolio/models.py:78
 msgid "Web server"
-msgstr ""
+msgstr "Servidor Web"
 
 #: portfolio/portfolio/models.py:79
 msgid "Web servers"
-msgstr ""
+msgstr "Servidores Web"
 
 #: portfolio/portfolio/models.py:83
 msgid "Technology Type"
-msgstr ""
+msgstr "Tipo de tecnologia"
 
 #: portfolio/portfolio/models.py:84
 msgid "Technology Types"
-msgstr ""
+msgstr "Tipos de tecnologia"
 
 #: portfolio/portfolio/models.py:89
 msgid "Technology"
-msgstr ""
+msgstr "Tecnologia"
 
 #: portfolio/portfolio/models.py:90
 msgid "Technologies"
-msgstr ""
+msgstr "Tecnologias"
 
 #: portfolio/portfolio/models.py:94 portfolio/portfolio/models.py:110
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #: portfolio/portfolio/models.py:100
 msgid "Project Type"
-msgstr ""
+msgstr "Tipo de projeto"
 
 #: portfolio/portfolio/models.py:114
 msgid "Project"
-msgstr ""
+msgstr "Projeto"
 
 #: portfolio/portfolio/models.py:115
 msgid "Projects"
-msgstr ""
+msgstr "Projetos"
 
 #: portfolio/portfolio/settings.py:146
 msgid "English"
-msgstr ""
+msgstr "Inglês"
 
 #: portfolio/portfolio/settings.py:147
 msgid "Brazilian Portuguese"
-msgstr ""
+msgstr "Português Brasil"
