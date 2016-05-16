@@ -1,0 +1,91 @@
+{% block sidebar %}
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+
+    <!-- search form (Optional) -->
+    <form action="#" method="get" class="sidebar-form">
+      <div class="input-group">
+        <input type="text" name="q" class="form-control" placeholder="Search...">
+        <span class="input-group-btn">
+          <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+    </form>
+    <!-- /.search form -->
+
+    <!-- Sidebar Menu -->
+    <ul class="sidebar-menu">
+      <!-- <li {% ifequal active "database" %}class="active"{% endifequal %}>
+        <a href="/database/station">
+          <i class="fa fa-database"></i> <span>Database</span>
+          <small class="label pull-right bg-green">New</small>
+        </a>
+      </li>-->
+
+      <li {% ifequal sidebarActive "dashboard" %}class="active"{% endifequal %}>
+        <a href="{% url 'dashboard_main' %}">
+          <i class="fa fa-th-large"></i> <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="{% ifequal sidebarActive "data" %}"active"{% endifequal %} treeview">
+        <a href="#">
+          <i class="fa fa-database"></i> <span>Data</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          {% if "station" in settings.MY_INSTALLED_APPS %}
+              <li class="active"><a href="{% url 'station_data' %}"><i class="fa fa-circle-o"></i> Stations </a></li>
+          {% endif %}
+        </ul>
+      </li>
+
+      <li class="{% ifequal sidebarActive "report" %}"active"{% endifequal %} treeview">
+        <a href="#">
+          <i class="fa fa-table"></i> <span>Reports</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          {% if "station" in settings.MY_INSTALLED_APPS %}
+              <li class="active"><a href="#"><i class="fa fa-circle-o"></i> Stations </a></li>
+              <li class="active"><a href="{% url 'report_station_elements' %}"><i class="fa fa-circle-o"></i> {{_('Elements by Station')}} </a></li>
+          {% endif %}
+        </ul>
+      </li>
+
+      <li class="{% ifequal sidebarActive "chart" %}"active"{% endifequal %} treeview">
+        <a href="#">
+          <i class="fa fa-bar-chart-o"></i> <span>Charts</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          {% if "station" in settings.MY_INSTALLED_APPS %}
+              <li class="active"><a href="{% url 'station_chart' %}"><i class="fa fa-circle-o"></i> Stations </a></li>
+          {% endif %}
+        </ul>
+      </li>
+
+      <li class="{% ifequal sidebarActive "map" %}"active"{% endifequal %} treeview">
+        <a href="#">
+          <i class="fa fa-globe"></i> <span>Maps</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          {% if "station" in settings.MY_INSTALLED_APPS %}
+              <li class="active"><a href="{% url 'station_map' %}"><i class="fa fa-circle-o"></i> Stations </a></li>
+          {% endif %}
+        </ul>
+      </li>
+
+      <li {% ifequal sidebarActive "management" %}class="active"{% endifequal %}>
+        <a href="{% url 'common_management_main' %}">
+          <i class="fa fa-wrench"></i> <span>Management</span>
+        </a>
+      </li>
+    </ul>
+    <!-- /.sidebar-menu -->
+  </section>
+  <!-- /.sidebar -->
+</aside>
+
+{% endblock sidebar %}

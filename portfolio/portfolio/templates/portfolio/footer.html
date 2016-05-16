@@ -1,0 +1,26 @@
+{% block footer %}
+
+<link href="/static/font-simepar-icons/css/font-styles.css" rel="stylesheet">
+
+<style>
+  .si-logo {
+    color: #565A5C;
+    padding-right: 50px;
+  }
+  .fs-logo{
+    font-size:30px;
+  }
+</style>
+
+<!-- Main Footer -->
+<footer class="main-footer">
+  <!-- To the right -->
+  <div class="pull-right hidden-xs">
+    <a class="si-logo" href="http://www.simepar.br"> <i class="fs-logo"></i> </a>
+  </div>
+  <!-- Default to the left -->
+  <strong>Copyright &copy; {% now "Y" %} <a href="{{ settings.OWNER_SITE }}">Simepar</a>.</strong> All rights reserved.
+
+</footer>
+
+{% endblock footer %}

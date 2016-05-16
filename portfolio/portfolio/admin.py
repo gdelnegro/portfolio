@@ -10,3 +10,35 @@ class ImageAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at')
     fields = ('image_tag', 'title', 'description',)
     readonly_fields = ('image_tag',)
+
+@admin.register(ProgrammingLanguages)
+class ProgrammingLanguagesAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Frameworks)
+class FrameworksAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Databases)
+class DatabasesAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(WebServers)
+class WebServersAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(TechnologyTypes)
+class TechnologyTypes(admin.ModelAdmin):
+    pass
+
+@admin.register(Technologies)
+class TechnologiesTypes(admin.ModelAdmin):
+    pass
+
+@admin.register(ProjectTypes)
+class ProjectTypes(admin.ModelAdmin):
+    pass
+
+@admin.register(Projects)
+class Projects(admin.ModelAdmin):
+    pass

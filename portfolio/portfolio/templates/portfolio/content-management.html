@@ -1,0 +1,77 @@
+{% block content %}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      {{ _('Page Management') }}
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="{{ settings.LOGIN_REDIRECT_URL }}"> {{_('Home') }} </a></li>
+      <li class="active">{{_('Management') }}</li>
+    </ol>
+  </section>
+
+
+
+  <!-- Main content -->
+  <section class="content">
+
+    <div class="row">
+      {% if 'station' in settings.INSTALLED_APPS %}
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+          <div class="inner">
+            <h3>{{ tableCount.station }}</h3>
+            <p>{{_('Stations')}}</p>
+          </div>
+          <div class="icon">
+            <i class="fs-weather-station"></i>
+          </div>
+          <a href="{% url 'station_management' %}" class="small-box-footer">{{_('More info')}} <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div><!-- ./col -->
+      {% endif %}
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-green">
+          <div class="inner info-box-text">
+            <h3>{{ tableCount.element }}</h3>
+            <!-- <sup style="font-size: 20px">%</sup> -->
+            <p>{{_('Elements')}}</p>
+          </div>
+          <div class="icon info-box-icon">
+            <i class="ion ion-grid"></i>
+          </div>
+          <a href="{% url 'element_management' %}" class="small-box-footer">{{_('More info')}} <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div><!-- ./col -->
+
+      {% if 'cemig' in settings.INSTALLED_APPS %}
+      <div class="col-lg-3 col-xs-6">
+        <!-- small box -->
+        <div class="small-box bg-aqua">
+          <div class="inner info-box-text">
+            <h3>{{ tableCount.reservoir }}</h3>
+            <!-- <sup style="font-size: 20px">%</sup> -->
+            <p>{{_('Reservoir')}}</p>
+          </div>
+          <div class="icon info-box-icon">
+            <i class="ion ion-grid"></i>
+          </div>
+          <a href="{% url 'reservoir_management' %}" class="small-box-footer">{{_('More info')}} <i class="fa fa-arrow-circle-right"></i></a>
+        </div>
+      </div><!-- ./col -->
+      {% endif %}
+
+    </div><!-- /.row -->
+
+
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+{% endblock content %}

@@ -49,6 +49,9 @@ class BaseTechnologyModel(BaseModel):
     logo_thumbnail.short_description = 'logo'
     logo_thumbnail.allow_tags = True
 
+    def __str__(self):
+        return "%s" % (self.name)
+
     class Meta:
         abstract = True
 
@@ -88,7 +91,11 @@ class Technologies(BaseTechnologyModel):
 
 class ProjectTypes(BaseModel):
     name = models.CharField(_("Name"), max_length=100)
-    description = models.TextField(_("Description"))
+    description = models.TextField(_("Description"),null=True, blank=True)
+
+    def __str__(self):
+        return "%s" % (self.name)
+
     class Meta:
         verbose_name = _("Project Type")
         verbose_name_plural = ("Project Types")

@@ -1,0 +1,39 @@
+{% load staticfiles %}
+
+<html>
+
+<head>
+  {% block required-css %} {% endblock %}
+  {% block required-css-page %} {% endblock %}
+</head>
+
+<!--
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-simepar sidebar-mini simepar">
+  <div class="wrapper">
+
+    {% block header %} {% endblock %}
+
+    {% block sidebar %} {% endblock %}
+
+    {% block content %} {% endblock %}
+
+    {% block footer %} {% endblock %}
+
+    {% block control-slider %} {% endblock %}
+
+  </div>
+
+  {% block required-js %} {% endblock %}
+
+  {% block required-js-page %} {% endblock %}
+
+</body>
+</html>
