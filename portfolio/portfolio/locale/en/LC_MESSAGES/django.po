@@ -120,3 +120,27 @@ msgstr ""
 #: portfolio/portfolio/settings.py:147
 msgid "Brazilian Portuguese"
 msgstr ""
+
+msgid "about_me"
+msgstr "<p>I am a fully professional freelance creative User Interface Designer &amp; Developer<br> Involving with latest web designing and technologies is a great<br> feel free to contact creative.</p>"
+
+msgid "home"
+msgstr "Home"
+
+msgid "about"
+msgstr "About"
+
+msgid "resume"
+msgstr "Resume"
+
+msgid "skills"
+msgstr "Skills"
+
+msgid "projects"
+msgstr "Projects"
+
+msgid "blog"
+msgstr "Blog"
+
+msgid "contact"
+msgstr "Contact"

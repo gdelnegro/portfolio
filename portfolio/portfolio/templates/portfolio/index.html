@@ -13,8 +13,7 @@
     <div class="intro">
         <div class="intro-sub">Gustavo Del Negro</div>
         <h1>FullStack <span>Developer</span></h1>
-        <p>I am a fully professional freelance creative User Interface Designer &amp; Developer<br> Involving with latest web designing and technologies is a great <br> feel free to contact creative.</p>
-
+        {% trans "about_me" %}
   <div class="social-icons">
     <ul class="list-inline">
       <li><a href="https://twitter.com/gdelnegro" target="_blank"><i class="fa fa-twitter"></i></a></li>
@@ -44,13 +43,13 @@
 
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home">{% trans "home" %}</a></li>
+                    <li><a href="#about">{% trans "about" %}</a></li>
+                    <li><a href="#resume">{% trans "resume" %}</a></li>
+                    <li><a href="#skills">{% trans "skills" %}</a></li>
+                    <li><a href="#works">{% trans "projects" %}</a></li>
+                    <li><a href="#blog">{% trans "blog" %}</a></li>
+                    <li><a href="#contact">{% trans "contact" %}</a></li>
                 </ul>
             </div>
         </div><!-- .container -->
@@ -61,7 +60,7 @@
 <!-- About Section -->
 <section id="about" class="about-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">About Me</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "about" %}</h2>
 
     <div class="row">
 
@@ -140,7 +139,7 @@
 <!-- Resume Section -->
 <section id="resume" class="resume-section section-padding">
     <div class="container">
-        <h2 class="section-title wow fadeInUp">Resume</h2>
+        <h2 class="section-title wow fadeInUp">{% trans "resume" %}</h2>
         <div class="row">
             <div class="col-md-12">
                 <div class="resume-title">
@@ -264,7 +263,7 @@
 <!-- Skills Section -->
 <section id="skills" class="skills-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">Skills</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "skills" %}</h2>
 
     <div class="row">
       <div class="col-md-6">
@@ -379,7 +378,7 @@
 <!-- Works Section -->
 <section id="works" class="works-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">Works</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "projects" %}</h2>
 
     <ul class="list-inline" id="filter">
         <li><a class="active" data-group="all">All</a></li>
@@ -717,7 +716,7 @@
 <!-- Contact Section -->
 <section id="contact" class="contact-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">Get in touch</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "contact" %}</h2>
 
     <div class="row">
       <div class="col-md-6">

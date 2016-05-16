@@ -120,3 +120,27 @@ msgstr "Inglês"
 #: portfolio/portfolio/settings.py:147
 msgid "Brazilian Portuguese"
 msgstr "Português Brasil"
+
+msgid "about_me"
+msgstr "<p> Sou um desenvoledor altamente profissional <br> Envolvido com as últimas tecnologias e padrões de desenvolvimento<br> entre em contato :</p>"
+
+msgid "home"
+msgstr "Início"
+
+msgid "about"
+msgstr "Sobre mim"
+
+msgid "resume"
+msgstr "Currículo"
+
+msgid "skills"
+msgstr "Habilidades"
+
+msgid "projects"
+msgstr "Projetos"
+
+msgid "blog"
+msgstr "blog"
+
+msgid "contact"
+msgstr "Contato"
