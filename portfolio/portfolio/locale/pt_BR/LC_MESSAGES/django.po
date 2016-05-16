@@ -150,3 +150,6 @@ msgstr "Contato"
 
 msgid "all"
 msgstr "Tudo"
+
+msgid "phone_number"
+msgstr "Telefone"

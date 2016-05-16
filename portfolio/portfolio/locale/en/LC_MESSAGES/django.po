@@ -147,3 +147,6 @@ msgstr "Contact"
 
 msgid "all"
 msgstr "All"
+
+msgid "phone_number"
+msgstr "Phone Number"
