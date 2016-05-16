@@ -1,39 +1,27 @@
-{% load staticfiles %}
-
+<!DOCTYPE html>
 <html>
-
-<head>
-  {% block required-css %} {% endblock %}
-  {% block required-css-page %} {% endblock %}
-</head>
-
-<!--
-|---------------------------------------------------------|
-|LAYOUT OPTIONS | fixed                                   |
-|               | layout-boxed                            |
-|               | layout-top-nav                          |
-|               | sidebar-collapse                        |
-|               | sidebar-mini                            |
-|---------------------------------------------------------|
--->
-<body class="hold-transition skin-simepar sidebar-mini simepar">
-  <div class="wrapper">
-
-    {% block header %} {% endblock %}
-
-    {% block sidebar %} {% endblock %}
-
-    {% block content %} {% endblock %}
-
-    {% block footer %} {% endblock %}
-
-    {% block control-slider %} {% endblock %}
-
-  </div>
-
-  {% block required-js %} {% endblock %}
-
-  {% block required-js-page %} {% endblock %}
-
-</body>
+    <head>
+        <meta charset="utf-8">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>        
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="...">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid" id="app_master">
+            {% block content %}{% endblock content %}
+            {% block extra_javascript %}{% endblock extra_javascript %}
+        </div>
+    </body>
+    <footer>
+    <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    </footer>
 </html>
