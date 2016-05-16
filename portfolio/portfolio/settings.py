@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -131,3 +132,20 @@ STATICFILES_DIR = [
     STATIC_ROOT,
     '/static'
 ]
+
+#LOCALE
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
+
+# Model translation settings
+
+gettext = lambda s: s
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('pt-br', gettext('Brazilian Portuguese')),
+)
+
+MODELTRANSLATION_FALLBACK_LANGUAGES = {'default': ('en',)}
+
