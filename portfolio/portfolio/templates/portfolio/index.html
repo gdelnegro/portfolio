@@ -381,11 +381,10 @@
     <h2 class="section-title wow fadeInUp">{% trans "projects" %}</h2>
 
     <ul class="list-inline" id="filter">
-        <li><a class="active" data-group="all">All</a></li>
-        <li><a data-group="design">Design</a></li>
-        <li><a data-group="web">Web</a></li>
-        <li><a data-group="interface">Interface</a></li>
-        <li><a data-group="identety">Identity</a></li>
+        <li><a class="active" data-group="all">{% trans "all" %}</a></li>
+        {% for project_type in projects_types  %}
+            <li><a data-group="{{ project_type.name }}"> {{ project_type.name }}</a></li>
+        {% endfor %}        
     </ul>
 
     <div class="row">

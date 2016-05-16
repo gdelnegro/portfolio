@@ -105,6 +105,9 @@ msgstr "Descrição"
 msgid "Project Type"
 msgstr "Tipo de projeto"
 
+msgid "Project Types"
+msgstr "Tipos de projeto"
+
 #: portfolio/portfolio/models.py:114
 msgid "Project"
 msgstr "Projeto"
@@ -144,3 +147,6 @@ msgstr "blog"
 
 msgid "contact"
 msgstr "Contato"
+
+msgid "all"
+msgstr "Tudo"

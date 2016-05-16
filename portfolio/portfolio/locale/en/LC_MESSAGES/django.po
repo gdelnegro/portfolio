@@ -144,3 +144,6 @@ msgstr "Blog"
 
 msgid "contact"
 msgstr "Contact"
+
+msgid "all"
+msgstr "All"
