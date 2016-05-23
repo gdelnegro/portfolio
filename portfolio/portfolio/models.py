@@ -121,6 +121,7 @@ class Projects(BaseModel):
         verbose_name_plural = _("Projects")
 
 class Resume(BaseModel):
+    import datetime
     EDUCATION = 'ED'
     EXPERIENCE = 'XP'
     AWARDS = 'AW'
@@ -130,11 +131,21 @@ class Resume(BaseModel):
         (AWARDS, _("Awards")),
     )
 
+    YEAR_CHOICES = [(r,r) for r in range(1984, datetime.date.today().year+1)]
+
     type = models.CharField(max_length=2,
                             choices=RESUME_TYPE_CHOICES,
                             default=EDUCATION)
+    start_year = models.IntegerField(_('start year'), max_length=4, choices=YEAR_CHOICES, default=datetime.datetime.now().year)
+    end_year = models.IntegerField(_('end year'), max_length=4, choices=YEAR_CHOICES, default=datetime.datetime.now().year)
     title = models.CharField(_("Title"), max_length=100, null=True)
     en_title = models.CharField(_("En Title"), max_length=100, null=True)
     description = models.TextField(_("Description"), null=True)
     en_description = models.TextField(_("En Description"), null=True)
     where = models.TextField(_("Where"), null=False)
+
+    class Meta:
+        verbose_name = _("Resume")
+
+    def __str__(self):
+        return "%s" % (self.title)
