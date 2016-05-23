@@ -119,3 +119,22 @@ class Projects(BaseModel):
     class Meta:
         verbose_name = _("Project")
         verbose_name_plural = _("Projects")
+
+class Resume(BaseModel):
+    EDUCATION = 'ED'
+    EXPERIENCE = 'XP'
+    AWARDS = 'AW'
+    RESUME_TYPE_CHOICES = (
+        (EDUCATION, _("Education")),
+        (EXPERIENCE, _("Experience")),
+        (AWARDS, _("Awards")),
+    )
+
+    type = models.CharField(max_length=2,
+                            choices=RESUME_TYPE_CHOICES,
+                            default=EDUCATION)
+    title = models.CharField(_("Title"), max_length=100, null=True)
+    en_title = models.CharField(_("En Title"), max_length=100, null=True)
+    description = models.TextField(_("Description"), null=True)
+    en_description = models.TextField(_("En Description"), null=True)
+    where = models.TextField(_("Where"), null=False)

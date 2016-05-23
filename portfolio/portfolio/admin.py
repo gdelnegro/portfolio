@@ -42,3 +42,7 @@ class ProjectTypes(admin.ModelAdmin):
 @admin.register(Projects)
 class Projects(admin.ModelAdmin):
     pass
+
+@admin.register(Resume)
+class Resume(admin.ModelAdmin):
+    pass
