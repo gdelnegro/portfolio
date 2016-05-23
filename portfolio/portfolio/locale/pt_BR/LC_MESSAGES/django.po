@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-23 15:18+0000\n"
+"POT-Creation-Date: 2016-05-23 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,8 +38,8 @@ msgid "Images"
 msgstr "Imagens"
 
 #: portfolio/portfolio/models.py:40 portfolio/portfolio/models.py:94
-#: portfolio/portfolio/templates/portfolio/index.html:73
-#: portfolio/portfolio/templates/portfolio/index.html:726
+#: portfolio/portfolio/templates/portfolio/index.html:76
+#: portfolio/portfolio/templates/portfolio/index.html:688
 msgid "Name"
 msgstr "Nome"
 
@@ -142,10 +142,12 @@ msgid "Projects"
 msgstr "Projetos"
 
 #: portfolio/portfolio/models.py:129
+#: portfolio/portfolio/templates/portfolio/index.html:149
 msgid "Education"
 msgstr "Educação"
 
 #: portfolio/portfolio/models.py:130
+#: portfolio/portfolio/templates/portfolio/index.html:181
 msgid "Experience"
 msgstr "Experiência"
 
@@ -196,73 +198,92 @@ msgid "home"
 msgstr "Início"
 
 #: portfolio/portfolio/templates/portfolio/index.html:47
-#: portfolio/portfolio/templates/portfolio/index.html:63
+#: portfolio/portfolio/templates/portfolio/index.html:66
 msgid "about"
 msgstr "Sobre mim"
 
 #: portfolio/portfolio/templates/portfolio/index.html:48
-#: portfolio/portfolio/templates/portfolio/index.html:142
+#: portfolio/portfolio/templates/portfolio/index.html:145
 msgid "resume"
 msgstr "Currículo"
 
 #: portfolio/portfolio/templates/portfolio/index.html:49
-#: portfolio/portfolio/templates/portfolio/index.html:266
+#: portfolio/portfolio/templates/portfolio/index.html:215
 msgid "skills"
 msgstr "Habilidades"
 
 #: portfolio/portfolio/templates/portfolio/index.html:50
-#: portfolio/portfolio/templates/portfolio/index.html:381
+#: portfolio/portfolio/templates/portfolio/index.html:330
 msgid "projects"
 msgstr "Projetos"
 
-#: portfolio/portfolio/templates/portfolio/index.html:51
-msgid "blog"
-msgstr "blog"
-
-#: portfolio/portfolio/templates/portfolio/index.html:52
-#: portfolio/portfolio/templates/portfolio/index.html:717
+#: portfolio/portfolio/templates/portfolio/index.html:55
+#: portfolio/portfolio/templates/portfolio/index.html:679
 msgid "contact"
 msgstr "Contato"
 
-#: portfolio/portfolio/templates/portfolio/index.html:74
+#: portfolio/portfolio/templates/portfolio/index.html:77
 msgid "DOB"
 msgstr "Data de Nascimento"
 
-#: portfolio/portfolio/templates/portfolio/index.html:75
+#: portfolio/portfolio/templates/portfolio/index.html:78
 msgid "address"
 msgstr "Endereço"
 
-#: portfolio/portfolio/templates/portfolio/index.html:76
+#: portfolio/portfolio/templates/portfolio/index.html:79
 msgid "nationality"
 msgstr "Nacionalidade"
 
-#: portfolio/portfolio/templates/portfolio/index.html:76
+#: portfolio/portfolio/templates/portfolio/index.html:79
 msgid "nationality_string"
 msgstr "Brasileiro"
 
-#: portfolio/portfolio/templates/portfolio/index.html:77
+#: portfolio/portfolio/templates/portfolio/index.html:80
 msgid "phone"
 msgstr "Telefone"
 
-#: portfolio/portfolio/templates/portfolio/index.html:383
+#: portfolio/portfolio/templates/portfolio/index.html:332
 msgid "all"
 msgstr "Tudo"
 
-#: portfolio/portfolio/templates/portfolio/index.html:722
+#: portfolio/portfolio/templates/portfolio/index.html:488
+#, fuzzy
+#| msgid "Experience"
+msgid "experience_years"
+msgstr "Anos de experiência"
+
+#: portfolio/portfolio/templates/portfolio/index.html:493
+#, fuzzy
+#| msgid "projects"
+msgid "done_projects"
+msgstr "Projetos concluídos"
+
+#: portfolio/portfolio/templates/portfolio/index.html:684
 msgid "contact_me_header"
 msgstr "Entre em contato"
 
-#: portfolio/portfolio/templates/portfolio/index.html:736
+#: portfolio/portfolio/templates/portfolio/index.html:698
 msgid "subject"
 msgstr "Assunto"
 
-#: portfolio/portfolio/templates/portfolio/index.html:741
+#: portfolio/portfolio/templates/portfolio/index.html:703
 msgid "message"
 msgstr "Mensagem"
 
-#: portfolio/portfolio/templates/portfolio/index.html:764
+#: portfolio/portfolio/templates/portfolio/index.html:726
 msgid "phone_number"
 msgstr "Telefone"
+
+#~ msgid "happy_clients"
+#~ msgstr "Clientes"
+
+#, fuzzy
+#~| msgid "Awards"
+#~ msgid "won_awards"
+#~ msgstr "Prêmios recebidos"
+
+#~ msgid "blog"
+#~ msgstr "blog"
 
 #~ msgid "Project Types"
 #~ msgstr "Tipos de projeto"

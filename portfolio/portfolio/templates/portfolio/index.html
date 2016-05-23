@@ -483,24 +483,26 @@
           <div class="count-wrap">
             <div class="col-sm-3 col-xs-6">
               <i class="fa fa-flask"></i>
-              <h3 class="timer">7</h3>
-              <p>Years of Experience</p>
+              <h3 class="timer">{{ years }}</h3>
+              <p>{% trans "experience_years" %}</p>
             </div>
             <div class="col-sm-3 col-xs-6">
               <i class="fa fa-thumbs-up"></i>
-              <h3 class="timer">651</h3>
-              <p>Projects Done</p>
+              <h3 class="timer">{{projects.count}}</h3>
+              <p>{% trans "done_projects" %}</p>
             </div>
+            {% comment %}
             <div class="col-sm-3 col-xs-6">
               <i class="fa fa-users"></i>
               <h3 class="timer">251</h3>
-              <p>Happy Clients</p>
+              <p>{% trans "happy_clients" %}</p>
             </div>
             <div class="col-sm-3 col-xs-6">
               <i class="fa fa-trophy"></i>
               <h3 class="timer">5</h3>
-              <p>Awards Won</p>
+              <p>{% trans "won_awards" %}</p>
             </div>
+            {% endcomment %}
           </div><!-- /count-wrap -->
         </div><!-- /.col-md-12 -->
       </div><!-- /.row -->
