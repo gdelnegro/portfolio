@@ -8,13 +8,15 @@ def index(request):
     # return render_to_response('portfolio/index.html', locals())
     user_lang = request.META.get('HTTP_ACCEPT_LANGUAGE')
     if "pt-BR" in user_lang:
-        user_lang = True
+        pt_br = True
     else:
-        user_lang = None
+        pt_br = None
     return render(request, 'portfolio/index.html', {
         "appActive": "portfolio",
         'settings': settings,
         'projects': Projects.objects.all(),
         'projects_types': ProjectTypes.objects.all(),
-        'user_lang': user_lang
+        'pt_br': pt_br,
+        'resume_education': Resume.objects.filter(type="ED"),
+        'resume_experiences': Resume.objects.filter(type="XP"),
         })

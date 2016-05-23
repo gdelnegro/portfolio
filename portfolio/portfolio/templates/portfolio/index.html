@@ -48,7 +48,9 @@
                     <li><a href="#resume">{% trans "resume" %}</a></li>
                     <li><a href="#skills">{% trans "skills" %}</a></li>
                     <li><a href="#works">{% trans "projects" %}</a></li>
+                    {% comment %}
                     <li><a href="#blog">{% trans "blog" %}</a></li>
+                    {% endcomment %}
                     <li><a href="#contact">{% trans "contact" %}</a></li>
                 </ul>
             </div>
@@ -143,66 +145,30 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="resume-title">
-                    <h3>Education</h3>
+                    <h3>{% trans "Education" %}</h3>
                 </div>
                 <div class="resume">
                     <ul class="timeline">
-                        <li>
-                            <div class="posted-date">
-                                <span class="month">2007-2011</span>
-                            </div><!-- /posted-date -->
+                        {% cycle 'timeline-inverted' '' as timeline_class %}
+                        {% for exp in resume_education  %}
+                            <li class=" {% cycle timeline_class %}">
+                                <div class="posted-date">
+                                    <span class="month">{{ exp.start_year }}-{{ exp.end_year }}</span>
+                                </div><!-- /posted-date -->
 
-                            <div class="timeline-panel wow fadeInUp">
-                                <div class="timeline-content">
-                                    <div class="timeline-heading">
-                                        <h3>Bachelor degree certificate</h3>
-                                        <span>BA(Hons) in UI Engineering, Arts University, Pabna, USA</span>
-                                    </div><!-- /timeline-heading -->
-
-                                    <div class="timeline-body">
-                                        <p>I have completed UI Engineering degree from ABC University, Boston, USA at feel the charm of existence in this spot, which was creat.</p>
-                                    </div><!-- /timeline-body -->
-                                </div> <!-- /timeline-content -->
-                            </div><!-- /timeline-panel -->
-                        </li>
-
-                        <li class="timeline-inverted">
-                            <div class="posted-date">
-                                <span class="month">2004-2006</span>
-                            </div><!-- /posted-date -->
-
-                            <div class="timeline-panel wow fadeInUp">
-                                <div class="timeline-content">
-                                    <div class="timeline-heading">
-                                        <h3>Higher Secondary certificate</h3>
-                                        <span>Typography Arts, FA College, New York, USA</span>
-                                    </div><!-- /timeline-heading -->
-
-                                    <div class="timeline-body">
-                                        <p>From this college of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
-                                    </div><!-- /timeline-body -->
-                                </div> <!-- /timeline-content -->
-                            </div> <!-- /timeline-panel -->
-                        </li>
-
-                        <li>
-                            <div class="posted-date">
-                              <span class="month">2000-2003</span>
-                            </div><!-- /posted-date -->
-
-                            <div class="timeline-panel wow fadeInUp">
-                                <div class="timeline-content">
-                                    <div class="timeline-heading">
-                                        <h3>Secondary school certificate</h3>
-                                        <span>Creative Arts, Julius Jr. school, USA</span>
-                                    </div><!-- /timeline-heading -->
-
-                                    <div class="timeline-body">
-                                        <p>I was awesome at arts, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy.</p>
-                                    </div><!-- /timeline-body -->
-                                </div> <!-- /timeline-content -->
-                            </div><!-- /timeline-panel -->
-                        </li>
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3> {% if pt_br or not exp.en_title %} {{ exp.title }} {% else %} {{ exp.en_title }} {% endif %} </h3>
+                                            <span> {{ exp.where }} </span>
+                                        </div><!-- /timeline-heading -->
+                                        <div class="timeline-body">
+                                            <p>{% if pt_br or not exp.en_description %} {{ exp.description }} {% else %} {{ exp.en_description }} {% endif %} </p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -211,47 +177,29 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="resume-title">
-                    <h3>Experience</h3>
+                    <h3>{% trans "Experience" %}</h3>
                 </div>
                 <div class="resume">
                     <ul class="timeline">
-                        <li class="timeline-inverted">
-                            <div class="posted-date">
-                              <span class="month">2011-2013</span>
-                            </div><!-- /posted-date -->
+                        {% for exp in resume_experiences  %}
+                            <li class=" {% cycle timeline_class %}">
+                                <div class="posted-date">
+                                    <span class="month">{{ exp.start_year }}-{{ exp.end_year }}</span>
+                                </div><!-- /posted-date -->
 
-                            <div class="timeline-panel wow fadeInUp">
-                                <div class="timeline-content">
-                                    <div class="timeline-heading">
-                                        <h3>Junior ui designer</h3>
-                                        <span>XYZ Design Home, One Street, Boston</span>
-                                    </div><!-- /timeline-heading -->
-
-                                    <div class="timeline-body">
-                                        <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
-                                    </div><!-- /timeline-body -->
-                                </div> <!-- /timeline-content -->
-                            </div> <!-- /timeline-panel -->
-                        </li>
-
-                        <li>
-                            <div class="posted-date">
-                              <span class="month">2013-2015</span>
-                            </div><!-- /posted-date -->
-
-                            <div class="timeline-panel wow fadeInUp">
-                                <div class="timeline-content">
-                                    <div class="timeline-heading">
-                                        <h3>Lead UX Consultant</h3>
-                                        <span>Lucky8 Designing Firm, California</span>
-                                    </div><!-- /timeline-heading -->
-
-                                    <div class="timeline-body">
-                                        <p>Completely provide access to seamless manufactured products before functionalized synergy. Progressively redefine competitive.</p>
-                                    </div><!-- /timeline-body -->
-                                </div> <!-- /timeline-content -->
-                            </div><!-- /timeline-panel -->
-                        </li>
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3> {% if pt_br or not exp.en_title %} {{ exp.title }} {% else %} {{ exp.en_title }} {% endif %} </h3>
+                                            <span> {{ exp.where }} </span>
+                                        </div><!-- /timeline-heading -->
+                                        <div class="timeline-body">
+                                            <p>{% if pt_br or not exp.en_description %} {{ exp.description }} {% else %} {{ exp.en_description }} {% endif %} </p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div><!-- /timeline-panel -->
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
@@ -382,7 +330,7 @@
     <ul class="list-inline" id="filter">
         <li><a class="active" data-group="all">{% trans "all" %}</a></li>
         {% for project_type in projects_types  %}
-            <li><a data-group="{{ project_type.name }}"> {% if  user_lang or not project_type.en_name%}{{ project_type.name }}{% else %}{{ project_type.en_name }}{% endif %}</a></li>
+            <li><a data-group="{{ project_type.name }}"> {% if  pt_br or not project_type.en_name %}{{ project_type.name }}{% else %}{{ project_type.en_name }}{% endif %}</a></li>
         {% endfor %}
     </ul>
 
