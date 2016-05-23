@@ -10,7 +10,7 @@ def index(request):
     if "pt-BR" in user_lang:
         user_lang = True
     else:
-        user_lang = None        
+        user_lang = None
     return render(request, 'portfolio/index.html', {
         "appActive": "portfolio",
         'settings': settings,

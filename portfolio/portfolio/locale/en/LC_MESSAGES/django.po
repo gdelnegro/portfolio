@@ -122,7 +122,7 @@ msgid "Brazilian Portuguese"
 msgstr ""
 
 msgid "about_me"
-msgstr "<p>I am a fully professional freelance creative User Interface Designer &amp; Developer<br> Involving with latest web designing and technologies is a great<br> feel free to contact creative.</p>"
+msgstr "<p>I am a professional freelance Full Stack Developer<br> Involved with the latest technologies and design patterns <br> feel free to contact me.</p>"
 
 msgid "home"
 msgstr "Home"
@@ -150,3 +150,30 @@ msgstr "All"
 
 msgid "phone_number"
 msgstr "Phone Number"
+
+msgid "name"
+msgstr "Name"
+
+msgid "DOB"
+msgstr "Date of birth"
+
+msgid "address"
+msgstr "Address"
+
+msgid "nationality"
+msgstr "Nationality"
+
+msgid "nationality_string"
+msgstr "Brazilian"
+
+msgid "phone"
+msgstr "Phone"
+
+msgid "subject"
+msgstr "Subject"
+
+msgid "message"
+msgstr "Message"
+
+msgid "contact_me_header"
+msgstr "Send me a message"

@@ -153,3 +153,30 @@ msgstr "Tudo"
 
 msgid "phone_number"
 msgstr "Telefone"
+
+msgid "name"
+msgstr "Nome"
+
+msgid "DOB"
+msgstr "Data de Nascimento"
+
+msgid "address"
+msgstr "Endereço"
+
+msgid "nationality"
+msgstr "Nacionalidade"
+
+msgid "nationality_string"
+msgstr "Brasileiro"
+
+msgid "phone"
+msgstr "Telefone"
+
+msgid "subject"
+msgstr "Assunto"
+
+msgid "message"
+msgstr "Mensagem"
+
+msgid "contact_me_header"
+msgstr "Entre em contato"

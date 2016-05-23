@@ -3,6 +3,7 @@ from django.core.validators import RegexValidator, MinValueValidator, MaxValueVa
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
+from portfolio import settings
 
 
 class BaseModel(models.Model):
