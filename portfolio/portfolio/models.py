@@ -38,9 +38,9 @@ class Image(BaseModel):
 
 class BaseTechnologyModel(BaseModel):
     name = models.CharField(_('Name'), max_length=100, null=False, blank=False)
-    site = models.URLField(_('Site'), max_length=200, null=False, blank=False)
+    site = models.URLField(_('Site'), max_length=200, null=True, blank=True)
     proeficiency = models.PositiveIntegerField(_('Proficiency'))
-    logo = models.OneToOneField(Image, on_delete=models.CASCADE, null=True)
+    logo = models.OneToOneField(Image, on_delete=models.DO_NOTHING, null=True, blank=True)
 
     def logo_thumbnail(self):
         if(self.logo):
@@ -85,7 +85,7 @@ class TechnologyTypes(BaseTechnologyModel):
         verbose_name_plural = _("Technology Types")
 
 class Technologies(BaseTechnologyModel):
-    type = models.OneToOneField(TechnologyTypes)
+    type = models.ForeignKey(TechnologyTypes)
     class Meta:
         verbose_name = _("Technology")
         verbose_name_plural = _("Technologies")
@@ -108,10 +108,10 @@ class Projects(BaseModel):
     name = models.CharField(_("Project Name"), max_length=100, null=True)
     en_name = models.CharField(_("En Project Name"), max_length=100, null=True)
     programming_language = models.ManyToManyField(ProgrammingLanguages)
-    framework = models.ManyToManyField(Frameworks)
-    database = models.ManyToManyField(Databases)
-    techonology = models.ManyToManyField(Technologies)
-    webserver = models.ManyToManyField(WebServers)
+    framework = models.ManyToManyField(Frameworks, null=True, blank=True)
+    database = models.ManyToManyField(Databases, null=True, blank=True)
+    techonology = models.ManyToManyField(Technologies, null=True, blank=True)
+    webserver = models.ManyToManyField(WebServers, null=True, blank=True)
     description = models.TextField(_("Description"), null=True)
     en_description = models.TextField(_("En Description"), null=True)
     images = models.ManyToManyField(Image, blank=True)
