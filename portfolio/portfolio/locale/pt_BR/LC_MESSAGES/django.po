@@ -247,14 +247,10 @@ msgid "all"
 msgstr "Tudo"
 
 #: portfolio/portfolio/templates/portfolio/index.html:488
-#, fuzzy
-#| msgid "Experience"
 msgid "experience_years"
 msgstr "Anos de experiência"
 
 #: portfolio/portfolio/templates/portfolio/index.html:493
-#, fuzzy
-#| msgid "projects"
 msgid "done_projects"
 msgstr "Projetos concluídos"
 
@@ -274,19 +270,17 @@ msgstr "Mensagem"
 msgid "phone_number"
 msgstr "Telefone"
 
-#~ msgid "happy_clients"
-#~ msgstr "Clientes"
+msgid "happy_clients"
+msgstr "Clientes"
 
-#, fuzzy
-#~| msgid "Awards"
-#~ msgid "won_awards"
-#~ msgstr "Prêmios recebidos"
+msgid "won_awards"
+msgstr "Prêmios recebidos"
 
-#~ msgid "blog"
-#~ msgstr "blog"
+msgid "blog"
+msgstr "blog"
 
-#~ msgid "Project Types"
-#~ msgstr "Tipos de projeto"
+msgid "Project Types"
+msgstr "Tipos de projeto"
 
-#~ msgid "name"
-#~ msgstr "Nome"
+msgid "name"
+msgstr "Nome"

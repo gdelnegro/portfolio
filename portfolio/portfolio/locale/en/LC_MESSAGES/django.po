@@ -243,8 +243,6 @@ msgid "experience_years"
 msgstr "Years of experience"
 
 #: portfolio/portfolio/templates/portfolio/index.html:493
-#, fuzzy
-#| msgid "projects"
 msgid "done_projects"
 msgstr "Projects done"
 
@@ -264,14 +262,14 @@ msgstr "Message"
 msgid "phone_number"
 msgstr "Phone Number"
 
-#~ msgid "happy_clients"
-#~ msgstr "Happy clients"
+msgid "happy_clients"
+msgstr "Happy clients"
 
-#~ msgid "won_awards"
-#~ msgstr "Awards won"
+msgid "won_awards"
+msgstr "Awards won"
 
-#~ msgid "blog"
-#~ msgstr "Blog"
+msgid "blog"
+msgstr "Blog"
 
-#~ msgid "name"
-#~ msgstr "Name"
+msgid "name"
+msgstr "Name"
