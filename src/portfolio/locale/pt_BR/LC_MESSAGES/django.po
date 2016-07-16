@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-15 16:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: portfolio/models.py:9
+msgid "MDL001"
+msgstr ""
+
+#: portfolio/models.py:9
+msgid "TTP001"
+msgstr ""
+
+#: portfolio/models.py:10
+msgid "MDL002"
+msgstr ""
+
+#: portfolio/models.py:10
+msgid "TTP002"
+msgstr ""
+
+#: portfolio/models.py:11
+msgid "MDL003"
+msgstr ""
+
+#: portfolio/models.py:11
+msgid "TTP003"
+msgstr ""
+
+#: portfolio/models.py:12
+msgid "MDL004"
+msgstr ""
+
+#: portfolio/models.py:12
+msgid "TTP004"
+msgstr ""
+
+#: portfolio/models.py:25
+msgid "MDL005"
+msgstr ""
+
+#: portfolio/models.py:25
+msgid "TTP005"
+msgstr ""
+
+#: portfolio/models.py:26
+msgid "MDL006"
+msgstr ""
+
+#: portfolio/models.py:26
+msgid "TTP006"
+msgstr ""
+
+#: portfolio/models.py:27
+msgid "MDL007"
+msgstr ""
+
+#: portfolio/models.py:27
+msgid "TTP007"
+msgstr ""
+
+#: portfolio/models.py:28
+msgid "MDL008"
+msgstr ""
+
+#: portfolio/models.py:28
+msgid "TTP008"
+msgstr ""
+
+#: portfolio/models.py:43
+msgid "MTA001"
+msgstr ""
+
+#: portfolio/models.py:44
+msgid "MTA002"
+msgstr ""
+
+#: portfolio/models.py:48
+msgid "MDL009"
+msgstr ""
+
+#: portfolio/models.py:48
+msgid "TTP009"
+msgstr ""
+
+#: portfolio/models.py:49
+msgid "MDL010"
+msgstr ""
+
+#: portfolio/models.py:49
+msgid "TTP010"
+msgstr ""
+
+#: portfolio/models.py:50
+msgid "MDL011"
+msgstr ""
+
+#: portfolio/models.py:51
+msgid "TTP011"
+msgstr ""
+
+#: portfolio/models.py:71
+msgid "MTA003"
+msgstr ""
+
+#: portfolio/models.py:72
+msgid "MTA004"
+msgstr ""
+
+#: portfolio/models.py:76
+msgid "MDL012"
+msgstr ""
+
+#: portfolio/models.py:76
+msgid "TTP012"
+msgstr ""
+
+#: portfolio/models.py:79
+msgid "MTA005"
+msgstr ""
+
+#: portfolio/models.py:80
+msgid "MTA006"
+msgstr ""
+
+#: portfolio/models.py:84
+msgid "MDL013"
+msgstr ""
+
+#: portfolio/models.py:84
+msgid "TTP013"
+msgstr ""
+
+#: portfolio/models.py:87
+msgid "MTA007"
+msgstr ""
+
+#: portfolio/models.py:88
+msgid "MTA008"
+msgstr ""
+
+#: portfolio/models.py:93
+msgid "MTA009"
+msgstr ""
+
+#: portfolio/models.py:94
+msgid "MTA010"
+msgstr ""
+
+#: portfolio/models.py:99
+msgid "MTA011"
+msgstr ""
+
+#: portfolio/models.py:100
+msgid "MTA012"
+msgstr ""
+
+#: portfolio/models.py:104
+msgid "MDL014"
+msgstr ""
+
+#: portfolio/models.py:104
+msgid "TTP014"
+msgstr ""
+
+#: portfolio/models.py:107
+msgid "MTA013"
+msgstr ""
+
+#: portfolio/models.py:108
+msgid "MTA014"
+msgstr ""
+
+#: portfolio/models.py:113
+msgid "MTA015"
+msgstr ""
+
+#: portfolio/models.py:114
+msgid "MTA016"
+msgstr ""
+
+#: portfolio/models.py:118
+msgid "MDL015"
+msgstr ""
+
+#: portfolio/models.py:118
+msgid "TTP015"
+msgstr ""
+
+#: portfolio/models.py:119
+msgid "MDL01"
+msgstr ""
+
+#: portfolio/models.py:119
+msgid "TTP01"
+msgstr ""
+
+#: portfolio/models.py:120
+msgid "MDL017"
+msgstr ""
+
+#: portfolio/models.py:120
+msgid "TTP017"
+msgstr ""
+
+#: portfolio/models.py:121
+msgid "MDL018"
+msgstr ""
+
+#: portfolio/models.py:121
+msgid "TTP018"
+msgstr ""
+
+#: portfolio/models.py:122
+msgid "MDL019"
+msgstr ""
+
+#: portfolio/models.py:122
+msgid "TTP019"
+msgstr ""
+
+#: portfolio/models.py:123 portfolio/models.py:124
+msgid "MDL020"
+msgstr ""
+
+#: portfolio/models.py:123 portfolio/models.py:124
+msgid "TTP020"
+msgstr ""
+
+#: portfolio/models.py:127
+msgid "MTA017"
+msgstr ""
+
+#: portfolio/models.py:128
+msgid "MTA018"
+msgstr ""
+
+#: portfolio/models.py:137
+msgid "MDL022"
+msgstr ""
+
+#: portfolio/models.py:138
+msgid "MDL023"
+msgstr ""
+
+#: portfolio/models.py:139
+msgid "MDL024"
+msgstr ""
+
+#: portfolio/models.py:144
+msgid "MDL025"
+msgstr ""
+
+#: portfolio/models.py:145
+msgid "TTP025"
+msgstr ""
+
+#: portfolio/models.py:146
+msgid "MDL026"
+msgstr ""
+
+#: portfolio/models.py:147
+msgid "TTP026"
+msgstr ""
+
+#: portfolio/models.py:148
+msgid "MDL027"
+msgstr ""
+
+#: portfolio/models.py:149
+msgid "TTP027"
+msgstr ""
+
+#: portfolio/models.py:150
+msgid "MDL028"
+msgstr ""
+
+#: portfolio/models.py:151
+msgid "TTP028"
+msgstr ""
+
+#: portfolio/models.py:152
+msgid "MDL029"
+msgstr ""
+
+#: portfolio/models.py:153
+msgid "TTP029"
+msgstr ""
+
+#: portfolio/models.py:154
+msgid "MDL030"
+msgstr ""
+
+#: portfolio/models.py:155
+msgid "MDL031"
+msgstr ""
+
+#: portfolio/models.py:156
+msgid "MDL032"
+msgstr ""
+
+#: portfolio/models.py:159
+msgid "MTA019"
+msgstr ""
+
+#: portfolio/settings.py:148
+msgid "English"
+msgstr "Inglês"
+
+#: portfolio/settings.py:149
+msgid "Brazilian Portuguese"
+msgstr "Português Brasil"
+
+#: portfolio/templates/portfolio/index.html:16
+msgid "about_me"
+msgstr ""
+"<p> Sou um desenvolvedor altamente profissional <br> Envolvido com as "
+"últimas tecnologias e padrões de desenvolvimento<br> entre em contato :</p>"
+
+#: portfolio/templates/portfolio/index.html:46
+msgid "home"
+msgstr "Início"
+
+#: portfolio/templates/portfolio/index.html:47
+#: portfolio/templates/portfolio/index.html:66
+msgid "about"
+msgstr "Sobre mim"
+
+#: portfolio/templates/portfolio/index.html:48
+#: portfolio/templates/portfolio/index.html:145
+msgid "resume"
+msgstr "Currículo"
+
+#: portfolio/templates/portfolio/index.html:49
+#: portfolio/templates/portfolio/index.html:215
+msgid "skills"
+msgstr "Habilidades"
+
+#: portfolio/templates/portfolio/index.html:50
+#: portfolio/templates/portfolio/index.html:330
+msgid "projects"
+msgstr "Projetos"
+
+#: portfolio/templates/portfolio/index.html:55
+#: portfolio/templates/portfolio/index.html:679
+msgid "contact"
+msgstr "Contato"
+
+#: portfolio/templates/portfolio/index.html:76
+#: portfolio/templates/portfolio/index.html:688
+msgid "Name"
+msgstr "Nome"
+
+#: portfolio/templates/portfolio/index.html:77
+msgid "DOB"
+msgstr "Data de Nascimento"
+
+#: portfolio/templates/portfolio/index.html:78
+msgid "address"
+msgstr "Endereço"
+
+#: portfolio/templates/portfolio/index.html:79
+msgid "nationality"
+msgstr "Nacionalidade"
+
+#: portfolio/templates/portfolio/index.html:79
+msgid "nationality_string"
+msgstr "Brasileiro"
+
+#: portfolio/templates/portfolio/index.html:80
+msgid "phone"
+msgstr "Telefone"
+
+#: portfolio/templates/portfolio/index.html:149
+msgid "Education"
+msgstr "Educação"
+
+#: portfolio/templates/portfolio/index.html:181
+msgid "Experience"
+msgstr "Experiência"
+
+#: portfolio/templates/portfolio/index.html:332
+msgid "all"
+msgstr "Tudo"
+
+#: portfolio/templates/portfolio/index.html:488
+msgid "experience_years"
+msgstr "Anos de experiência"
+
+#: portfolio/templates/portfolio/index.html:493
+msgid "done_projects"
+msgstr "Projetos concluídos"
+
+#: portfolio/templates/portfolio/index.html:684
+msgid "contact_me_header"
+msgstr "Entre em contato"
+
+#: portfolio/templates/portfolio/index.html:698
+msgid "subject"
+msgstr "Assunto"
+
+#: portfolio/templates/portfolio/index.html:703
+msgid "message"
+msgstr "Mensagem"
+
+#: portfolio/templates/portfolio/index.html:726
+msgid "phone_number"
+msgstr "Telefone"
