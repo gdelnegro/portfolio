@@ -2,11 +2,12 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+from modeltranslation.admin import TabbedTranslationAdmin
 from portfolio.models import *
 
 
 @admin.register(Translation)
-class Translation(admin.ModelAdmin):
+class TranslationAdmin(TabbedTranslationAdmin):
     pass
 
 @admin.register(Image)
@@ -16,37 +17,37 @@ class ImageAdmin(admin.ModelAdmin):
     readonly_fields = ('image_tag',)
 
 @admin.register(ProgrammingLanguages)
-class ProgrammingLanguagesAdmin(admin.ModelAdmin):
+class ProgrammingLanguagesAdmin(TabbedTranslationAdmin):
     pass
 
 @admin.register(Frameworks)
-class FrameworksAdmin(admin.ModelAdmin):
+class FrameworksAdmin(TabbedTranslationAdmin):
     pass
 
 @admin.register(Databases)
-class DatabasesAdmin(admin.ModelAdmin):
+class DatabasesAdmin(TabbedTranslationAdmin):
     pass
 
 @admin.register(WebServers)
-class WebServersAdmin(admin.ModelAdmin):
+class WebServersAdmin(TabbedTranslationAdmin):
     pass
 
 @admin.register(TechnologyTypes)
-class TechnologyTypes(admin.ModelAdmin):
+class TechnologyTypes(TabbedTranslationAdmin):
     pass
 
 @admin.register(Technologies)
-class TechnologiesTypes(admin.ModelAdmin):
+class TechnologiesTypes(TabbedTranslationAdmin):
     pass
 
 @admin.register(ProjectTypes)
-class ProjectTypes(admin.ModelAdmin):
+class ProjectTypes(TabbedTranslationAdmin):
     pass
 
 @admin.register(Projects)
-class Projects(admin.ModelAdmin):
+class Projects(TabbedTranslationAdmin):
     pass
 
 @admin.register(Resume)
-class Resume(admin.ModelAdmin):
+class Resume(TabbedTranslationAdmin):
     pass

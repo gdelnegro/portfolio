@@ -7,5 +7,20 @@ class BaseModelTranslationOptions(TranslationOptions):
     fields = ('name', 'description')
     required_languages = ('en', 'pt-br')
 
-# register tagged models with 'description' field for translation
+
+class TranslationModelTranslationOptions(TranslationOptions):
+    fields = ('text',)
+    required_languages = ('en', 'pt-br')
+
 translator.register(BaseModel, BaseModelTranslationOptions)
+translator.register(Translation, TranslationModelTranslationOptions)
+translator.register(ProgrammingLanguages, BaseModelTranslationOptions)
+translator.register(Frameworks, BaseModelTranslationOptions)
+translator.register(Databases, BaseModelTranslationOptions)
+translator.register(WebServers, BaseModelTranslationOptions)
+translator.register(TechnologyTypes, BaseModelTranslationOptions)
+translator.register(Technologies, BaseModelTranslationOptions)
+translator.register(ProjectTypes, BaseModelTranslationOptions)
+translator.register(Projects, BaseModelTranslationOptions)
+translator.register(Resume, BaseModelTranslationOptions)
+
