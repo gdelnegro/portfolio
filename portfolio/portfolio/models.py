@@ -4,6 +4,31 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 
+TRANSLATION_TYPES_CHOICES = (
+    ('MDL', _('MDL036')),
+    ('TTP', _('MDL035')),
+    ('MTA', _('MDL037')),
+    ('MTP', _('MDL038'))
+)
+
+
+class Translation(models.Model):
+    created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))
+    updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
+    tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20)
+    type = models.CharField(_('MDL033'), help_text=_('TTP033'), max_length=20, choices=TRANSLATION_TYPES_CHOICES)
+    text = models.TextField(_('MDL034'), help_text=_('TTP034'))
+
+    class Meta:
+        verbose_name = _('MTA020')
+        verbose_name_plural = _('MTA021')
+
+    def __str__(self):
+        return "%s" % self.tag
+
+    def __unicode__(self):
+        return "%s" % self.tag
+
 
 class BaseModel(models.Model):
     created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))

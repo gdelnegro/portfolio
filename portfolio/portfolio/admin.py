@@ -5,6 +5,10 @@ from django.utils.translation import ugettext_lazy as _
 from portfolio.models import *
 
 
+@admin.register(Translation)
+class Translation(admin.ModelAdmin):
+    pass
+
 @admin.register(Image)
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at')
