@@ -90,7 +90,7 @@ def load_data(apps, schema_editor):
     translation(tag='MDL011', type='MDL', text_pt_br="Logo", text_en="Logo").save()
     translation(tag='MTA003', type='MTA', text_pt_br="Linguagem de programação",
                 text_en="Linguagens de programação").save()
-    translation(tag='MTA004', type='MTA', text_pt_br="Programming language", text_en="Programming languages").save()
+    translation(tag='MTA004', type='MTA', text_pt_br="Linguagens de programação", text_en="Programming languages").save()
     translation(tag='MTA005', type='MTA', text_pt_br="Framework", text_en="Framework").save()
     translation(tag='MTA006', type='MTA', text_pt_br="Frameworks", text_en="Frameworks").save()
     translation(tag='MDL012', type='MDL', text_pt_br="Linguagem de programação do framework",
