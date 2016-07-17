@@ -4,19 +4,23 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from portfolio.utils import base64_image
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 TRANSLATION_TYPES_CHOICES = (
     ('MDL', _('MDL036')),
     ('TTP', _('MDL035')),
     ('MTA', _('MDL037')),
-    ('MTP', _('MDL038'))
+    ('MTP', _('MDL038')),
+    ('GEN', _('MDL039')),
+    ('GTP', _('MDL040'))
 )
 
-
+# todo: show last tag of this type on admin
 class Translation(models.Model):
     created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))
     updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
-    tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20)
+    tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
     type = models.CharField(_('MDL033'), help_text=_('TTP033'), max_length=20, choices=TRANSLATION_TYPES_CHOICES)
     text = models.TextField(_('MDL034'), help_text=_('TTP034'))
 
@@ -29,6 +33,26 @@ class Translation(models.Model):
 
     def __unicode__(self):
         return "%s" % self.tag
+
+    def last_tag(self):
+        from django.db import connection
+        query = """ SELECT max(tag) FROM portfolio_translation WHERE tag LIKE '%s%%' """ % self.type
+        cursor = connection.cursor()
+        try:
+            cursor.execute(query)
+        except Exception as err:
+            raise err
+        else:
+            result = []
+            for row in cursor.fetchall():
+                result = row[0]
+        return result
+
+
+@receiver(post_save, sender=Translation, dispatch_uid="update_stock_count")
+def update_translation(sender, instance, **kwargs):
+    from django.core.management import call_command
+    call_command('make_translation')
 
 
 class BaseModel(models.Model):

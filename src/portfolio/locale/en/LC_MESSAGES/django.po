@@ -1,24 +1,24 @@
 
-            # SOME DESCRIPTIVE TITLE.
-            # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-            # This file is distributed under the same license as the PACKAGE package.
-            # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-            #
-            #, fuzzy
-            msgid ""
-            msgstr ""
-            "Project-Id-Version: PACKAGE VERSION\n"
-            "Report-Msgid-Bugs-To: \n"
-            "POT-Creation-Date: 2016-05-19 14:44+0000\n"
-            "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-            "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-            "Language-Team: LANGUAGE <LL@li.org>\n"
-            "Language: \n"
-            "MIME-Version: 1.0\n"
-            "Content-Type: text/plain; charset=UTF-8\n"
-            "Content-Transfer-Encoding: 8bit\n"
-            "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-            # File generated in: 2016-07-17 00:24:41 
+        # SOME DESCRIPTIVE TITLE.
+        # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+        # This file is distributed under the same license as the PACKAGE package.
+        # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+        #
+        #, fuzzy
+        msgid ""
+        msgstr ""
+        "Project-Id-Version: PACKAGE VERSION\n"
+        "Report-Msgid-Bugs-To: \n"
+        "POT-Creation-Date: 2016-05-19 14:44+0000\n"
+        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+        "Language-Team: LANGUAGE <LL@li.org>\n"
+        "Language: \n"
+        "MIME-Version: 1.0\n"
+        "Content-Type: text/plain; charset=UTF-8\n"
+        "Content-Transfer-Encoding: 8bit\n"
+        "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+        # File generated in: 2016-07-17 02:49:17 
 
 msgid "TTP001"
 msgstr "Date of the record creation"
@@ -176,15 +176,6 @@ msgstr "-"
 msgid "MTP021"
 msgstr "-"
 
-msgid "TTP032"
-msgstr "-"
-
-msgid "TTP033"
-msgstr "-"
-
-msgid "TTP034"
-msgstr "-"
-
 msgid "TTP035"
 msgstr "-"
 
@@ -239,9 +230,6 @@ msgstr "Logo"
 msgid "MTA003"
 msgstr "Linguagens de programação"
 
-msgid "MTA004"
-msgstr "Programming languages"
-
 msgid "MTA005"
 msgstr "Framework"
 
@@ -289,6 +277,12 @@ msgstr "Projects types"
 
 msgid "MDL015"
 msgstr "Project type"
+
+msgid "TTP034"
+msgstr "Translation text"
+
+msgid "TTP033"
+msgstr "Translation type"
 
 msgid "MDL016"
 msgstr "Programming language used"
@@ -373,4 +367,28 @@ msgstr "Meta"
 
 msgid "MDL038"
 msgstr "Meta tooltip"
+
+msgid "MTA004"
+msgstr "Programming languages"
+
+msgid "MDL039"
+msgstr "General text"
+
+msgid "MDL040"
+msgstr "Text tooltip"
+
+msgid "TTP032"
+msgstr "Translation unique identifier"
+
+msgid "TTP039"
+msgstr "-"
+
+msgid "TTP040"
+msgstr "-"
+
+msgid "MDL041"
+msgstr "Last tag"
+
+msgid "TTP041"
+msgstr "Last tag of this type"
 

@@ -13,8 +13,10 @@ class CustomModelAdminMixin(object):
 
 
 @admin.register(Translation)
-class TranslationAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
-    pass
+class TranslationAdmin(TabbedTranslationAdmin):
+    list_display = ('tag', 'type', 'text', 'type')
+    fields = ('last_tag', 'tag', 'type', 'text')
+    readonly_fields = ('last_tag', )
 
 
 @admin.register(Image)
