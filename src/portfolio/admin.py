@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from modeltranslation.admin import TabbedTranslationAdmin
 from portfolio.models import *
+from django.conf import settings
 
 
 class CustomModelAdminMixin(object):
@@ -15,8 +16,15 @@ class CustomModelAdminMixin(object):
 @admin.register(Translation)
 class TranslationAdmin(TabbedTranslationAdmin):
     list_display = ('tag', 'type', 'text', 'type')
-    fields = ('last_tag', 'tag', 'type', 'text')
+    fields = ('last_tag', 'type', 'tag', 'text')
     readonly_fields = ('last_tag', )
+
+    class Media:
+        import os
+        js_dir = os.path.join(settings.STATIC_URL, 'admin/js')
+        js = (
+            js_dir + '/admin-translation.js',
+        )
 
 
 @admin.register(Image)
