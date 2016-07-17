@@ -1,422 +1,376 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
-msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-15 16:01+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 
-#: portfolio/models.py:9
-msgid "MDL001"
-msgstr ""
+            # SOME DESCRIPTIVE TITLE.
+            # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+            # This file is distributed under the same license as the PACKAGE package.
+            # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+            #
+            #, fuzzy
+            msgid ""
+            msgstr ""
+            "Project-Id-Version: PACKAGE VERSION\n"
+            "Report-Msgid-Bugs-To: \n"
+            "POT-Creation-Date: 2016-05-19 14:44+0000\n"
+            "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+            "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+            "Language-Team: LANGUAGE <LL@li.org>\n"
+            "Language: \n"
+            "MIME-Version: 1.0\n"
+            "Content-Type: text/plain; charset=UTF-8\n"
+            "Content-Transfer-Encoding: 8bit\n"
+            "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+            # File generated in: 2016-07-17 00:24:41 
 
-#: portfolio/models.py:9
 msgid "TTP001"
-msgstr ""
+msgstr "Date of the record creation"
 
-#: portfolio/models.py:10
-msgid "MDL002"
-msgstr ""
-
-#: portfolio/models.py:10
 msgid "TTP002"
-msgstr ""
+msgstr "Date of the record update"
 
-#: portfolio/models.py:11
-msgid "MDL003"
-msgstr ""
-
-#: portfolio/models.py:11
 msgid "TTP003"
-msgstr ""
+msgstr "Record name"
 
-#: portfolio/models.py:12
-msgid "MDL004"
-msgstr ""
-
-#: portfolio/models.py:12
 msgid "TTP004"
-msgstr ""
+msgstr "Record descriptio"
 
-#: portfolio/models.py:25
-msgid "MDL005"
-msgstr ""
-
-#: portfolio/models.py:25
 msgid "TTP005"
-msgstr ""
+msgstr "Image title"
 
-#: portfolio/models.py:26
-msgid "MDL006"
-msgstr ""
-
-#: portfolio/models.py:26
 msgid "TTP006"
-msgstr ""
+msgstr "Image binary data"
 
-#: portfolio/models.py:27
-msgid "MDL007"
-msgstr ""
-
-#: portfolio/models.py:27
 msgid "TTP007"
-msgstr ""
+msgstr "Image type"
 
-#: portfolio/models.py:28
-msgid "MDL008"
-msgstr ""
-
-#: portfolio/models.py:28
 msgid "TTP008"
-msgstr ""
+msgstr "Image extension"
 
-#: portfolio/models.py:43
-msgid "MTA001"
-msgstr ""
+msgid "MTP001"
+msgstr "-"
 
-#: portfolio/models.py:44
-msgid "MTA002"
-msgstr ""
+msgid "MTP002"
+msgstr "-"
 
-#: portfolio/models.py:48
-msgid "MDL009"
-msgstr ""
-
-#: portfolio/models.py:48
 msgid "TTP009"
-msgstr ""
+msgstr "Site"
 
-#: portfolio/models.py:49
-msgid "MDL010"
-msgstr ""
-
-#: portfolio/models.py:49
 msgid "TTP010"
-msgstr ""
+msgstr "Proficiency"
 
-#: portfolio/models.py:50
-msgid "MDL011"
-msgstr ""
-
-#: portfolio/models.py:51
 msgid "TTP011"
-msgstr ""
+msgstr "Logo"
 
-#: portfolio/models.py:71
-msgid "MTA003"
-msgstr ""
+msgid "MTP003"
+msgstr "-"
 
-#: portfolio/models.py:72
-msgid "MTA004"
-msgstr ""
+msgid "MTP004"
+msgstr "-"
 
-#: portfolio/models.py:76
-msgid "MDL012"
-msgstr ""
+msgid "MTP005"
+msgstr "-"
 
-#: portfolio/models.py:76
+msgid "MTP006"
+msgstr "-"
+
 msgid "TTP012"
-msgstr ""
+msgstr "Framework's programming language"
 
-#: portfolio/models.py:79
-msgid "MTA005"
-msgstr ""
+msgid "MTP007"
+msgstr "-"
 
-#: portfolio/models.py:80
-msgid "MTA006"
-msgstr ""
+msgid "MTP008"
+msgstr "-"
 
-#: portfolio/models.py:84
-msgid "MDL013"
-msgstr ""
-
-#: portfolio/models.py:84
 msgid "TTP013"
-msgstr ""
+msgstr "If the database is SQL"
 
-#: portfolio/models.py:87
-msgid "MTA007"
-msgstr ""
+msgid "MTP009"
+msgstr "-"
 
-#: portfolio/models.py:88
-msgid "MTA008"
-msgstr ""
+msgid "MTP010"
+msgstr "-"
 
-#: portfolio/models.py:93
-msgid "MTA009"
-msgstr ""
+msgid "MTP011"
+msgstr "-"
 
-#: portfolio/models.py:94
-msgid "MTA010"
-msgstr ""
+msgid "MTP012"
+msgstr "-"
 
-#: portfolio/models.py:99
-msgid "MTA011"
-msgstr ""
+msgid "MTP013"
+msgstr "-"
 
-#: portfolio/models.py:100
-msgid "MTA012"
-msgstr ""
+msgid "MTP014"
+msgstr "-"
 
-#: portfolio/models.py:104
-msgid "MDL014"
-msgstr ""
-
-#: portfolio/models.py:104
 msgid "TTP014"
-msgstr ""
+msgstr "Tipo de tecnologia"
 
-#: portfolio/models.py:107
-msgid "MTA013"
-msgstr ""
+msgid "MTP015"
+msgstr "-"
 
-#: portfolio/models.py:108
-msgid "MTA014"
-msgstr ""
+msgid "MTP016"
+msgstr "-"
 
-#: portfolio/models.py:113
-msgid "MTA015"
-msgstr ""
-
-#: portfolio/models.py:114
-msgid "MTA016"
-msgstr ""
-
-#: portfolio/models.py:118
-msgid "MDL015"
-msgstr ""
-
-#: portfolio/models.py:118
 msgid "TTP015"
-msgstr ""
+msgstr "Tipo de projeto"
 
-#: portfolio/models.py:119
-msgid "MDL01"
-msgstr ""
+msgid "TTP016"
+msgstr "Programming languages used in the project"
 
-#: portfolio/models.py:119
-msgid "TTP01"
-msgstr ""
-
-#: portfolio/models.py:120
-msgid "MDL017"
-msgstr ""
-
-#: portfolio/models.py:120
 msgid "TTP017"
-msgstr ""
+msgstr "Frameworks used in the project"
 
-#: portfolio/models.py:121
-msgid "MDL018"
-msgstr ""
-
-#: portfolio/models.py:121
 msgid "TTP018"
-msgstr ""
+msgstr "Databases used in the project"
 
-#: portfolio/models.py:122
-msgid "MDL019"
-msgstr ""
-
-#: portfolio/models.py:122
 msgid "TTP019"
-msgstr ""
+msgstr "Technologies used in the project"
 
-#: portfolio/models.py:123 portfolio/models.py:124
-msgid "MDL020"
-msgstr ""
-
-#: portfolio/models.py:123 portfolio/models.py:124
 msgid "TTP020"
-msgstr ""
+msgstr "Webservers used in the project"
 
-#: portfolio/models.py:127
-msgid "MTA017"
-msgstr ""
+msgid "TTP021"
+msgstr "Project's images"
 
-#: portfolio/models.py:128
-msgid "MTA018"
-msgstr ""
+msgid "MTP017"
+msgstr "-"
 
-#: portfolio/models.py:137
-msgid "MDL022"
-msgstr ""
+msgid "MTP018"
+msgstr "-"
 
-#: portfolio/models.py:138
-msgid "MDL023"
-msgstr ""
+msgid "TTP022"
+msgstr "Education"
 
-#: portfolio/models.py:139
-msgid "MDL024"
-msgstr ""
+msgid "TTP023"
+msgstr "Experience"
 
-#: portfolio/models.py:144
-msgid "MDL025"
-msgstr ""
+msgid "TTP024"
+msgstr "Awards"
 
-#: portfolio/models.py:145
 msgid "TTP025"
-msgstr ""
+msgstr "Experience type"
 
-#: portfolio/models.py:146
-msgid "MDL026"
-msgstr ""
-
-#: portfolio/models.py:147
 msgid "TTP026"
-msgstr ""
+msgstr "Start month"
 
-#: portfolio/models.py:148
-msgid "MDL027"
-msgstr ""
-
-#: portfolio/models.py:149
 msgid "TTP027"
-msgstr ""
+msgstr "Start year"
 
-#: portfolio/models.py:150
-msgid "MDL028"
-msgstr ""
-
-#: portfolio/models.py:151
 msgid "TTP028"
-msgstr ""
+msgstr "End month"
 
-#: portfolio/models.py:152
-msgid "MDL029"
-msgstr ""
-
-#: portfolio/models.py:153
 msgid "TTP029"
-msgstr ""
+msgstr "End year"
 
-#: portfolio/models.py:154
-msgid "MDL030"
-msgstr ""
+msgid "TTP030"
+msgstr "Title"
 
-#: portfolio/models.py:155
-msgid "MDL031"
-msgstr ""
+msgid "TTP031"
+msgstr "Location"
 
-#: portfolio/models.py:156
-msgid "MDL032"
-msgstr ""
+msgid "MTP019"
+msgstr "-"
 
-#: portfolio/models.py:159
-msgid "MTA019"
-msgstr ""
+msgid "MTP020"
+msgstr "-"
 
-#: portfolio/settings.py:148
-msgid "English"
-msgstr ""
+msgid "MTP021"
+msgstr "-"
 
-#: portfolio/settings.py:149
-msgid "Brazilian Portuguese"
-msgstr ""
+msgid "TTP032"
+msgstr "-"
 
-#: portfolio/templates/portfolio/index.html:16
-msgid "about_me"
-msgstr ""
-"<p>I am a professional freelance Full Stack Developer<br> Involved with the "
-"latest technologies and design patterns <br> feel free to contact me.</p>"
+msgid "TTP033"
+msgstr "-"
 
-#: portfolio/templates/portfolio/index.html:46
-msgid "home"
-msgstr "Home"
+msgid "TTP034"
+msgstr "-"
 
-#: portfolio/templates/portfolio/index.html:47
-#: portfolio/templates/portfolio/index.html:66
-msgid "about"
-msgstr "About"
+msgid "TTP035"
+msgstr "-"
 
-#: portfolio/templates/portfolio/index.html:48
-#: portfolio/templates/portfolio/index.html:145
-msgid "resume"
-msgstr "Resume"
+msgid "TTP036"
+msgstr "-"
 
-#: portfolio/templates/portfolio/index.html:49
-#: portfolio/templates/portfolio/index.html:215
-msgid "skills"
-msgstr "Skills"
+msgid "TTP037"
+msgstr "-"
 
-#: portfolio/templates/portfolio/index.html:50
-#: portfolio/templates/portfolio/index.html:330
-msgid "projects"
+msgid "TTP038"
+msgstr "-"
+
+msgid "MDL001"
+msgstr "Creation date"
+
+msgid "MDL002"
+msgstr "Update date"
+
+msgid "MDL003"
+msgstr "Name"
+
+msgid "MDL004"
+msgstr "Description"
+
+msgid "MDL005"
+msgstr "Title"
+
+msgid "MDL006"
+msgstr "Binary data"
+
+msgid "MDL007"
+msgstr "MIME type"
+
+msgid "MDL008"
+msgstr "Extension"
+
+msgid "MTA001"
+msgstr "Image"
+
+msgid "MTA002"
+msgstr "Images"
+
+msgid "MDL009"
+msgstr "Site"
+
+msgid "MDL010"
+msgstr "Proficiency"
+
+msgid "MDL011"
+msgstr "Logo"
+
+msgid "MTA003"
+msgstr "Linguagens de programação"
+
+msgid "MTA004"
+msgstr "Programming languages"
+
+msgid "MTA005"
+msgstr "Framework"
+
+msgid "MTA006"
+msgstr "Frameworks"
+
+msgid "MDL012"
+msgstr "Framework's programming language"
+
+msgid "MTA007"
+msgstr "Database"
+
+msgid "MTA008"
+msgstr "Databases"
+
+msgid "MDL013"
+msgstr "SQL"
+
+msgid "MTA009"
+msgstr "Webserver"
+
+msgid "MTA010"
+msgstr "Webservers"
+
+msgid "MTA011"
+msgstr "Technology type"
+
+msgid "MTA012"
+msgstr "Technology types"
+
+msgid "MTA013"
+msgstr "Technology"
+
+msgid "MTA014"
+msgstr "Technologies"
+
+msgid "MDL014"
+msgstr "Technology type"
+
+msgid "MTA015"
+msgstr "Project type"
+
+msgid "MTA016"
+msgstr "Projects types"
+
+msgid "MDL015"
+msgstr "Project type"
+
+msgid "MDL016"
+msgstr "Programming language used"
+
+msgid "MDL017"
+msgstr "Framework used"
+
+msgid "MDL018"
+msgstr "Database used"
+
+msgid "MDL019"
+msgstr "Technology used"
+
+msgid "MDL020"
+msgstr "Webserver used"
+
+msgid "MDL021"
+msgstr "Project's images"
+
+msgid "MTA017"
+msgstr "Project"
+
+msgid "MTA018"
 msgstr "Projects"
 
-#: portfolio/templates/portfolio/index.html:55
-#: portfolio/templates/portfolio/index.html:679
-msgid "contact"
-msgstr "Contact"
+msgid "MDL022"
+msgstr "Education"
 
-#: portfolio/templates/portfolio/index.html:76
-#: portfolio/templates/portfolio/index.html:688
-msgid "Name"
-msgstr ""
+msgid "MDL023"
+msgstr "Experience"
 
-#: portfolio/templates/portfolio/index.html:77
-msgid "DOB"
-msgstr "Date of birth"
+msgid "MDL024"
+msgstr "Awards"
 
-#: portfolio/templates/portfolio/index.html:78
-msgid "address"
-msgstr "Address"
+msgid "MDL025"
+msgstr "Experience type"
 
-#: portfolio/templates/portfolio/index.html:79
-msgid "nationality"
-msgstr "Nationality"
+msgid "MDL026"
+msgstr "Start month"
 
-#: portfolio/templates/portfolio/index.html:79
-msgid "nationality_string"
-msgstr "Brazilian"
+msgid "MDL027"
+msgstr "Start year"
 
-#: portfolio/templates/portfolio/index.html:80
-msgid "phone"
-msgstr "Phone"
+msgid "MDL028"
+msgstr "End month"
 
-#: portfolio/templates/portfolio/index.html:149
-msgid "Education"
-msgstr ""
+msgid "MDL029"
+msgstr "End year"
 
-#: portfolio/templates/portfolio/index.html:181
-msgid "Experience"
-msgstr ""
+msgid "MDL030"
+msgstr "Title"
 
-#: portfolio/templates/portfolio/index.html:332
-msgid "all"
-msgstr "All"
+msgid "MDL031"
+msgstr "Location"
 
-#: portfolio/templates/portfolio/index.html:488
-msgid "experience_years"
-msgstr "Years of experience"
+msgid "MTA019"
+msgstr "Resume"
 
-#: portfolio/templates/portfolio/index.html:493
-msgid "done_projects"
-msgstr "Projects done"
+msgid "MTA020"
+msgstr "Translation"
 
-#: portfolio/templates/portfolio/index.html:684
-msgid "contact_me_header"
-msgstr "Send me a message"
+msgid "MTA021"
+msgstr "Translations"
 
-#: portfolio/templates/portfolio/index.html:698
-msgid "subject"
-msgstr "Subject"
+msgid "MDL032"
+msgstr "tag"
 
-#: portfolio/templates/portfolio/index.html:703
-msgid "message"
-msgstr "Message"
+msgid "MDL033"
+msgstr "type"
 
-#: portfolio/templates/portfolio/index.html:726
-msgid "phone_number"
-msgstr "Phone Number"
+msgid "MDL034"
+msgstr "Text"
+
+msgid "MDL035"
+msgstr "Model tooltip"
+
+msgid "MDL036"
+msgstr "Model"
+
+msgid "MDL037"
+msgstr "Meta"
+
+msgid "MDL038"
+msgstr "Meta tooltip"
+
