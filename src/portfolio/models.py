@@ -16,7 +16,7 @@ TRANSLATION_TYPES_CHOICES = (
     ('GTP', _('MDL040'))
 )
 
-# todo: show last tag of this type on admin
+
 class Translation(models.Model):
     created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))
     updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
