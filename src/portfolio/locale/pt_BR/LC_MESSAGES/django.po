@@ -18,7 +18,7 @@
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
         "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-        # Aquivo gerado em: 2016-07-17 02:49:17 
+        # Aquivo gerado em: 2016-07-21 17:56:48 
 
 msgid "TTP001"
 msgstr "Data da criação do registro"
@@ -344,9 +344,6 @@ msgstr "Currículo"
 msgid "MTA020"
 msgstr "Tradução"
 
-msgid "MTA021"
-msgstr "Traduções"
-
 msgid "MDL032"
 msgstr "tag"
 
@@ -386,9 +383,15 @@ msgstr "-"
 msgid "TTP040"
 msgstr "-"
 
-msgid "MDL041"
-msgstr "Ultima tag"
-
 msgid "TTP041"
 msgstr "Ultima tag cadastrada desse tipo"
+
+msgid "MDL041"
+msgstr "Ultima tag1"
+
+msgid "MTA021"
+msgstr "Traduções"
+
+msgid "MTA022"
+msgstr "Configuração do site"
 

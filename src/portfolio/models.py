@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from portfolio.utils import base64_image
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.conf import settings
+
 
 TRANSLATION_TYPES_CHOICES = (
     ('MDL', _('MDL036')),
@@ -49,10 +51,10 @@ class Translation(models.Model):
         return result
 
 
-@receiver(post_save, sender=Translation, dispatch_uid="update_stock_count")
-def update_translation(sender, instance, **kwargs):
-    from django.core.management import call_command
-    call_command('make_translation')
+# @receiver(post_save, sender=Translation, dispatch_uid="update_stock_count")
+# def update_translation(sender, instance, **kwargs):
+#     from django.core.management import call_command
+#     call_command('make_translation')
 
 
 class BaseModel(models.Model):
@@ -79,9 +81,9 @@ class Image(BaseModel):
 
     def image_tag(self):
         if self.mimetype:
-            return u'<img src="%s" width="300px"/>' % (base64_image(self.mimetype, self.image_string))
+            return u'<img src="%s" width="300px"/>' % base64_image(self.mimetype, self.image_string)
         else:
-            return u'<img src="%s"  alt="placeholder" width="300px"/>' % (settings.PLACEHOLDER_B64_STRING)
+            return u'<img src="%s"  alt="placeholder" width="300px"/>' % settings.PLACEHOLDER_B64_STRING
 
     image_tag.short_description = 'Image'
     image_tag.allow_tags = True
@@ -207,3 +209,12 @@ class Resume(BaseModel):
 
     class Meta:
         verbose_name = _('MTA019')
+
+
+class SiteSettings(BaseModel):
+    tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
+    value = models.TextField(_('MDL034'), help_text=_('TTP034'))
+
+    class Meta:
+        verbose_name = _('MTA022')
+        verbose_name_plural = _('MTA023')

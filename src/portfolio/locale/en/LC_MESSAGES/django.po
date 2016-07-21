@@ -18,7 +18,7 @@
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
         "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-        # File generated in: 2016-07-17 02:49:17 
+        # File generated in: 2016-07-21 17:56:48 
 
 msgid "TTP001"
 msgstr "Date of the record creation"
@@ -344,9 +344,6 @@ msgstr "Resume"
 msgid "MTA020"
 msgstr "Translation"
 
-msgid "MTA021"
-msgstr "Translations"
-
 msgid "MDL032"
 msgstr "tag"
 
@@ -386,9 +383,15 @@ msgstr "-"
 msgid "TTP040"
 msgstr "-"
 
-msgid "MDL041"
-msgstr "Last tag"
-
 msgid "TTP041"
 msgstr "Last tag of this type"
+
+msgid "MDL041"
+msgstr "Last tag1"
+
+msgid "MTA021"
+msgstr "Translations"
+
+msgid "MTA022"
+msgstr "Site settings"
 
