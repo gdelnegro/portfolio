@@ -12,6 +12,11 @@ class TranslationModelTranslationOptions(TranslationOptions):
     fields = ('text',)
     required_languages = ('en', 'pt-br')
 
+
+class SiteSettingsModelTranslationOptions(TranslationOptions):
+    fields = ('value',)
+    required_languages = ('en', 'pt-br')
+
 translator.register(BaseModel, BaseModelTranslationOptions)
 translator.register(Translation, TranslationModelTranslationOptions)
 translator.register(ProgrammingLanguages, BaseModelTranslationOptions)
@@ -23,4 +28,4 @@ translator.register(Technologies, BaseModelTranslationOptions)
 translator.register(ProjectTypes, BaseModelTranslationOptions)
 translator.register(Projects, BaseModelTranslationOptions)
 translator.register(Resume, BaseModelTranslationOptions)
-
+translator.register(SiteSettings, SiteSettingsModelTranslationOptions)

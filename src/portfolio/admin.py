@@ -77,3 +77,8 @@ class Projects(CustomModelAdminMixin, TabbedTranslationAdmin):
 @admin.register(Resume)
 class Resume(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
+
+
+@admin.register(SiteSettings)
+class SiteSettings(CustomModelAdminMixin, TabbedTranslationAdmin):
+    pass
