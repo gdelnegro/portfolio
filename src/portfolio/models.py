@@ -211,7 +211,9 @@ class Resume(BaseModel):
         verbose_name = _('MTA019')
 
 
-class SiteSettings(BaseModel):
+class SiteSettings(models.Model):
+    created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))
+    updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
     value = models.TextField(_('MDL034'), help_text=_('TTP034'))
 
