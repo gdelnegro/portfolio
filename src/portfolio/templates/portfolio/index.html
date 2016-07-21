@@ -16,10 +16,9 @@
         {% trans "about_me" %}
   <div class="social-icons">
     <ul class="list-inline">
-      <li><a href="https://twitter.com/gdelnegro" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      <li><a href="https://github.com/gdelnegro" target="_blank"><i class="fa fa-github"></i></a></li>
+      <li><a href="{{ settings.OWNER_INFO.git }}" target="_blank"><i class="fa fa-github"></i></a></li>
       <li><a href="#" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
-      <li><a href="https://br.linkedin.com/in/gustavo-del-negro-98a97933" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="{{ settings.OWNER_INFO.linkedin }}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
     </ul>
   </div> <!-- /.social-icons -->
     </div>
@@ -713,8 +712,8 @@
             <i class="fa fa-map-marker"></i>
             <address>
               <strong>Address/Street</strong>
-              Travessa Equador, 23<br>
-              São José dos Pinhais, PR, BR<br>
+              {{ settings.OWNER_INFO.address }}<br>
+              {{ settings.OWNER_INFO.city }}, {{ settings.OWNER_INFO.region }}, {{ settings.OWNER_INFO.country }}<br>
             </address>
           </div>
 
@@ -747,7 +746,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="copyright text-center">
-          <p>&copy; Gustavo Del Negro {% now "Y" %}</p>
+          <p>&copy; {{ settings.DEVELOPER_NAME }} {% now "Y" %}</p>
         </div>
       </div>
     </div>

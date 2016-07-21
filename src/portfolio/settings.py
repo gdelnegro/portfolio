@@ -161,3 +161,16 @@ PLACEHOLDER_B64_STRING = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEs
 
 MOBILE_NUMBER = "(55) 41 9646-5130"
 CONTACT_EMAIL = "gustavodelnegro@gmail.com"
+
+OWNER_INFO = {
+    'git': "https://github.com/gdelnegro",
+    'linkedin': "https://br.linkedin.com/in/gustavo-del-negro-98a97933",
+    'address': "Travessa Equador, 23",
+    'city': "São José dos Pinhais",
+    'region': "PR",
+    'country': "BR",
+    'LAT': "41.372641",
+    'LONG': "-74.687387"
+}
+
+DEVELOPER_NAME = "Gustavo Del Negro"
