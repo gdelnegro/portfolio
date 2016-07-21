@@ -18,7 +18,7 @@
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
         "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-        # File generated in: 2016-07-21 17:56:48 
+        # File generated in: 2016-07-21 18:11:59 
 
 msgid "TTP001"
 msgstr "Date of the record creation"
@@ -393,5 +393,8 @@ msgid "MTA021"
 msgstr "Translations"
 
 msgid "MTA022"
+msgstr "Site settings"
+
+msgid "MTA023"
 msgstr "Site settings"
 

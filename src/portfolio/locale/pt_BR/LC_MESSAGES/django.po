@@ -18,7 +18,7 @@
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
         "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-        # Aquivo gerado em: 2016-07-21 17:56:48 
+        # Aquivo gerado em: 2016-07-21 18:11:59 
 
 msgid "TTP001"
 msgstr "Data da criação do registro"
@@ -394,4 +394,7 @@ msgstr "Traduções"
 
 msgid "MTA022"
 msgstr "Configuração do site"
+
+msgid "MTA023"
+msgstr "Parâmetros do Site"
 
