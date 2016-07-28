@@ -13,6 +13,11 @@ class CustomModelAdminMixin(object):
         super(CustomModelAdminMixin, self).__init__(model, admin_site)
 
 
+@admin.register(TranslationType)
+class TranslationTypeAdmin(TabbedTranslationAdmin):
+    pass
+
+
 @admin.register(Translation)
 class TranslationAdmin(TabbedTranslationAdmin):
     list_display = ('tag', 'type', 'text', 'type')

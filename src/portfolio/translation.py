@@ -19,6 +19,7 @@ class SiteSettingsModelTranslationOptions(TranslationOptions):
 
 translator.register(BaseModel, BaseModelTranslationOptions)
 translator.register(Translation, TranslationModelTranslationOptions)
+translator.register(TranslationType, TranslationModelTranslationOptions)
 translator.register(ProgrammingLanguages, BaseModelTranslationOptions)
 translator.register(Frameworks, BaseModelTranslationOptions)
 translator.register(Databases, BaseModelTranslationOptions)
