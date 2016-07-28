@@ -42,7 +42,7 @@ class Translation(models.Model):
     created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))
     updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
-    type = models.ForeignKey(TranslationType, on_delete=None, related_name="translation_translation_type", verbose_name=_('MDL03'), help_text=_('TTP033'))
+    type = models.ForeignKey(TranslationType, on_delete=None, related_name="translation_translation_type", verbose_name=_('MDL033'), help_text=_('TTP033'))
     text = models.TextField(_('MDL034'), help_text=_('TTP034'))
     migration_created = models.BooleanField(_('Migration'), default=False)
 
