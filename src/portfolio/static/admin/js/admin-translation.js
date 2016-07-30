@@ -4,6 +4,7 @@
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
       jQuery(".field-last_tag").children('div').children('p').text("");
+      toggleFields();
       if (document.URL.indexOf("add") > -1){
         clearValue();
         document.getElementById("id_type").addEventListener("change", updateTag);
@@ -15,23 +16,37 @@ function updateTag() {
     clearValue();
     var x = document.getElementById("id_type");
     document.getElementById("id_tag").value = x.value
-    getLastTag(x.value);
+    var text = x.options[x.selectedIndex].text;
+    getLastTag(jQuery.trim(text.split("-", 1)));
 }
 
 function clearValue(){
     var x = document.getElementById("id_tag")
-    x.value=""
+    x.value="";
 }
 
-function getLastTag(translationType){
+function getLastTag(translationTag){
     jQuery.ajax({
-        url: "/api/translation?type="+translationType,
+        url: "/api/last_translation_tag/"+translationTag+"/",
         context: document.body,
         success: function(data){
-            if(data.count > 0){
-                jQuery(".field-last_tag").children('div').children('p').text(data.results[0]['last_tag']);
+            var result = data.result;
+            if(Object.keys(result).length > 0){
+                // '<div class="form-row field-last_tag"> <div> <label>Last tag:</label> <p>TTP038</p> </div> </div>'
+                var tag = translationTag+(parseInt(result['last_id'])+1)
+                jQuery(".field-last_tag").children('div').children('p').text(result['last_tag']);
+                jQuery("#id_tag").val(tag);
+            }else{
+                var tag = translationTag+"1"
+                jQuery(".field-last_tag").children('div').children('p').text(" - ");
+                jQuery("#id_tag").val(tag);
             }
         }
     });
+}
+
+function toggleFields(){
+    jQuery(".field-tooltip_tag").toggle();
+    jQuery(".field-tooltip_text").toggle();
 }
 
