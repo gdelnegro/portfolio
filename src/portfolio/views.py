@@ -5,11 +5,13 @@ from portfolio.models import *
 from portfolio.serializers import *
 from rest_framework import viewsets
 from rest_framework import filters
+from rest_framework import views
+from rest_framework.response import Response
+from rest_framework import status
+
 
 def index(request):
     from datetime import date
-    # return HttpResponse("Hello, world. You're at the polls index.")
-    # return render_to_response('portfolio/index.html', locals())
     user_lang = request.META.get('HTTP_ACCEPT_LANGUAGE')
     if "pt-BR" in user_lang:
         pt_br = True
@@ -26,7 +28,7 @@ def index(request):
         'resume_education': Resume.objects.filter(type="ED"),
         'resume_experiences': Resume.objects.filter(type="XP"),
         'years': years_of_experience,
-        })
+    })
 
 
 class TranslationViewSet(viewsets.ReadOnlyModelViewSet):
@@ -37,3 +39,13 @@ class TranslationViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = TranslationSerializer
     filter_backends = (filters.DjangoFilterBackend,)
     filter_fields = ('id', 'tag', 'type')
+
+
+class LastTranslationTagView(views.APIView):
+    def get(self, request, *args, **kwargs):
+        if len(kwargs['tag']) > 0:
+            myClass = LastTranslationTag(kwargs['tag'], *args, **kwargs)
+            result = myClass.return_last_tag()
+        else:
+            result = dict(result=dict())
+        return Response(result, status=status.HTTP_200_OK)

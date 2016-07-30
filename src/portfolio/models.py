@@ -24,7 +24,7 @@ class TranslationType(models.Model):
     updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
     text = models.TextField(_('MDL034'), help_text=_('TTP034'))
-    has_tooltip = models.NullBooleanField(_('Tooltip'), default=True)
+    has_tooltip = models.BooleanField(_('Tooltip'), default=True)
     tooltip_tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
 
     class Meta:
@@ -41,10 +41,12 @@ class TranslationType(models.Model):
 class Translation(models.Model):
     created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))
     updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
+    type = models.ForeignKey(TranslationType, on_delete=None, related_name="translation_translation_type",
+                             verbose_name=_('MDL033'), help_text=_('TTP033'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
-    type = models.ForeignKey(TranslationType, on_delete=None, related_name="translation_translation_type", verbose_name=_('MDL033'), help_text=_('TTP033'))
     text = models.TextField(_('MDL034'), help_text=_('TTP034'))
     migration_created = models.BooleanField(_('Migration'), default=False)
+    is_tooltip = models.BooleanField(_('Tooltip'), default=False)
 
     class Meta:
         verbose_name = _('MTA020')
@@ -58,7 +60,7 @@ class Translation(models.Model):
 
     def last_tag(self):
         from django.db import connection
-        query = """ SELECT max(tag) FROM portfolio_translation WHERE tag LIKE '%s%%' """ % self.type
+        query = """ SELECT max(tag) FROM portfolio_translation WHERE tag LIKE '%s%%' """ % self.tag[:3]
         cursor = connection.cursor()
         try:
             cursor.execute(query)
@@ -75,6 +77,30 @@ class Translation(models.Model):
 # def update_translation(sender, instance, **kwargs):
 #     from django.core.management import call_command
 #     call_command('make_translation')
+
+class LastTranslationTag(object):
+    translation_tag = None
+
+    def __init__(self, translation_tag, *args, **kwargs):
+        self.translation_tag = translation_tag
+
+    def return_last_tag(self):
+        from django.db import connection
+        query = """ SELECT max(tag) FROM portfolio_translation WHERE tag LIKE '%s%%' """ % self.translation_tag
+        cursor = connection.cursor()
+        try:
+            cursor.execute(query)
+        except Exception as err:
+            raise err
+        else:
+            result = []
+            for row in cursor.fetchall():
+                result = row[0]
+            if result:
+                import re
+                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0]))
+            else:
+                return dict(result=dict())
 
 
 class BaseModel(models.Model):

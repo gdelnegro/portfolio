@@ -5,6 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 from modeltranslation.admin import TabbedTranslationAdmin
 from portfolio.models import *
 from django.conf import settings
+from portfolio.forms import *
 
 
 class CustomModelAdminMixin(object):
@@ -20,9 +21,9 @@ class TranslationTypeAdmin(TabbedTranslationAdmin):
 
 @admin.register(Translation)
 class TranslationAdmin(TabbedTranslationAdmin):
+    form = TranslationForm
     list_display = ('tag', 'type', 'text', 'type')
-    fields = ('last_tag', 'type', 'tag', 'text')
-    readonly_fields = ('last_tag', )
+    # inlines = [TranslationInline, ]
 
     class Media:
         import os

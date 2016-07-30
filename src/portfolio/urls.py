@@ -16,17 +16,18 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
-from portfolio import views
+from portfolio.views import *
 from rest_framework import routers
 
 router = routers.DefaultRouter()
-router.register(r'translation', views.TranslationViewSet)
+router.register(r'translation', TranslationViewSet)
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
     url(r'^api/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^api/last_translation_tag/(?P<tag>\w+)[/]?$', LastTranslationTagView.as_view(), name='get_last_translation_tag'),
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name='index'),
+    url(r'^$', index, name='index'),
 ]
 
 #urlpatterns = i18n_patterns('',
