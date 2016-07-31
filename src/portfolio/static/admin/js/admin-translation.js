@@ -3,6 +3,7 @@
  */
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
+      document.getElementById('id_tag').readOnly = true;
       jQuery(".field-last_tag").children('div').children('p').text("");
       toggleFields();
       if (document.URL.indexOf("add") > -1){
@@ -36,11 +37,32 @@ function getLastTag(translationTag){
                 var tag = translationTag+(parseInt(result['last_id'])+1)
                 jQuery(".field-last_tag").children('div').children('p').text(result['last_tag']);
                 jQuery("#id_tag").val(tag);
+                if (result['has_tooltip']){
+                    // enable tooltip fields
+                    toggleFields();
+                }
             }else{
                 var tag = translationTag+"1"
                 jQuery(".field-last_tag").children('div').children('p').text(" - ");
                 jQuery("#id_tag").val(tag);
+                //check if has tooltip
+                if (checkTooltip()){
+                    // enable tooltip fields
+                    toggleFields();
+                }
             }
+        }
+    });
+}
+
+function checkTooltip(){
+    jQuery.ajax({
+        url: "/api/translation_type/",
+        data: {id: document.getElementById("id_type").value},
+        context: document.body,
+        success: function (data) {
+            var result=data[0];
+            return result['has_tooltip']
         }
     });
 }

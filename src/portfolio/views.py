@@ -41,6 +41,13 @@ class TranslationViewSet(viewsets.ReadOnlyModelViewSet):
     filter_fields = ('id', 'tag', 'type')
 
 
+class TranslationTypeViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = TranslationType.objects.all()
+    serializer_class = TranslationTypeSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('id', 'tag')
+
+
 class LastTranslationTagView(views.APIView):
     def get(self, request, *args, **kwargs):
         if len(kwargs['tag']) > 0:

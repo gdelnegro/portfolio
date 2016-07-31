@@ -98,7 +98,8 @@ class LastTranslationTag(object):
                 result = row[0]
             if result:
                 import re
-                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0]))
+                tag = Translation.objects.get(tag=result)
+                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.text, has_tooltip=tag.type.has_tooltip))
             else:
                 return dict(result=dict())
 
