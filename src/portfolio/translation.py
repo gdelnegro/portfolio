@@ -9,7 +9,12 @@ class BaseModelTranslationOptions(TranslationOptions):
 
 
 class TranslationModelTranslationOptions(TranslationOptions):
-    fields = ('text',)
+    fields = ('text', 'tooltip_text')
+    required_languages = ('en', 'pt-br')
+
+
+class TranslationTypeModelTranslationOptions(TranslationOptions):
+    fields = ('name',)
     required_languages = ('en', 'pt-br')
 
 
@@ -19,7 +24,7 @@ class SiteSettingsModelTranslationOptions(TranslationOptions):
 
 translator.register(BaseModel, BaseModelTranslationOptions)
 translator.register(Translation, TranslationModelTranslationOptions)
-translator.register(TranslationType, TranslationModelTranslationOptions)
+translator.register(TranslationType, TranslationTypeModelTranslationOptions)
 translator.register(ProgrammingLanguages, BaseModelTranslationOptions)
 translator.register(Frameworks, BaseModelTranslationOptions)
 translator.register(Databases, BaseModelTranslationOptions)

@@ -23,7 +23,7 @@ class TranslationType(models.Model):
     created_at = models.DateTimeField(_('MDL001'), auto_now_add=True, null=True, blank=True, help_text=_('TTP001'))
     updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
-    text = models.TextField(_('MDL034'), help_text=_('TTP034'))
+    name = models.TextField(_('MDL034'), help_text=_('TTP034'))
     has_tooltip = models.BooleanField(_('Tooltip'), default=True)
     tooltip_tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
 
@@ -32,10 +32,10 @@ class TranslationType(models.Model):
         verbose_name_plural = _('MTA021')
 
     def __str__(self):
-        return "%s - %s" % (self.tag, self.text)
+        return "%s - %s" % (self.tag, self.name)
 
     def __unicode__(self):
-        return "%s - %s" % (self.tag, self.text)
+        return "%s - %s" % (self.tag, self.name)
 
 
 class Translation(models.Model):
@@ -45,8 +45,9 @@ class Translation(models.Model):
                              verbose_name=_('MDL033'), help_text=_('TTP033'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
     text = models.TextField(_('MDL034'), help_text=_('TTP034'))
+    tooltip_tag = models.CharField(_('ToolTipTag'), help_text=_('TTP032'), max_length=20)
+    tooltip_text = models.TextField(_('ToolTipText'), help_text=_('TTP034'))
     migration_created = models.BooleanField(_('Migration'), default=False)
-    is_tooltip = models.BooleanField(_('Tooltip'), default=False)
 
     class Meta:
         verbose_name = _('MTA020')
@@ -99,7 +100,7 @@ class LastTranslationTag(object):
             if result:
                 import re
                 tag = Translation.objects.get(tag=result)
-                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.text, has_tooltip=tag.type.has_tooltip))
+                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.text, has_tooltip=tag.type.has_tooltip, tooltip_tag=tag.type.tooltip_tag))
             else:
                 return dict(result=dict())
 

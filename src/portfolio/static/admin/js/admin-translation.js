@@ -4,11 +4,12 @@
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
       document.getElementById('id_tag').readOnly = true;
+      document.getElementById('id_tooltip_tag').readOnly = true;
       jQuery(".field-last_tag").children('div').children('p').text("");
-      toggleFields();
       if (document.URL.indexOf("add") > -1){
-        clearValue();
-        document.getElementById("id_type").addEventListener("change", updateTag);
+          toggleFields();
+          clearValue();
+          document.getElementById("id_type").addEventListener("change", updateTag);
       }
   }
 }
@@ -33,38 +34,49 @@ function getLastTag(translationTag){
         success: function(data){
             var result = data.result;
             if(Object.keys(result).length > 0){
-                // '<div class="form-row field-last_tag"> <div> <label>Last tag:</label> <p>TTP038</p> </div> </div>'
                 var tag = translationTag+(parseInt(result['last_id'])+1)
                 jQuery(".field-last_tag").children('div').children('p').text(result['last_tag']);
                 jQuery("#id_tag").val(tag);
                 if (result['has_tooltip']){
-                    // enable tooltip fields
-                    toggleFields();
+                    if (jQuery(".field-tooltip_tag").css("display") != "block"){
+                        toggleFields();
+                    }
+                    jQuery("#id_tooltip_tag").val(result['tooltip_tag']+(parseInt(result['last_id'])+1))
                 }
             }else{
                 var tag = translationTag+"1"
                 jQuery(".field-last_tag").children('div').children('p').text(" - ");
                 jQuery("#id_tag").val(tag);
                 //check if has tooltip
-                if (checkTooltip()){
+                var translationTypeDetails = getTranslationTypeDetails();
+                if (translationTypeDetails[0]){
                     // enable tooltip fields
-                    toggleFields();
+                    if (jQuery(".field-tooltip_tag").css("display") != "block"){
+                        toggleFields();
+                    }
+                    jQuery("#id_tooltip_tag").val(translationTypeDetails[1]+"1")
                 }
             }
         }
     });
 }
 
-function checkTooltip(){
+function getTranslationTypeDetails(){
+    var flag = false;
+    var tooltip_tag = null;
     jQuery.ajax({
         url: "/api/translation_type/",
         data: {id: document.getElementById("id_type").value},
         context: document.body,
+        async: false,
         success: function (data) {
-            var result=data[0];
-            return result['has_tooltip']
+            flag = data[0]['has_tooltip'];
+            if (flag){
+                tooltip_tag = data[0]['tooltip_tag'];
+            }
         }
     });
+    return [flag, tooltip_tag];
 }
 
 function toggleFields(){

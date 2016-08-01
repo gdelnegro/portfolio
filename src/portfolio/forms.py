@@ -67,8 +67,6 @@ class TranslationForm(forms.ModelForm):
     tooltip_text = forms.CharField(label=_('MDL034'))
 
     def save(self, commit=False):
-        translation = super(TranslationForm, self).save(commit=commit)
-        translation.save()
         tooltip_tag = self.cleaned_data.get('tooltip_tag', None)
         tooltip_text = self.cleaned_data.get('tooltip_text', None)
 
@@ -78,6 +76,7 @@ class TranslationForm(forms.ModelForm):
             tooltip.text = tooltip_text
             tooltip.type = self.cleaned_data.get('type', None)
             tooltip.save()
+        return super(TranslationForm, self).save(commit=commit)
 
     class Meta:
         model = Translation

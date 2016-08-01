@@ -1,0 +1,17 @@
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (1, 'contenttypes', '0001_initial', '2016-07-28 08:47:42.330069 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (2, 'auth', '0001_initial', '2016-07-28 08:47:42.435744 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (3, 'admin', '0001_initial', '2016-07-28 08:47:42.464092 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (4, 'admin', '0002_logentry_remove_auto_add', '2016-07-28 08:47:42.477571 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (5, 'contenttypes', '0002_remove_content_type_name', '2016-07-28 08:47:42.526328 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (6, 'auth', '0002_alter_permission_name_max_length', '2016-07-28 08:47:42.543581 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (7, 'auth', '0003_alter_user_email_max_length', '2016-07-28 08:47:42.563595 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (8, 'auth', '0004_alter_user_username_opts', '2016-07-28 08:47:42.582420 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (9, 'auth', '0005_alter_user_last_login_null', '2016-07-28 08:47:42.598818 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (10, 'auth', '0006_require_contenttypes_0002', '2016-07-28 08:47:42.601155 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (11, 'auth', '0007_alter_validators_add_error_messages', '2016-07-28 08:47:42.613563 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (12, 'portfolio', '0001_initial', '2016-07-28 08:47:42.966716 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (13, 'portfolio', '0002_translation_type_data_20160728_1129', '2016-07-28 08:47:42.976237 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (14, 'portfolio', '0003_translation_data_20160728_1133', '2016-07-28 08:48:53.657439 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (15, 'sessions', '0001_initial', '2016-07-28 08:48:53.668482 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (16, 'portfolio', '0004_auto_20160730_1141', '2016-07-30 08:41:32.500354 -03:00');
+INSERT INTO public.django_migrations (id, app, name, applied) VALUES (17, 'portfolio', '0004_auto_20160730_1204', '2016-07-30 09:05:30.418807 -03:00');

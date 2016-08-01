@@ -1,0 +1,4 @@
+INSERT INTO public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) VALUES (1, '2016-07-31 20:27:14.834516 -03:00', '128', 'MDL39', 1, 'Added.', 8, 1);
+INSERT INTO public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) VALUES (2, '2016-07-31 20:29:22.204944 -03:00', '128', 'MDL39', 3, '', 8, 1);
+INSERT INTO public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) VALUES (3, '2016-07-31 20:29:22.214229 -03:00', '127', 'Teste', 3, '', 8, 1);
+INSERT INTO public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) VALUES (4, '2016-07-31 20:34:46.926174 -03:00', '130', 'MDL39', 1, 'Added.', 8, 1);

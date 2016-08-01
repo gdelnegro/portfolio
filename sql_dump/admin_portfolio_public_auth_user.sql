@@ -1,0 +1,1 @@
+INSERT INTO public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) VALUES (1, 'pbkdf2_sha256$24000$gnGgOhTglJ9I$E6uUMyDZzKdIkHLSYefXEzojiVcd0e/nA7rz2/0KcDk=', '2016-07-30 18:52:46.681441 -03:00', true, 'gdelnegro', '', '', '', true, true, '2016-07-28 08:49:17.999075 -03:00');
