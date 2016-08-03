@@ -100,7 +100,7 @@ class LastTranslationTag(object):
             if result:
                 import re
                 tag = Translation.objects.get(tag=result)
-                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.text, has_tooltip=tag.type.has_tooltip, tooltip_tag=tag.type.tooltip_tag))
+                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.name, has_tooltip=tag.type.has_tooltip, tooltip_tag=tag.type.tooltip_tag))
             else:
                 return dict(result=dict())
 

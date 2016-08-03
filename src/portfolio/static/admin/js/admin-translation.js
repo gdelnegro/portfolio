@@ -81,6 +81,6 @@ function getTranslationTypeDetails(){
 
 function toggleFields(){
     jQuery(".field-tooltip_tag").toggle();
-    jQuery(".field-tooltip_text").toggle();
+    jQuery('[class*=" field-tooltip_text_"]').parents(".ui-tabs").toggle();
 }
 

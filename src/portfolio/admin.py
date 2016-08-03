@@ -26,6 +26,10 @@ class TranslationAdmin(TabbedTranslationAdmin):
     list_display = ('tag', 'type', 'text')
     # inlines = [TranslationInline, ]
 
+#(_('Operation'), {
+#            'fields': ('installation_date', 'operation_start_date', 'status', 'operation_end_date')
+#        })
+
     class Media:
         import os
         js_dir = os.path.join(settings.STATIC_URL, 'admin/js')
