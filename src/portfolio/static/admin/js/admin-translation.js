@@ -4,7 +4,7 @@
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
       document.getElementById('id_tag').readOnly = true;
-      document.getElementById('id_tooltip_tag').readOnly = true;
+      document.getElementById('id_auxiliary_tag').readOnly = true;
       jQuery(".field-last_tag").children('div').children('p').text("");
       if (document.URL.indexOf("add") > -1){
           toggleFields();
@@ -37,11 +37,11 @@ function getLastTag(translationTag){
                 var tag = translationTag+(parseInt(result['last_id'])+1)
                 jQuery(".field-last_tag").children('div').children('p').text(result['last_tag']);
                 jQuery("#id_tag").val(tag);
-                if (result['has_tooltip']){
-                    if (jQuery(".field-tooltip_tag").css("display") != "block"){
+                if (result['has_auxiliary_text']){
+                    if (jQuery(".field-auxiliary_tag").css("display") != "block"){
                         toggleFields();
                     }
-                    jQuery("#id_tooltip_tag").val(result['tooltip_tag']+(parseInt(result['last_id'])+1))
+                    jQuery("#id_auxiliary_tag").val(result['auxiliary_tag']+(parseInt(result['last_id'])+1))
                 }
             }else{
                 var tag = translationTag+"1"
@@ -49,12 +49,17 @@ function getLastTag(translationTag){
                 jQuery("#id_tag").val(tag);
                 //check if has tooltip
                 var translationTypeDetails = getTranslationTypeDetails();
+                console.log(translationTypeDetails)
                 if (translationTypeDetails[0]){
                     // enable tooltip fields
-                    if (jQuery(".field-tooltip_tag").css("display") != "block"){
+                    if (jQuery(".field-auxiliary_tag").css("display") != "block"){
                         toggleFields();
                     }
-                    jQuery("#id_tooltip_tag").val(translationTypeDetails[1]+"1")
+                    jQuery("#id_auxiliary_tag").val(translationTypeDetails[1]+"1")
+                }else{
+                    if (jQuery(".field-auxiliary_tag").css("display") == "block"){
+                        toggleFields();
+                    }
                 }
             }
         }
@@ -63,24 +68,24 @@ function getLastTag(translationTag){
 
 function getTranslationTypeDetails(){
     var flag = false;
-    var tooltip_tag = null;
+    var auxiliary_tag = null;
     jQuery.ajax({
         url: "/api/translation_type/",
         data: {id: document.getElementById("id_type").value},
         context: document.body,
         async: false,
         success: function (data) {
-            flag = data[0]['has_tooltip'];
+            flag = data[0]['has_auxiliary_text'];
             if (flag){
-                tooltip_tag = data[0]['tooltip_tag'];
+                auxiliary_tag = data[0]['auxiliary_tag'];
             }
         }
     });
-    return [flag, tooltip_tag];
+    return [flag, auxiliary_tag];
 }
 
 function toggleFields(){
-    jQuery(".field-tooltip_tag").toggle();
-    jQuery('[class*=" field-tooltip_text_"]').parents(".ui-tabs").toggle();
+    jQuery(".field-auxiliary_tag").toggle();
+    jQuery('[class*=" field-auxiliary_text_"]').parents(".ui-tabs").toggle();
 }
 

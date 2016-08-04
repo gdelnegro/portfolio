@@ -9,7 +9,7 @@ class BaseModelTranslationOptions(TranslationOptions):
 
 
 class TranslationModelTranslationOptions(TranslationOptions):
-    fields = ('text', 'tooltip_text')
+    fields = ('text', 'auxiliary_text')
     required_languages = ('en', 'pt-br')
 
 

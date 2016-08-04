@@ -22,7 +22,7 @@ class TranslationTypeAdmin(TabbedTranslationAdmin):
 @admin.register(Translation)
 class TranslationAdmin(TabbedTranslationAdmin):
     # form = TranslationForm
-    fields = ('type', 'tag', 'text', 'tooltip_tag', 'tooltip_text')
+    fields = ('type', 'tag', 'text', 'auxiliary_tag', 'auxiliary_text')
     list_display = ('tag', 'type', 'text')
     # inlines = [TranslationInline, ]
 

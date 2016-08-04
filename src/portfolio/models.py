@@ -24,8 +24,8 @@ class TranslationType(models.Model):
     updated_at = models.DateTimeField(_('MDL002'), auto_now=True, null=True, blank=True, help_text=_('TTP002'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
     name = models.TextField(_('MDL034'), help_text=_('TTP034'))
-    has_tooltip = models.BooleanField(_('Tooltip'), default=True)
-    tooltip_tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
+    has_auxiliary_text = models.BooleanField(_('Texto Auxiliar'), default=True)
+    auxiliary_tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
 
     class Meta:
         verbose_name = _('MTA020')
@@ -45,8 +45,8 @@ class Translation(models.Model):
                              verbose_name=_('MDL033'), help_text=_('TTP033'))
     tag = models.CharField(_('MDL032'), help_text=_('TTP032'), max_length=20, unique=True)
     text = models.TextField(_('MDL034'), help_text=_('TTP034'))
-    tooltip_tag = models.CharField(_('ToolTipTag'), help_text=_('TTP032'), max_length=20)
-    tooltip_text = models.TextField(_('ToolTipText'), help_text=_('TTP034'))
+    auxiliary_tag = models.CharField(_('ToolTipTag'), help_text=_('TTP032'), max_length=20)
+    auxiliary_text = models.TextField(_('ToolTipText'), help_text=_('TTP034'))
     migration_created = models.BooleanField(_('Migration'), default=False)
 
     class Meta:
@@ -58,20 +58,6 @@ class Translation(models.Model):
 
     def __unicode__(self):
         return "%s" % self.tag
-
-    def last_tag(self):
-        from django.db import connection
-        query = """ SELECT max(tag) FROM portfolio_translation WHERE tag LIKE '%s%%' """ % self.tag[:3]
-        cursor = connection.cursor()
-        try:
-            cursor.execute(query)
-        except Exception as err:
-            raise err
-        else:
-            result = []
-            for row in cursor.fetchall():
-                result = row[0]
-        return result
 
 
 # @receiver(post_save, sender=Translation, dispatch_uid="update_stock_count")
@@ -100,7 +86,7 @@ class LastTranslationTag(object):
             if result:
                 import re
                 tag = Translation.objects.get(tag=result)
-                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.name, has_tooltip=tag.type.has_tooltip, tooltip_tag=tag.type.tooltip_tag))
+                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.name, has_auxiliary_text=tag.type.has_auxiliary_text, auxiliary_tag=tag.type.auxiliary_tag))
             else:
                 return dict(result=dict())
 
