@@ -25,6 +25,8 @@ function updateTag() {
 function clearValue(){
     var x = document.getElementById("id_tag")
     x.value="";
+    document.getElementById("id_auxiliary_tag").value="";
+    jQuery('[id*=" field-auxiliary_text_"]').val("");
 }
 
 function getLastTag(translationTag){
@@ -85,6 +87,7 @@ function getTranslationTypeDetails(){
 }
 
 function toggleFields(){
+    clearValue();
     jQuery(".field-auxiliary_tag").toggle();
     jQuery('[class*=" field-auxiliary_text_"]').parents(".ui-tabs").toggle();
 }
