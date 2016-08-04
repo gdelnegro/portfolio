@@ -60,24 +60,3 @@ class OrganizationImageAdminForm(forms.ModelForm):
         model = Image
         fields = '__all__'
         widgets = {'organization': forms.HiddenInput()}
-
-
-class TranslationForm(forms.ModelForm):
-    tooltip_tag = forms.CharField(label=_('MDL032'), max_length=20)
-    tooltip_text = forms.CharField(label=_('MDL034'))
-
-    def save(self, commit=False):
-        tooltip_tag = self.cleaned_data.get('tooltip_tag', None)
-        tooltip_text = self.cleaned_data.get('tooltip_text', None)
-
-        if tooltip_tag and tooltip_text:
-            tooltip = Translation()
-            tooltip.tag = tooltip_tag
-            tooltip.text = tooltip_text
-            tooltip.type = self.cleaned_data.get('type', None)
-            tooltip.save()
-        return super(TranslationForm, self).save(commit=commit)
-
-    class Meta:
-        model = Translation
-        fields = '__all__'
