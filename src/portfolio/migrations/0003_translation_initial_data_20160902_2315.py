@@ -137,11 +137,14 @@ def load_data(apps, schema_editor):
                 auxiliary_text_pt_br="Tipos de projeto", auxiliary_text_en="Project types")
     __load_data(apps=apps, tag='MTA9', type='MTA', text_pt_br="Projeto", text_en="Project", auxiliary_tag='MTP9',
                 auxiliary_text_pt_br="Projetos", auxiliary_text_en="Projects")
-    __load_data(apps=apps, tag='MTA10', type='MTA', text_pt_br="Currículo", text_en="Resume")
+    __load_data(apps=apps, tag='MTA10', type='MTA', text_pt_br="Currículo", text_en="Resume", auxiliary_tag="MTP10",
+                auxiliary_text_pt_br="Currículo", auxiliary_text_en="Resume")
     __load_data(apps=apps, tag='MTA11', type='MTA', text_pt_br="Tradução", text_en="Translation", auxiliary_tag='MTP11',
                 auxiliary_text_pt_br="Traduções", auxiliary_text_en="Translations")
-    __load_data(apps=apps, tag='MTA12', type='MTA', text_pt_br="Tipo de Tradução", text_en="Translation Type", auxiliary_tag='MTP12',
-                auxiliary_text_pt_br="Tipos de Tradução", auxiliary_text_en="Translation Types")
+    __load_data(apps=apps, tag='MTA12', type='MTA', text_pt_br="Tipo de Tradução", text_en="Translation Type",
+                auxiliary_tag='MTP12', auxiliary_text_pt_br="Tipos de Tradução", auxiliary_text_en="Translation Types")
+    __load_data(apps=apps, tag='MTA13', type='MTA', text_pt_br="Configuração do site", text_en="Site settings",
+                auxiliary_tag='MTP13', auxiliary_text_pt_br="Configurações do site", auxiliary_text_en="Site settings")
 
 
 class Migration(migrations.Migration):
