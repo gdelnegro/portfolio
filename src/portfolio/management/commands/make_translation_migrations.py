@@ -63,7 +63,7 @@ class Migration(migrations.Migration):
 
     def __create_translation_lines(self):
         new_lines = []
-        for translation in Translation.objects.filter(migration_created=False):
+        for translation in Translation.objects.filter(migration_created=True):
             new_lines.append(
                 '    __load_data(apps=apps, tag="%(tag)s", type="%(type)s", text_pt_br="%(text_pt)s", text_en="%(text_en)s",'
                 'auxiliary_tag="%(aux_tag)s", auxiliary_text_pt_br="%(aux_text_pt)s", auxiliary_text_en="%(aux_text_en)s")'
@@ -82,7 +82,7 @@ class Migration(migrations.Migration):
     def __create_translation_migration(self):
         """ Create an empty migration """
         migrations_dir = settings.BASE_DIR + '/portfolio/migrations/'
-        dependency_migration = os.path.basename(max(glob.iglob(migrations_dir + '*.py'), key=os.path.getctime))
+        dependency_migration = os.path.basename(max(glob.iglob(migrations_dir + '*.py'), key=os.path.getctime)).replace(".py", "")
         call_command('makemigrations', 'portfolio', "--empty")
         """ Get last migration name and edit it, adding the new code """
         last_migration_file = max(glob.iglob(migrations_dir + '*.py'), key=os.path.getctime)
@@ -100,9 +100,10 @@ class Migration(migrations.Migration):
                 os.remove(last_migration_file)
         except Exception as error:
             os.remove(last_migration_file)
-        else:
-            from subprocess import call
-            call(["git add", last_migration_file])
+        # else:
+        #     from subprocess import call
+        #     os.chdir(migrations_dir)
+        #     call(["git add", os.path.basename(last_migration_file)])
 
     def handle(self, *args, **options):
         self.__create_translation_migration()
