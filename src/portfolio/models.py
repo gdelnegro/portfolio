@@ -45,8 +45,8 @@ class Translation(models.Model):
                              verbose_name=_('MDL33'), help_text=_('TTP33'))
     tag = models.CharField(_('MDL32'), help_text=_('TTP32'), max_length=20, unique=True)
     text = models.TextField(_('MDL34'), help_text=_('TTP34'))
-    auxiliary_tag = models.CharField(_('ToolTipTag'), help_text=_('TTP32'), max_length=20)
-    auxiliary_text = models.TextField(_('ToolTipText'), help_text=_('TTP34'))
+    auxiliary_tag = models.CharField(_('ToolTipTag'), help_text=_('TTP32'), max_length=20, blank=True, null=True)
+    auxiliary_text = models.TextField(_('ToolTipText'), help_text=_('TTP34'), blank=True, null=True)
     migration_created = models.BooleanField(_('Migration'), default=False)
 
     class Meta:
