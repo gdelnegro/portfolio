@@ -21,6 +21,7 @@ def __load_data(**kwargs):
                 setattr(mdl, k, translation_type.objects.get(tag=v))
             else:
                 setattr(mdl, k, v)
+        setattr(mdl, "migration_created", True)
         mdl.save()
 
 
