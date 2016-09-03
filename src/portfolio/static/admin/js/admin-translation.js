@@ -44,6 +44,15 @@ function getLastTag(translationTag){
                     if (result['has_auxiliary_text']){
                         jQuery("#id_auxiliary_tag").val(result['auxiliary_tag']+(parseInt(result['last_id'])+1))
                     }
+                    //check if has tooltip
+                    var translationTypeDetails = getTranslationTypeDetails();
+                    if (translationTypeDetails[0]){
+                        // enable tooltip fields
+                        if ( jQuery(".field-auxiliary_tag").is(":hidden") ){
+                            toggleFields();
+                        }
+                        jQuery("#id_auxiliary_tag").val(translationTypeDetails[1]+"1")
+                    }
                 }else{
                     var tag = translationTag+"1";
                     jQuery(".field-last_tag").children('div').children('p').text(" - ");
