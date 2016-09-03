@@ -2,11 +2,9 @@ import django
 from django.core.management import BaseCommand
 from django.conf import settings
 from datetime import datetime
-from portfolio.models import Translation
 from django.core.management import call_command
 import os
 import glob
-import fileinput
 from portfolio.models import Translation
 
 
@@ -100,10 +98,11 @@ class Migration(migrations.Migration):
                 os.remove(last_migration_file)
         except Exception as error:
             os.remove(last_migration_file)
-        # else:
-        #     from subprocess import call
-        #     os.chdir(migrations_dir)
-        #     call(["git add", os.path.basename(last_migration_file)])
+        else:
+            import subprocess
+            os.chdir(migrations_dir)
+            subprocess.call(["git", "add"])
+            subprocess.call(["git", "commit -m 'Added new translation migration' "])
 
     def handle(self, *args, **options):
         self.__create_translation_migration()
