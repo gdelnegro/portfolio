@@ -18,383 +18,311 @@
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
         "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-        # Aquivo gerado em: 2016-07-21 18:11:59 
+        # Aquivo gerado em: 2016-09-03 01:08:46 
 
-msgid "TTP001"
-msgstr "Data da criação do registro"
-
-msgid "TTP002"
-msgstr "Data da atualização do registro"
-
-msgid "TTP003"
-msgstr "Nome do registro"
-
-msgid "TTP004"
-msgstr "Descrição do Registro"
-
-msgid "TTP005"
-msgstr "Título da imagem"
-
-msgid "TTP006"
-msgstr "Dado Binário da Imagem"
-
-msgid "TTP007"
-msgstr "Tipo do arquivo"
-
-msgid "TTP008"
-msgstr "Extensão da imagem"
-
-msgid "MTP001"
-msgstr "-"
-
-msgid "MTP002"
-msgstr "-"
-
-msgid "TTP009"
-msgstr "Site"
-
-msgid "TTP010"
-msgstr "Proeficiência"
-
-msgid "TTP011"
-msgstr "Logo"
-
-msgid "MTP003"
-msgstr "-"
-
-msgid "MTP004"
-msgstr "-"
-
-msgid "MTP005"
-msgstr "-"
-
-msgid "MTP006"
-msgstr "-"
-
-msgid "TTP012"
-msgstr "Linguagem de programação do framework"
-
-msgid "MTP007"
-msgstr "-"
-
-msgid "MTP008"
-msgstr "-"
-
-msgid "TTP013"
-msgstr "Se a base de dados é do tipo SQL"
-
-msgid "MTP009"
-msgstr "-"
-
-msgid "MTP010"
-msgstr "-"
-
-msgid "MTP011"
-msgstr "-"
-
-msgid "MTP012"
-msgstr "-"
-
-msgid "MTP013"
-msgstr "-"
-
-msgid "MTP014"
-msgstr "-"
-
-msgid "TTP014"
-msgstr "Tipo de tecnologia"
-
-msgid "MTP015"
-msgstr "-"
-
-msgid "MTP016"
-msgstr "-"
-
-msgid "TTP015"
-msgstr "Tipo de projeto"
-
-msgid "TTP016"
-msgstr "Linguagens de programação utilizadas"
-
-msgid "TTP017"
-msgstr "Frameworks utilizados no projeto"
-
-msgid "TTP018"
-msgstr "Bases de dados utilizadas no projeto"
-
-msgid "TTP019"
-msgstr "Tecnologias utilizadas no projeto"
-
-msgid "TTP020"
-msgstr "Servidores web utilizados no projeto"
-
-msgid "TTP021"
-msgstr "Imagens do projeto"
-
-msgid "MTP017"
-msgstr "-"
-
-msgid "MTP018"
-msgstr "-"
-
-msgid "TTP022"
-msgstr "Educação"
-
-msgid "TTP023"
-msgstr "Experiência"
-
-msgid "TTP024"
-msgstr "Prêmios"
-
-msgid "TTP025"
-msgstr "Tipo de experiência"
-
-msgid "TTP026"
-msgstr "Mês de início"
-
-msgid "TTP027"
-msgstr "Ano de início"
-
-msgid "TTP028"
-msgstr "Mês de término"
-
-msgid "TTP029"
-msgstr "Ano de término"
-
-msgid "TTP030"
-msgstr "Cargo"
-
-msgid "TTP031"
-msgstr "Localização"
-
-msgid "MTP019"
-msgstr "-"
-
-msgid "MTP020"
-msgstr "-"
-
-msgid "MTP021"
-msgstr "-"
-
-msgid "TTP035"
-msgstr "-"
-
-msgid "TTP036"
-msgstr "-"
-
-msgid "TTP037"
-msgstr "-"
-
-msgid "TTP038"
-msgstr "-"
-
-msgid "MDL001"
+msgid "MDL1"
 msgstr "Data de criação"
 
-msgid "MDL002"
+msgid "TTP1"
+msgstr "Data da criação do registro"
+
+msgid "MDL2"
 msgstr "Data de atualização"
 
-msgid "MDL003"
+msgid "TTP2"
+msgstr "Data da atualização do registro"
+
+msgid "MDL3"
 msgstr "Nome"
 
-msgid "MDL004"
+msgid "TTP3"
+msgstr "Nome do registro"
+
+msgid "MDL4"
 msgstr "Descrição"
 
-msgid "MDL005"
+msgid "TTP4"
+msgstr "Descrição do Registro"
+
+msgid "MDL5"
 msgstr "Título"
 
-msgid "MDL006"
+msgid "TTP5"
+msgstr "Título da imagem"
+
+msgid "MDL6"
 msgstr "Dado binário"
 
-msgid "MDL007"
+msgid "TTP6"
+msgstr "Dado Binário da Imagem"
+
+msgid "MDL7"
 msgstr "Tipo MIME"
 
-msgid "MDL008"
+msgid "TTP7"
+msgstr "Tipo do arquivo"
+
+msgid "MDL8"
 msgstr "Extensão"
 
-msgid "MTA001"
-msgstr "Imagem"
+msgid "TTP8"
+msgstr "Extensão da imagem"
 
-msgid "MTA002"
-msgstr "Imagens"
-
-msgid "MDL009"
+msgid "MDL9"
 msgstr "Site"
 
-msgid "MDL010"
+msgid "TTP9"
+msgstr "Site"
+
+msgid "MDL10"
 msgstr "Proeficiência"
 
-msgid "MDL011"
-msgstr "Logo"
+msgid "TTP10"
+msgstr "Proeficiência"
 
-msgid "MTA003"
-msgstr "Linguagem de programação"
-
-msgid "MTA005"
-msgstr "Framework"
-
-msgid "MTA006"
-msgstr "Frameworks"
-
-msgid "MDL012"
-msgstr "Linguagem de programação do framework"
-
-msgid "MTA007"
-msgstr "Base de dados"
-
-msgid "MTA008"
-msgstr "Bases de dados"
-
-msgid "MDL013"
-msgstr "SQL"
-
-msgid "MTA009"
-msgstr "Servidor web"
-
-msgid "MTA010"
-msgstr "Servidores web"
-
-msgid "MTA011"
-msgstr "Tipo de tecnologia"
-
-msgid "MTA012"
-msgstr "Tipos de tecnologia"
-
-msgid "MTA013"
-msgstr "Tecnologia"
-
-msgid "MTA014"
-msgstr "Tecnologias"
-
-msgid "MDL014"
-msgstr "Tipo de tecnologia"
-
-msgid "MTA015"
-msgstr "Tipo de projeto"
-
-msgid "MTA016"
-msgstr "Tipos de projeto"
-
-msgid "MDL015"
-msgstr "Tipo de projeto"
-
-msgid "TTP034"
-msgstr "Texto da tradução"
-
-msgid "TTP033"
-msgstr "Tipo de tradução"
-
-msgid "MDL016"
-msgstr "Linguagem de programação utilizada"
-
-msgid "MDL017"
-msgstr "Frameworks utilizado"
-
-msgid "MDL018"
-msgstr "Base de dados utilizada"
-
-msgid "MDL019"
-msgstr "Tecnologia utilizada"
-
-msgid "MDL020"
-msgstr "Servidor web utilizado"
-
-msgid "MDL021"
-msgstr "Imagens do projeto"
-
-msgid "MTA017"
-msgstr "Projeto"
-
-msgid "MTA018"
-msgstr "Projetos"
-
-msgid "MDL022"
-msgstr "Educação"
-
-msgid "MDL023"
-msgstr "Experiência"
-
-msgid "MDL024"
-msgstr "Prêmios"
-
-msgid "MDL025"
-msgstr "Tipo de experiência"
-
-msgid "MDL026"
-msgstr "Mês de início"
-
-msgid "MDL027"
-msgstr "Ano de início"
-
-msgid "MDL028"
-msgstr "Mês de término"
-
-msgid "MDL029"
-msgstr "Ano de término"
-
-msgid "MDL030"
-msgstr "Cargo"
-
-msgid "MDL031"
-msgstr "Localização"
-
-msgid "MTA019"
-msgstr "Currículo"
-
-msgid "MTA020"
-msgstr "Tradução"
-
-msgid "MDL032"
+msgid "MDL32"
 msgstr "tag"
 
-msgid "MDL033"
+msgid "TTP32"
+msgstr "-"
+
+msgid "MDL11"
+msgstr "Logo"
+
+msgid "TTP11"
+msgstr "Logo"
+
+msgid "MDL12"
+msgstr "Linguagem de programação do framework"
+
+msgid "TTP12"
+msgstr "Linguagem de programação do framework"
+
+msgid "MDL13"
+msgstr "SQL"
+
+msgid "TTP13"
+msgstr "Se a base de dados é do tipo SQL"
+
+msgid "MDL14"
+msgstr "Tipo de tecnologia"
+
+msgid "TTP14"
+msgstr "Tipo de tecnologia"
+
+msgid "MDL15"
+msgstr "Tipo de projeto"
+
+msgid "TTP15"
+msgstr "Tipo de projeto"
+
+msgid "MDL16"
+msgstr "Linguagem de programação utilizada"
+
+msgid "TTP16"
+msgstr "Linguagens de programação utilizadas"
+
+msgid "MDL17"
+msgstr "Frameworks utilizado"
+
+msgid "TTP17"
+msgstr "Frameworks utilizados no projeto"
+
+msgid "MDL18"
+msgstr "Base de dados utilizada"
+
+msgid "TTP18"
+msgstr "Bases de dados utilizadas no projeto"
+
+msgid "MDL19"
+msgstr "Tecnologia utilizada"
+
+msgid "TTP19"
+msgstr "Tecnologias utilizadas no projeto"
+
+msgid "MDL20"
+msgstr "Servidor web utilizado"
+
+msgid "TTP20"
+msgstr "Servidores web utilizados no projeto"
+
+msgid "MDL21"
+msgstr "Imagens do projeto"
+
+msgid "TTP21"
+msgstr "Imagens do projeto"
+
+msgid "MDL22"
+msgstr "Educação"
+
+msgid "TTP22"
+msgstr "Educação"
+
+msgid "MDL23"
+msgstr "Experiência"
+
+msgid "TTP23"
+msgstr "Experiência"
+
+msgid "MDL24"
+msgstr "Prêmios"
+
+msgid "TTP24"
+msgstr "Prêmios"
+
+msgid "MDL25"
+msgstr "Tipo de experiência"
+
+msgid "TTP25"
+msgstr "Tipo de experiência"
+
+msgid "MDL26"
+msgstr "Mês de início"
+
+msgid "TTP26"
+msgstr "Mês de início"
+
+msgid "MDL27"
+msgstr "Ano de início"
+
+msgid "TTP27"
+msgstr "Ano de início"
+
+msgid "MDL28"
+msgstr "Mês de término"
+
+msgid "TTP28"
+msgstr "Mês de término"
+
+msgid "MDL29"
+msgstr "Ano de término"
+
+msgid "TTP29"
+msgstr "Ano de término"
+
+msgid "MDL30"
+msgstr "Cargo"
+
+msgid "TTP30"
+msgstr "Cargo"
+
+msgid "MDL31"
+msgstr "Localização"
+
+msgid "TTP31"
+msgstr "Localização"
+
+msgid "MDL33"
 msgstr "Tipo"
 
-msgid "MDL034"
+msgid "TTP33"
+msgstr "-"
+
+msgid "MDL34"
 msgstr "Texto"
 
-msgid "MDL035"
+msgid "TTP34"
+msgstr "-"
+
+msgid "MDL35"
 msgstr "Ajuda de modelo"
 
-msgid "MDL036"
+msgid "TTP35"
+msgstr "-"
+
+msgid "MDL36"
 msgstr "Modelo"
 
-msgid "MDL037"
+msgid "TTP36"
+msgstr "-"
+
+msgid "MDL37"
 msgstr "Meta"
 
-msgid "MDL038"
+msgid "TTP37"
+msgstr "-"
+
+msgid "MDL38"
 msgstr "Ajuda de meta"
 
-msgid "MTA004"
+msgid "TTP38"
+msgstr "-"
+
+msgid "MTA1"
+msgstr "Imagem"
+
+msgid "MTP1"
+msgstr "Imagens"
+
+msgid "MTA2"
+msgstr "Linguagem de programação"
+
+msgid "MTP2"
 msgstr "Linguagens de programação"
 
-msgid "MDL039"
-msgstr "Texto"
+msgid "MTA3"
+msgstr "Framework"
 
-msgid "MDL040"
-msgstr "Ajuda de texto"
+msgid "MTP3"
+msgstr "Frameworks"
 
-msgid "TTP032"
-msgstr "Identificador único da tradução"
+msgid "MTA4"
+msgstr "Base de dados"
 
-msgid "TTP039"
-msgstr "-"
+msgid "MTP4"
+msgstr "Bases de dados"
 
-msgid "TTP040"
-msgstr "-"
+msgid "MTA5"
+msgstr "Servidor web"
 
-msgid "TTP041"
-msgstr "Ultima tag cadastrada desse tipo"
+msgid "MTP5"
+msgstr "Servidores web"
 
-msgid "MDL041"
-msgstr "Ultima tag1"
+msgid "MTA6"
+msgstr "Tipo de tecnologia"
 
-msgid "MTA021"
+msgid "MTP6"
+msgstr "Tipos de tecnologia"
+
+msgid "MTA7"
+msgstr "Tecnologia"
+
+msgid "MTP7"
+msgstr "Tecnologias"
+
+msgid "MTA8"
+msgstr "Tipo de projeto"
+
+msgid "MTP8"
+msgstr "Tipos de projeto"
+
+msgid "MTA9"
+msgstr "Projeto"
+
+msgid "MTP9"
+msgstr "Projetos"
+
+msgid "MTA10"
+msgstr "Currículo"
+
+msgid "MTP10"
+msgstr "Currículo"
+
+msgid "MTA11"
+msgstr "Tradução"
+
+msgid "MTP11"
 msgstr "Traduções"
 
-msgid "MTA022"
+msgid "MTA12"
+msgstr "Tipo de Tradução"
+
+msgid "MTP12"
+msgstr "Tipos de Tradução"
+
+msgid "MTA13"
 msgstr "Configuração do site"
 
-msgid "MTA023"
-msgstr "Parâmetros do Site"
+msgid "MTP13"
+msgstr "Configurações do site"
 

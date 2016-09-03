@@ -42,6 +42,9 @@ class Command(BaseCommand):
             for obj in Translation.objects.filter():
                 file_en_us.write('msgid "%s"\nmsgstr "%s"\n\n' % (obj.tag, obj.text_en))
                 file_pt_br.write('msgid "%s"\nmsgstr "%s"\n\n' % (obj.tag, obj.text_pt_br))
+                if obj.type.has_auxiliary_text:
+                    file_en_us.write('msgid "%s"\nmsgstr "%s"\n\n' % (obj.auxiliary_tag, obj.auxiliary_text_en))
+                    file_pt_br.write('msgid "%s"\nmsgstr "%s"\n\n' % (obj.auxiliary_tag, obj.auxiliary_text_pt_br))
         except Exception as error:
             file_en_us.close()
             file_pt_br.close()
