@@ -101,8 +101,8 @@ class Migration(migrations.Migration):
         else:
             import subprocess
             os.chdir(migrations_dir)
-            subprocess.call(["git", "add"])
-            subprocess.call(["git", "commit -m 'Added new translation migration' "])
+            subprocess.call(["git", "add", "."])
+            subprocess.call(["git", 'commit', "-m" ,"Added new translation migration"])
 
     def handle(self, *args, **options):
         self.__create_translation_migration()
