@@ -65,11 +65,11 @@ class Migration(migrations.Migration):
         new_lines = []
         for translation in Translation.objects.filter(migration_created=False):
             new_lines.append(
-                '    __load_data(apps=apps, tag="%(tag)s", type="%(type)s", text_pt_br="%(text_pt)s", text_en="%(text_en)s",'
+                '    __load_data(apps=apps, tag="%(tag)s", type="%(type)s", text_pt_br="%(text_pt)s", text_en="%(text_en)s", '
                 'auxiliary_tag="%(aux_tag)s", auxiliary_text_pt_br="%(aux_text_pt)s", auxiliary_text_en="%(aux_text_en)s")'
                 % {
                     'tag': translation.tag,
-                    'type': translation.type,
+                    'type': translation.type.tag,
                     'text_pt': translation.text_pt_br,
                     'text_en': translation.text_en,
                     'aux_tag': translation.auxiliary_tag,
