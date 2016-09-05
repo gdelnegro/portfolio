@@ -18,7 +18,37 @@
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
         "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-        # Aquivo gerado em: 2016-09-03 01:08:46 
+        # Aquivo gerado em: 2016-09-05 16:56:06 
+
+msgid "GEN2"
+msgstr "desenvolvedor"
+
+msgid "GEN4"
+msgstr "currículo"
+
+msgid "GEN6"
+msgstr "projetos"
+
+msgid "GEN8"
+msgstr "objetivo"
+
+msgid "GEN10"
+msgstr "educação"
+
+msgid "GEN12"
+msgstr "Anos de experiência"
+
+msgid "GEN14"
+msgstr "Endereço"
+
+msgid "GEN16"
+msgstr "nome"
+
+msgid "GEN18"
+msgstr "assunto"
+
+msgid "GEN20"
+msgstr "Enviar mensagem"
 
 msgid "MDL1"
 msgstr "Data de criação"
@@ -325,4 +355,31 @@ msgstr "Configuração do site"
 
 msgid "MTP13"
 msgstr "Configurações do site"
+
+msgid "GEN3"
+msgstr "sobre"
+
+msgid "GEN5"
+msgstr "habilidades"
+
+msgid "GEN7"
+msgstr "contato"
+
+msgid "GEN9"
+msgstr "O que eu faço"
+
+msgid "GEN11"
+msgstr "experiência"
+
+msgid "GEN13"
+msgstr "Projetos concluídos"
+
+msgid "GEN15"
+msgstr "Telefone"
+
+msgid "GEN17"
+msgstr "email"
+
+msgid "GEN19"
+msgstr "mensagem"
 

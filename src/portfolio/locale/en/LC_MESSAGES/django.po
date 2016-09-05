@@ -18,7 +18,37 @@
         "Content-Type: text/plain; charset=UTF-8\n"
         "Content-Transfer-Encoding: 8bit\n"
         "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-        # File generated in: 2016-09-03 01:08:46 
+        # File generated in: 2016-09-05 16:56:06 
+
+msgid "GEN2"
+msgstr "developer"
+
+msgid "GEN4"
+msgstr "resume"
+
+msgid "GEN6"
+msgstr "projects"
+
+msgid "GEN8"
+msgstr "objective"
+
+msgid "GEN10"
+msgstr "education"
+
+msgid "GEN12"
+msgstr "Years of experience"
+
+msgid "GEN14"
+msgstr "Address/Street"
+
+msgid "GEN16"
+msgstr "name"
+
+msgid "GEN18"
+msgstr "subject"
+
+msgid "GEN20"
+msgstr "Send message"
 
 msgid "MDL1"
 msgstr "Creation date"
@@ -325,4 +355,31 @@ msgstr "Site settings"
 
 msgid "MTP13"
 msgstr "Site settings"
+
+msgid "GEN3"
+msgstr "about"
+
+msgid "GEN5"
+msgstr "skills"
+
+msgid "GEN7"
+msgstr "contact"
+
+msgid "GEN9"
+msgstr "what I do"
+
+msgid "GEN11"
+msgstr "experience"
+
+msgid "GEN13"
+msgstr "Done projects"
+
+msgid "GEN15"
+msgstr "Phone Number"
+
+msgid "GEN17"
+msgstr "email"
+
+msgid "GEN19"
+msgstr "message"
 
