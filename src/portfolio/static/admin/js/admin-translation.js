@@ -34,7 +34,7 @@ function hideFields(){
 function protectFields(){
     var ids = ["id_tag", "id_type", "id_auxiliary_tag"]
     for(var i=0; i<ids.length;i++){
-        jQuery("#"+ids[i]).prop('disabled', true);
+        jQuery("#"+ids[i]).prop('readonly', true);
     }
     jQuery("#add_id_type").hide();
     jQuery("#change_id_type").hide();
