@@ -51,8 +51,20 @@ class TranslationTypeViewSet(viewsets.ReadOnlyModelViewSet):
 class LastTranslationTagView(views.APIView):
     def get(self, request, *args, **kwargs):
         if len(kwargs['tag']) > 0:
-            myClass = LastTranslationTag(kwargs['tag'], *args, **kwargs)
-            result = myClass.return_last_tag()
+            try:
+                int(kwargs['tag'])
+            except ValueError:
+                try:
+                    model = TranslationType.objects.get(tag=kwargs['tag'])
+                except TranslationType.DoesNotExist:
+                    return Response(status=status.HTTP_404_NOT_FOUND)
+            else:
+                try:
+                    model = TranslationType.objects.get(pk=kwargs['tag'])
+                except TranslationType.DoesNotExist:
+                    return Response(status=status.HTTP_404_NOT_FOUND)
+            last_translation_tag = LastTranslationTag(model.tag, *args, **kwargs)
+            result = last_translation_tag.return_last_tag()
         else:
             result = dict(result=dict())
         return Response(result, status=status.HTTP_200_OK)

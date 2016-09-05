@@ -88,7 +88,7 @@ class LastTranslationTag(object):
             if result:
                 import re
                 tag = Translation.objects.get(tag=result)
-                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.name, has_auxiliary_text=tag.type.has_auxiliary_text, auxiliary_tag=tag.type.auxiliary_tag))
+                return dict(result=dict(last_tag=result, last_id=re.findall("(\d+)", result)[0], type=tag.type.name, has_auxiliary_text=tag.type.has_auxiliary_text, auxiliary_tag=tag.type.auxiliary_tag, tag=tag.tag))
             else:
                 return dict(result=dict())
 
