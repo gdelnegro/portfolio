@@ -15,26 +15,26 @@ class Command(BaseCommand):
         file_en_us = open(dir_en_us + "django.po", "w+")
         file_pt_br = open(dir_pt_br + "django.po", "w+")
         header = """
-        # SOME DESCRIPTIVE TITLE.
-        # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-        # This file is distributed under the same license as the PACKAGE package.
-        # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-        #
-        #, fuzzy
-        msgid ""
-        msgstr ""
-        "Project-Id-Version: PACKAGE VERSION\\n"
-        "Report-Msgid-Bugs-To: \\n"
-        "POT-Creation-Date: 2016-05-19 14:44+0000\\n"
-        "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n"
-        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n"
-        "Language-Team: LANGUAGE <LL@li.org>\\n"
-        "Language: \\n"
-        "MIME-Version: 1.0\\n"
-        "Content-Type: text/plain; charset=UTF-8\\n"
-        "Content-Transfer-Encoding: 8bit\\n"
-        "Plural-Forms: nplurals=2; plural=(n > 1);\\n"
-        """
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\\n"
+"Report-Msgid-Bugs-To: \\n"
+"POT-Creation-Date: 2016-05-19 14:44+0000\\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\\n"
+"Language-Team: LANGUAGE <LL@li.org>\\n"
+"Language: \\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+"""
 
         try:
             file_pt_br.write("%s# Aquivo gerado em: %s \n\n" % (header, datetime.now().strftime('%Y-%m-%d %H:%M:%S')))
