@@ -1,16 +1,19 @@
 /**
  * Created by gdelnegro on 16/07/16.
  */
+var method = undefined;
 document.onreadystatechange = function () {
   if (document.readyState === "complete") {
       document.getElementById('id_tag').readOnly = true;
       document.getElementById('id_auxiliary_tag').readOnly = true;
       jQuery(".field-last_tag").children('div').children('p').text("");
       if (document.URL.indexOf("add") > -1){
+          method = "add";
           document.getElementById("id_type").addEventListener("change", onChangeTranslationType);
       }else if(document.URL.indexOf("change") > -1){
           protectFields();
           onChangeTranslationType();
+          method = "edit";
       }
   }
 };
@@ -56,17 +59,24 @@ function getTranslationTypeDetails(){
             async: false,
             success: function (data) {
                 if (Object.keys(data.result).length > 0){
-                    console.log("Result", data.result);
                     var result = data.result;
-                    jQuery(".field-last_tag").children('div').children('p').text(result.last_tag);
-                    if(!jQuery("#id_tag").prop("disabled")){
-                        jQuery("#id_tag").val(result.tag + (parseInt(result.last_id)+1));
-                    }
-                    if (result.has_auxiliary_text){
-                        showFields();
-                        jQuery("#id_auxiliary_tag").val(result.auxiliary_tag+(parseInt(result.last_id)+1))
-                    }else{
-                        hideFields();
+                    if(method == "add"){
+                        jQuery(".field-last_tag").children('div').children('p').text(result.last_tag);
+                        if(!jQuery("#id_tag").prop("disabled")){
+                            jQuery("#id_tag").val(result.tag + (parseInt(result.last_id)+1));
+                        }
+                        if (result.has_auxiliary_text){
+                            showFields();
+                            jQuery("#id_auxiliary_tag").val(result.auxiliary_tag+(parseInt(result.last_id)+1))
+                        }else{
+                            hideFields();
+                        }
+                    }else if(method == "edit"){
+                        if (result.has_auxiliary_text){
+                            showFields();
+                        }else{
+                            hideFields();
+                        }
                     }
                 }
             }
