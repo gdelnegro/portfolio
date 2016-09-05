@@ -12,7 +12,11 @@
 <section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
     <div class="intro">
         <div class="intro-sub">Gustavo Del Negro</div>
-        <h1>FullStack <span>{% trans "GEN2" %}</span></h1>
+        {% if pt_br %}
+            <h1>{% trans "GEN2" %} <span> Full Stack</span></h1>
+        {% else %}
+            <h1> Full Stack <span>{% trans "GEN2" %}</span></h1>
+        {% endif %}
         {% trans "about_me" %}
   <div class="social-icons">
     <ul class="list-inline">
@@ -43,14 +47,14 @@
             <div class="collapse navbar-collapse" id="custom-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#home">{% trans "home" %}</a></li>
-                    <li><a href="#about">{% trans "about" %}</a></li>
-                    <li><a href="#resume">{% trans "resume" %}</a></li>
-                    <li><a href="#skills">{% trans "skills" %}</a></li>
-                    <li><a href="#works">{% trans "projects" %}</a></li>
+                    <li><a href="#about">{% trans "GEN3" %}</a></li>
+                    <li><a href="#resume">{% trans "GEN4" %}</a></li>
+                    <li><a href="#skills">{% trans "GEN5" %}</a></li>
+                    <li><a href="#works">{% trans "GEN6" %}</a></li>
                     {% comment %}
                     <li><a href="#blog">{% trans "blog" %}</a></li>
                     {% endcomment %}
-                    <li><a href="#contact">{% trans "contact" %}</a></li>
+                    <li><a href="#contact">{% trans "GEN7" %}</a></li>
                 </ul>
             </div>
         </div><!-- .container -->
@@ -61,7 +65,7 @@
 <!-- About Section -->
 <section id="about" class="about-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">{% trans "about" %}</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "GEN3" %}</h2>
 
     <div class="row">
 
@@ -71,11 +75,11 @@
             <img src="static/images/myphoto.jpg" alt="">
           </div>
           <ul>
-            <li><strong>{% trans "Name" %}:</strong> Gustavo Del Negro</li>
-            <li><strong>{% trans "DOB" %}:</strong> 11 Dec 1991</li>
-            <li><strong>{% trans "address" %}:</strong> Travessa Equador, 23 - PR, BR</li>
-            <li><strong>{% trans "nationality" %}:</strong> {% trans "nationality_string" %}</li>
-            <li><strong>{% trans "phone" %}:</strong> {{ settings.MOBILE_NUMBER }}</li>
+            <li><strong>{% trans "GEN16" %}:</strong> Gustavo Del Negro</li>
+            <li><strong>{% trans "GEN22" %}:</strong> 11 Dec 1991</li>
+            <li><strong>{% trans "GEN14" %}:</strong> Travessa Equador, 23 - PR, BR</li>
+            <li><strong>{% trans "GEN21" %}:</strong> {% trans "nationality_string" %}</li>
+            <li><strong>{% trans "GEN15" %}:</strong> {{ settings.MOBILE_NUMBER }}</li>
             <li><strong>Email:</strong> {{ settings.CONTACT_EMAIL }} </li>
           </ul>
         </div>
@@ -83,12 +87,12 @@
 
       <div class="col-md-8 col-md-pull-4">
         <div class="short-info wow fadeInUp">
-          <h3>Objective</h3>
+          <h3>{% trans "GEN8" %}</h3>
           <p>An opportunity to work and upgrade oneself, as well as being involved in an organization that believes in gaining a competitive edge and giving back to the community. I'm presently expanding my solid experience in UI / UX design. I focus on using my interpersonal skills to build good user experience and create a strong interest in my employers. I hope to develop skills in motion design and my knowledge of the Web, and become an honest asset to the business. As an individual, I'm self-confident you’ll find me creative, funny and naturally passionate. I’m a forward thinker, which others may find inspiring when working as a team.</p>
         </div>
 
         <div class="short-info wow fadeInUp">
-          <h3>What I Do ?</h3>
+          <h3>{% trans "GEN9" %} ?</h3>
           <p>I have been working as a web interface designer since. I have a love of clean, elegant styling, and I have lots of experience in the production of CSS3 and HTML5 for modern websites. I loving creating awesome as per my clients’ need. I think user experience when I try to craft something for my clients. Making a design awesome.</p>
 
           <ul class="list-check">
@@ -106,8 +110,8 @@
         </div>
 
         <div class="download-button">
-          <a class="btn btn-info btn-lg" href="#contact"><i class="fa fa-paper-plane"></i>Send me message</a>
-          <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-download"></i>download my cv</a>
+          <a class="btn btn-info btn-lg" href="#contact"><i class="fa fa-paper-plane"></i>{% trans "GEN24" %}</a>
+          <a class="btn btn-primary btn-lg" href="#"><i class="fa fa-download"></i>{% trans "GEN23" %}</a>
         </div>
       </div>
 
@@ -140,11 +144,11 @@
 <!-- Resume Section -->
 <section id="resume" class="resume-section section-padding">
     <div class="container">
-        <h2 class="section-title wow fadeInUp">{% trans "resume" %}</h2>
+        <h2 class="section-title wow fadeInUp">{% trans "GEN4" %}</h2>
         <div class="row">
             <div class="col-md-12">
                 <div class="resume-title">
-                    <h3>{% trans "Education" %}</h3>
+                    <h3>{% trans "GEN10" %}</h3>
                 </div>
                 <div class="resume">
                     <ul class="timeline">
@@ -176,7 +180,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="resume-title">
-                    <h3>{% trans "Experience" %}</h3>
+                    <h3>{% trans "GEN11" %}</h3>
                 </div>
                 <div class="resume">
                     <ul class="timeline">
@@ -210,7 +214,7 @@
 <!-- Skills Section -->
 <section id="skills" class="skills-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">{% trans "skills" %}</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "GEN5" %}</h2>
 
     <div class="row">
       <div class="col-md-6">
@@ -325,9 +329,9 @@
 <!-- Works Section -->
 <section id="works" class="works-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">{% trans "projects" %}</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "GEN6" %}</h2>
     <ul class="list-inline" id="filter">
-        <li><a class="active" data-group="all">{% trans "all" %}</a></li>
+        <li><a class="active" data-group="all">{% trans "GEN26" %}</a></li>
         {% for project_type in projects_types  %}
             <li><a data-group="{{ project_type.name }}"> {% if  pt_br or not project_type.en_name %}{{ project_type.name }}{% else %}{{ project_type.en_name }}{% endif %}</a></li>
         {% endfor %}
@@ -483,12 +487,12 @@
             <div class="col-sm-3 col-xs-6">
               <i class="fa fa-flask"></i>
               <h3 class="timer">{{ years }}</h3>
-              <p>{% trans "experience_years" %}</p>
+              <p>{% trans "GEN12" %}</p>
             </div>
             <div class="col-sm-3 col-xs-6">
               <i class="fa fa-thumbs-up"></i>
               <h3 class="timer">{{projects.count}}</h3>
-              <p>{% trans "done_projects" %}</p>
+              <p>{% trans "GEN13" %}</p>
             </div>
             {% comment %}
             <div class="col-sm-3 col-xs-6">
@@ -673,7 +677,7 @@
 <!-- Contact Section -->
 <section id="contact" class="contact-section section-padding">
   <div class="container">
-    <h2 class="section-title wow fadeInUp">{% trans "contact" %}</h2>
+    <h2 class="section-title wow fadeInUp">{% trans "GEN7" %}</h2>
 
     <div class="row">
       <div class="col-md-6">
@@ -682,26 +686,26 @@
           <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
 
             <div class="form-group">
-              <label for="name">{% trans "Name" %}</label>
+              <label for="name">{% trans "GEN16" %}</label>
               <input type="text" name="name" class="form-control" id="name" required="">
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email">{% trans "GEN17" %}</label>
               <input type="email" name="email" class="form-control" id="email" required="">
             </div>
 
             <div class="form-group">
-              <label for="subject">{% trans "subject" %}</label>
+              <label for="subject">{% trans "GEN18" %}</label>
               <input type="text" name="subject" class="form-control" id="subject">
             </div>
 
             <div class="form-group">
-              <label for="message">{% trans "message" %}</label>
+              <label for="message">{% trans "GEN19" %}</label>
               <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
             </div>
 
-            <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" name="submit" class="btn btn-primary">{% trans "GEN20" %}</button>
           </form>
         </div><!-- /.contact-form -->
       </div><!-- /.col-md-6 -->
@@ -711,7 +715,7 @@
           <div class="col-sm-6">
             <i class="fa fa-map-marker"></i>
             <address>
-              <strong>Address/Street</strong>
+              <strong>{% trans "GEN14" %}</strong>
               {{ settings.OWNER_INFO.address }}<br>
               {{ settings.OWNER_INFO.city }}, {{ settings.OWNER_INFO.region }}, {{ settings.OWNER_INFO.country }}<br>
             </address>
@@ -720,7 +724,7 @@
           <div class="col-sm-6">
             <i class="fa fa-mobile"></i>
             <div class="contact-number">
-              <strong>{% trans "phone_number" %}</strong>
+              <strong>{% trans "GEN15" %}</strong>
               {{ settings.MOBILE_NUMBER }}<br>
             </div>
           </div>
