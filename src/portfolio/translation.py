@@ -10,7 +10,7 @@ class BaseModelTranslationOptions(TranslationOptions):
 
 class TranslationModelTranslationOptions(TranslationOptions):
     fields = ('text', 'auxiliary_text')
-    required_languages = ('en', 'pt-br')
+    required_languages = {'en': ('text', ), 'pt-br': ('text',)}
 
 
 class TranslationTypeModelTranslationOptions(TranslationOptions):
