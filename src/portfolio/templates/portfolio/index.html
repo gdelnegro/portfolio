@@ -215,55 +215,33 @@
 <section id="skills" class="skills-section section-padding">
   <div class="container">
     <h2 class="section-title wow fadeInUp">{% trans "GEN5" %}</h2>
-
     <div class="row">
       <div class="col-md-6">
-        <div class="skill-progress">
-          <div class="skill-title"><h3>UX Design</h3></div>
-          <div class="progress">
-            <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
-            </div>
-          </div><!-- /.progress -->
-        </div><!-- /.skill-progress -->
-
-        <div class="skill-progress">
-          <div class="skill-title"><h3>Visual Design</h3></div>
-          <div class="progress">
-            <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
-            </div>
-          </div><!-- /.progress -->
-        </div><!-- /.skill-progress -->
-        <div class="skill-progress">
-          <div class="skill-title"><h3>Business Design</h3></div>
-          <div class="progress">
-            <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
-            </div>
-          </div><!-- /.progress -->
-        </div><!-- /.skill-progress -->
+          {% for skill in bar_skills %}
+              {% if skill.id|divisibleby:2 %}
+                <div class="skill-progress">
+                  <div class="skill-title"><h3>{{ skill.name }}</h3></div>
+                  <div class="progress">
+                    <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{ skill.proficiency }}" aria-valuemin="0" aria-valuemax="100" ><span>{{ skill.proficiency }}%</span>
+                    </div>
+                  </div><!-- /.progress -->
+                </div><!-- /.skill-progress -->
+              {% endif %}
+          {% endfor %}
       </div><!-- /.col-md-6 -->
 
       <div class="col-md-6">
-        <div class="skill-progress">
-          <div class="skill-title"><h3>Branding Design</h3></div>
-          <div class="progress">
-            <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" ><span>95%</span>
-            </div>
-          </div><!-- /.progress -->
-        </div><!-- /.skill-progress -->
-        <div class="skill-progress">
-          <div class="skill-title"><h3>Motion Graphic</h3></div>
-          <div class="progress">
-            <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" ><span>80%</span>
-            </div>
-          </div><!-- /.progress -->
-        </div><!-- /.skill-progress -->
-        <div class="skill-progress">
-          <div class="skill-title"><h3>Flyers Designing</h3></div>
-          <div class="progress">
-            <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" ><span>75%</span>
-            </div>
-          </div><!-- /.progress -->
-        </div><!-- /.skill-progress -->
+          {% for skill in bar_skills %}
+              {% if not skill.id|divisibleby:2 %}
+                <div class="skill-progress">
+                  <div class="skill-title"><h3>{{ skill.name }}</h3></div>
+                  <div class="progress">
+                    <div class="progress-bar six-sec-ease-in-out" role="progressbar" aria-valuenow="{{ skill.proficiency }}" aria-valuemin="0" aria-valuemax="100" ><span>{{ skill.proficiency }}%</span>
+                    </div>
+                  </div><!-- /.progress -->
+                </div><!-- /.skill-progress -->
+              {% endif %}
+          {% endfor %}
       </div><!-- /.col-md-6 -->
     </div><!-- /.row -->
 
@@ -701,7 +679,7 @@
             </div>
 
             <div class="form-group">
-              <label for="message">{% trans "GEN19" %}</label>
+              <label for="message">{% trans "GEN27" %}</label>
               <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
             </div>
 
