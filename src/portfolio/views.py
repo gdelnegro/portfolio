@@ -29,7 +29,8 @@ def index(request):
         'resume_experiences': Resume.objects.filter(type="XP"),
         'years': years_of_experience,
         'bar_skills': Skill.objects.filter(chart_type="bar"),
-        'gauge_skills': Skill.objects.filter(chart_type="gauge")
+        'gauge_skills': Skill.objects.filter(chart_type="gauge"),
+        'keywords': Keyword.objects.all()
     })
 
 

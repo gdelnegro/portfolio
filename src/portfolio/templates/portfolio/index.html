@@ -96,12 +96,9 @@
           <p>{% trans "GEN30" %}</p>
 
           <ul class="list-check">
-            <li>Python</li>
-            <li>PHP</li>
-            <li></li>
-            <li>Branding Design</li>
-            <li>Digital Painting</li>
-            <li>Video Editing</li>
+              {% for keyword in keywords %}
+                <li>{{ keyword.value }}</li>
+              {% endfor %}
           </ul>
         </div>
 
