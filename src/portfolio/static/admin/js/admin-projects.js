@@ -61,12 +61,12 @@ function getProjectPictures(){
                     html += '<td>';
                     html += '<div class="image-cell">';
                     html += '<div class="image-toolbar">';
-                    html += '<a class="related-widget-wrapper-link add-related" id="" href="#" title="Add">';
-                    html += '<img src="/static/admin/img/icon-addlink.svg" alt="Add">';
-                    html += '</a>';
-                    html += '<a class="related-widget-wrapper-link add-related" id="" href="#" title="Add">';
-                    html += '<img src="/static/admin/img/icon-changelink.svg" alt="Add">';
-                    html += '</a>';
+                    // html += '<a class="related-widget-wrapper-link add-related" id="" href="#" title="Add">';
+                    // html += '<img src="/static/admin/img/icon-addlink.svg" alt="Add">';
+                    // html += '</a>';
+                    // html += '<a class="related-widget-wrapper-link add-related" id="" href="#" title="Add">';
+                    // html += '<img src="/static/admin/img/icon-changelink.svg" alt="Add">';
+                    // html += '</a>';
                     html += '<a class="" id="'+result[i].id+'" href="#" title="Del" onclick="deleteImage(this.id);return false;">';
                     html += '<img src="/static/admin/img/icon-deletelink.svg" alt="Del">';
                     html += '</a>';
