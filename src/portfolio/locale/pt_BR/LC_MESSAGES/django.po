@@ -18,16 +18,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# Aquivo gerado em: 2016-09-06 13:09:01 
+# Aquivo gerado em: 2016-09-06 15:15:39 
 
 msgid "GEN29"
 msgstr "TEste21"
+
+msgid "GEN30"
+msgstr "Sou um desenvolvedor Full Stack, focado em resolução de problemas e melhorar a experiência do usuário, com experiência em desenvolvimento web e manutenção/melhorias em infraestrutura (em nuvem ou física) . Tenho experiência com Python, PHP, além de JavaScript, Jquery, AngularJS, MySQL, PostgreSQL, DynamoDB e Aerospike.<br>Sinta-se a vontade, para me mandar uma mensagem."
+
+msgid "GEN31"
+msgstr "Uma oportunidade de trabalhar, aprender e me aprimorar, assim como fazer parte de uma organização (ou projeto) que tenha como objetivos aprimorar o mercado e entregar e melhorar a experiência do usuário."
 
 msgid "MDL40"
 msgstr "Gráfico em círculo"
 
 msgid "TTP40"
 msgstr "Gráfico em círculo"
+
+msgid "MDL42"
+msgstr "Tag auxiliar"
+
+msgid "TTP42"
+msgstr "Tag do texto auxiliar"
 
 msgid "GEN2"
 msgstr "desenvolvedor"
@@ -46,6 +58,12 @@ msgstr "Anos de experiência"
 
 msgid "GEN14"
 msgstr "Endereço"
+
+msgid "MDL10"
+msgstr "Proeficiência"
+
+msgid "TTP10"
+msgstr "Proeficiência - inteiro, de 0 a 100"
 
 msgid "GEN20"
 msgstr "Enviar mensagem"
@@ -70,12 +88,6 @@ msgstr "Habilidade"
 
 msgid "MTP14"
 msgstr "Habilidades"
-
-msgid "MDL10"
-msgstr "Proeficiência"
-
-msgid "TTP10"
-msgstr "Proeficiência - inteiro, de 0 a 10"
 
 msgid "GEN18"
 msgstr "Assunto"
@@ -430,4 +442,16 @@ msgstr "O tipo de gráfico que será utilizado para representar essa habilidade"
 
 msgid "GEN28"
 msgstr "Mais habilidades"
+
+msgid "MTA15"
+msgstr "Palavra chave"
+
+msgid "MTP15"
+msgstr "Palavras chave"
+
+msgid "MDL43"
+msgstr "Texto auxiliar"
+
+msgid "TTP43"
+msgstr "Texto auxiliar"
 

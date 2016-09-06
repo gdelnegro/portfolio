@@ -45,8 +45,8 @@ class Translation(models.Model):
                              verbose_name=_('MDL33'), help_text=_('TTP33'))
     tag = models.CharField(_('MDL32'), help_text=_('TTP32'), max_length=20, unique=True)
     text = models.TextField(_('MDL34'), help_text=_('TTP34'))
-    auxiliary_tag = models.CharField(_('ToolTipTag'), help_text=_('TTP32'), max_length=20, blank=True, null=True)
-    auxiliary_text = models.TextField(_('ToolTipText'), help_text=_('TTP34'), blank=True, null=True)
+    auxiliary_tag = models.CharField(_('MDL42'), help_text=_('TTP42'), max_length=20, blank=True, null=True)
+    auxiliary_text = models.TextField(_('MDL43'), help_text=_('TTP43'), blank=True, null=True)
     migration_created = models.BooleanField(_('Migration'), default=False)
 
     class Meta:
@@ -272,3 +272,14 @@ class Skill(BaseModel):
     class Meta:
         verbose_name = _('MTA14')
         verbose_name_plural = _('MTP14')
+
+
+class Keyword(models.Model):
+    created_at = models.DateTimeField(_('MDL1'), auto_now_add=True, null=True, blank=True, help_text=_('TTP1'))
+    updated_at = models.DateTimeField(_('MDL2'), auto_now=True, null=True, blank=True, help_text=_('TTP2'))
+    tag = models.CharField(_('MDL32'), help_text=_('TTP32'), max_length=20, unique=True)
+    value = models.TextField(_('MDL34'), help_text=_('TTP34'))
+
+    class Meta:
+        verbose_name = _('MTA15')
+        verbose_name_plural = _('MTP15')

@@ -18,16 +18,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# File generated in: 2016-09-06 13:09:01 
+# File generated in: 2016-09-06 15:15:39 
 
 msgid "GEN29"
 msgstr "Teste21"
+
+msgid "GEN30"
+msgstr "I'm a Full Stack developer, focused in problem solving and improving the user experience, with experience in web development and infrastructure (cloud or bare metal) maintenance/upgrade. I have experience with Python and PHP, JavaScript, jQuery, AngularJs, along with MySQL, PostgreSQL, DynamoDB and Aerospike.<br>Feel free to have a chat with me."
+
+msgid "GEN31"
+msgstr "An opportunity to work, learn and improve myself, as well as being involved in an organization (or project) that aims to improve the user experience and improve the market."
 
 msgid "MDL40"
 msgstr "Gauge chart"
 
 msgid "TTP40"
 msgstr "Gauge chart"
+
+msgid "MDL42"
+msgstr "Auxiliary Tag"
+
+msgid "TTP42"
+msgstr "Auxiliary text tag"
 
 msgid "GEN2"
 msgstr "developer"
@@ -46,6 +58,12 @@ msgstr "Years of experience"
 
 msgid "GEN14"
 msgstr "Address/Street"
+
+msgid "MDL10"
+msgstr "Proficiency"
+
+msgid "TTP10"
+msgstr "Proficiency - integer from 0 to 100"
 
 msgid "GEN20"
 msgstr "Send message"
@@ -70,12 +88,6 @@ msgstr "Skill"
 
 msgid "MTP14"
 msgstr "Skills"
-
-msgid "MDL10"
-msgstr "Proficiency"
-
-msgid "TTP10"
-msgstr "Proficiency - integer from 0 to 10"
 
 msgid "GEN18"
 msgstr "Subject"
@@ -430,4 +442,16 @@ msgstr "The chart type that will be used to represent this skill"
 
 msgid "GEN28"
 msgstr "More skills"
+
+msgid "MTA15"
+msgstr "Keyword"
+
+msgid "MTP15"
+msgstr "Keywords"
+
+msgid "MDL43"
+msgstr "Auxiliary text"
+
+msgid "TTP43"
+msgstr "Auxiliary text"
 

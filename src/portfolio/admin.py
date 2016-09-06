@@ -108,3 +108,8 @@ class SiteSettingsAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
 @admin.register(Skill)
 class SkillAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
+
+
+@admin.register(Keyword)
+class KeywordAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+    pass
