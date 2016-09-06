@@ -110,18 +110,17 @@ class BaseModel(models.Model):
 
 
 class Image(BaseModel):
-    title = models.TextField(_('MDL5'), null=True, blank=True, help_text=_('TTP5'))
-    image_string = models.TextField(_('MDL6'), null=False, blank=False, help_text=_('TTP6'))
-    mimetype = models.TextField(_('MDL7'), null=False, help_text=_('TTP7'))
-    extension = models.TextField(_('MDL8'), null=False, help_text=_('TTP8'))
+    title = models.TextField(_('MDL49'), null=True, blank=True)
+    image_string = models.TextField(_('MDL50'), null=False, blank=False)
+    mimetype = models.TextField(null=False)
+    extension = models.TextField(null=False)
 
     def image_tag(self):
         if self.mimetype:
             return u'<img src="%s" width="300px"/>' % base64_image(self.mimetype, self.image_string)
         else:
             return u'<img src="%s"  alt="placeholder" width="300px"/>' % settings.PLACEHOLDER_B64_STRING
-
-    image_tag.short_description = 'Image'
+    image_tag.short_description = _('MDL50')
     image_tag.allow_tags = True
 
     def __str__(self):
