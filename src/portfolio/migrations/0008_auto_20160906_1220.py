@@ -27,7 +27,7 @@ def __load_data(**kwargs):
 
 def clear_data(apps, schema_editor):
     model = apps.get_model("portfolio", "Translation")
-    model.objects.filter(tag__in=[MTA14]).delete()
+    model.objects.filter(tag__in=["MTA14"]).delete()
 
 
 def load_data(apps, schema_editor):
