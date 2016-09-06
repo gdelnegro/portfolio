@@ -92,7 +92,19 @@ class ProjectTypesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
 
 @admin.register(Projects)
 class ProjectsAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
-    readonly_fields = ('images', )
+    form = ProjectsImageAdminForm
+    exclude = ('images', )
+
+    class Media:
+        import os
+        js_dir = os.path.join(settings.STATIC_URL, 'admin/js')
+        css_dir = os.path.join(settings.STATIC_URL, 'admin/css')
+        js = (
+            js_dir + '/admin-projects.js',
+        )
+        css = {
+            'all': (css_dir + 'admin-projects.css',)
+        }
 
 
 @admin.register(Resume)

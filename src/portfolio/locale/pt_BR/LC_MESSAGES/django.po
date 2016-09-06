@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# Aquivo gerado em: 2016-09-06 15:15:39 
+# Aquivo gerado em: 2016-09-06 18:21:11 
 
 msgid "GEN29"
 msgstr "TEste21"
@@ -43,6 +43,12 @@ msgstr "Tag do texto auxiliar"
 
 msgid "GEN2"
 msgstr "desenvolvedor"
+
+msgid "MDL44"
+msgstr "Imagem"
+
+msgid "TTP44"
+msgstr "Imagem"
 
 msgid "GEN6"
 msgstr "projetos"
@@ -71,8 +77,14 @@ msgstr "Enviar mensagem"
 msgid "GEN4"
 msgstr "Currículo"
 
+msgid "ME1"
+msgstr "Objeto de imagem inválido"
+
 msgid "GEN16"
 msgstr "Nome"
+
+msgid "ME3"
+msgstr "Arquivo de imagem é maior que o limite de 2,5Mb"
 
 msgid "GEN22"
 msgstr "Data de nascimento"
@@ -89,8 +101,17 @@ msgstr "Habilidade"
 msgid "MTP14"
 msgstr "Habilidades"
 
+msgid "GEN32"
+msgstr "Upload"
+
 msgid "GEN18"
 msgstr "Assunto"
+
+msgid "ME4"
+msgstr "Erro no decodificador da imagem"
+
+msgid "GEN33"
+msgstr "Novo"
 
 msgid "MDL1"
 msgstr "Data de criação"
@@ -454,4 +475,7 @@ msgstr "Texto auxiliar"
 
 msgid "TTP43"
 msgstr "Texto auxiliar"
+
+msgid "ME2"
+msgstr "Imagem não existe"
 

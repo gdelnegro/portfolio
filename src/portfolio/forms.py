@@ -7,29 +7,23 @@ import datetime
 
 
 class ProjectsImageAdminForm(forms.ModelForm):
-    image_upload = forms.ImageField(required=False, label=_('LB222'), help_text=_('TP222'))
+    image_upload = forms.ImageField(required=False, label=_('MDL44'), help_text=_('TTP44'))
 
     def save(self, commit=False):
-        org = super(ProjectsImageAdminForm, self).save(commit=commit)
-        org.save()
+        project = super(ProjectsImageAdminForm, self).save(commit=commit)
+        project.save()
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        org_name = "%s" % org.acronym
-        filename = "%s logo - %s" % (org_name, timestamp)
-        if org.logo_id:
-            pk = org.logo_id
-        else:
-            pk = None
+        filename = "%s logo - %s" % (project.name, timestamp)
         form_image = self.cleaned_data.get('image_upload')
-        image_id, image_error = image_upload(form_image, filename, pk)
+        image_id, image_error = image_upload(form_image, filename)
         if image_id:
-            org.logo_id = image_id
-            org.save()
-        return org
+            project.images.add(image_id)
+            project.save()
+        return project
 
     class Meta:
         model = Image
         fields = '__all__'
-        widgets = {'organization': forms.HiddenInput()}
 
 
 class TranslationAdminForm(forms.ModelForm):
