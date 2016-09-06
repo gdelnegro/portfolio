@@ -18,10 +18,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# File generated in: 2016-09-06 13:00:27 
+# File generated in: 2016-09-06 13:09:01 
 
 msgid "GEN29"
 msgstr "Teste21"
+
+msgid "MDL40"
+msgstr "Gauge chart"
+
+msgid "TTP40"
+msgstr "Gauge chart"
 
 msgid "GEN2"
 msgstr "developer"
@@ -380,9 +386,6 @@ msgstr "Message"
 msgid "GEN17"
 msgstr "Email"
 
-msgid "GEN28"
-msgstr "TESTE"
-
 msgid "GEN21"
 msgstr "Nationality"
 
@@ -412,4 +415,19 @@ msgstr "Phone Number"
 
 msgid "GEN25"
 msgstr "All"
+
+msgid "MDL39"
+msgstr "Progress bar chart"
+
+msgid "TTP39"
+msgstr "Progress bar chart"
+
+msgid "MDL41"
+msgstr "Chart type"
+
+msgid "TTP41"
+msgstr "The chart type that will be used to represent this skill"
+
+msgid "GEN28"
+msgstr "More skills"
 

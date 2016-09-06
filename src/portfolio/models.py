@@ -259,8 +259,15 @@ class SiteSettings(models.Model):
         verbose_name_plural = _('MTP13')
 
 
+CHART_TYPE_CHOICES = (
+    ("bar", _('MDL39')),
+    ("gauge", _('MDL40'))
+)
+
+
 class Skill(BaseModel):
     proficiency = models.PositiveIntegerField(_('MDL10'), help_text=_('TTP10'))
+    chart_type = models.CharField(_('MDL41'), choices=CHART_TYPE_CHOICES, help_text=_('TTP41'), max_length=45)
 
     class Meta:
         verbose_name = _('MTA14')

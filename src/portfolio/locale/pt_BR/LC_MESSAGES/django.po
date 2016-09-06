@@ -18,10 +18,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# Aquivo gerado em: 2016-09-06 13:00:27 
+# Aquivo gerado em: 2016-09-06 13:09:01 
 
 msgid "GEN29"
 msgstr "TEste21"
+
+msgid "MDL40"
+msgstr "Gráfico em círculo"
+
+msgid "TTP40"
+msgstr "Gráfico em círculo"
 
 msgid "GEN2"
 msgstr "desenvolvedor"
@@ -380,9 +386,6 @@ msgstr "Mensagem"
 msgid "GEN17"
 msgstr "Email"
 
-msgid "GEN28"
-msgstr "TESTE"
-
 msgid "GEN21"
 msgstr "Nacionalidade"
 
@@ -412,4 +415,19 @@ msgstr "Telefone"
 
 msgid "GEN25"
 msgstr "Tudo"
+
+msgid "MDL39"
+msgstr "Gráfico de barra de progresso"
+
+msgid "TTP39"
+msgstr "Progress bar chart"
+
+msgid "MDL41"
+msgstr "Tipo de gráfico"
+
+msgid "TTP41"
+msgstr "O tipo de gráfico que será utilizado para representar essa habilidade"
+
+msgid "GEN28"
+msgstr "Mais habilidades"
 
