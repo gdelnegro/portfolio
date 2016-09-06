@@ -92,7 +92,7 @@ class ProjectTypesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
 
 @admin.register(Projects)
 class ProjectsAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
-    pass
+    readonly_fields = ('images', )
 
 
 @admin.register(Resume)

@@ -210,9 +210,10 @@ class Projects(BaseModel):
     database = models.ManyToManyField(Databases, blank=True, verbose_name=_('MDL18'), help_text=_('TTP18'))
     technology = models.ManyToManyField(Technologies, blank=True, verbose_name=_('MDL19'), help_text=_('TTP19'))
     webserver = models.ManyToManyField(WebServers, blank=True, verbose_name=_('MDL20'), help_text=_('TTP20'))
-    images = models.ManyToManyField(Image, blank=True, verbose_name=_('MDL20'), help_text=_('TTP20'))
+    images = models.ManyToManyField(Image, blank=True, verbose_name=_('MDL21'), help_text=_('TTP21'))
 
     class Meta:
+
         verbose_name = _('MTA9')
         verbose_name_plural = _('MTP9')
 

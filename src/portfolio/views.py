@@ -53,6 +53,13 @@ class TranslationTypeViewSet(viewsets.ReadOnlyModelViewSet):
     filter_fields = ('id', 'tag')
 
 
+class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Projects.objects.all()
+    serializer_class = ProjectSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
+    filter_fields = ('id',)
+
+
 class LastTranslationTagView(views.APIView):
     def get(self, request, *args, **kwargs):
         if len(kwargs['tag']) > 0:

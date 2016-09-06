@@ -22,6 +22,7 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register(r'translation', TranslationViewSet)
 router.register(r'translation_type', TranslationTypeViewSet)
+router.register(r'project', ProjectViewSet)
 
 urlpatterns = [
     url(r'^api/', include(router.urls)),
