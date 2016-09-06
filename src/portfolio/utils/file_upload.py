@@ -34,25 +34,25 @@ def image_upload(form_image, filename, pk=None):
             image_id, image_error = image_upload(request.FILES['image'], filename, 1)
     """
     if form_image is None:
-        error = {'show': False, 'error_message': _('ME26')}
+        error = {'show': False, 'error_message': _('ME1')}
         return False, error
     if pk is not None:
         try:
             model = Image.objects.get(pk=pk)
         except Image.DoesNotExist:
-            error = {'show': True, 'error_message': _('ME27')}
+            error = {'show': True, 'error_message': _('ME2')}
             return False, error
     else:
         model = Image()
     if form_image.multiple_chunks():
-        error = {'show': True, 'error_message': _('ME28')}
+        error = {'show': True, 'error_message': _('ME3')}
         return False, error
     else:
         if "image" in form_image.content_type:
             try:
                 encoded_image = base64.b64encode(form_image.read())
             except Exception:
-                error = {"show": False, "error_message": _('ME29')}
+                error = {"show": False, "error_message": _('ME4')}
                 return False, error
             else:
                 if encoded_image:
@@ -66,7 +66,7 @@ def image_upload(form_image, filename, pk=None):
 
                     return model.id, {}
         else:
-            error = {"show": False, "error_message": _('ME29')}
+            error = {"show": False, "error_message": _('ME4')}
             return False, error
 
 def image_upload_from_url(image_url, filename, pk=None):
