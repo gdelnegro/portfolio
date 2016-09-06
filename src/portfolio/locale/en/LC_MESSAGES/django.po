@@ -18,13 +18,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# File generated in: 2016-09-05 17:13:54 
+# File generated in: 2016-09-06 12:24:54 
 
 msgid "GEN2"
 msgstr "developer"
-
-msgid "GEN4"
-msgstr "resume"
 
 msgid "GEN6"
 msgstr "projects"
@@ -41,14 +38,32 @@ msgstr "Years of experience"
 msgid "GEN14"
 msgstr "Address/Street"
 
-msgid "GEN16"
-msgstr "name"
-
 msgid "GEN18"
 msgstr "subject"
 
 msgid "GEN20"
 msgstr "Send message"
+
+msgid "GEN4"
+msgstr "Resume"
+
+msgid "GEN16"
+msgstr "Name"
+
+msgid "GEN22"
+msgstr "Date of birth"
+
+msgid "GEN24"
+msgstr "Send me a message"
+
+msgid "GEN26"
+msgstr "All"
+
+msgid "MTA14"
+msgstr "Skill"
+
+msgid "MTP14"
+msgstr "Skills"
 
 msgid "MDL1"
 msgstr "Creation date"
@@ -356,6 +371,15 @@ msgstr "Site settings"
 msgid "MTP13"
 msgstr "Site settings"
 
+msgid "GEN27"
+msgstr "Message"
+
+msgid "GEN21"
+msgstr "Nationality"
+
+msgid "GEN23"
+msgstr "Download my CV"
+
 msgid "GEN3"
 msgstr "about"
 
@@ -380,6 +404,6 @@ msgstr "Phone Number"
 msgid "GEN17"
 msgstr "email"
 
-msgid "GEN19"
-msgstr "message"
+msgid "GEN25"
+msgstr "All"
 

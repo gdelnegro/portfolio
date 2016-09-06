@@ -257,3 +257,10 @@ class SiteSettings(models.Model):
     class Meta:
         verbose_name = _('MTA13')
         verbose_name_plural = _('MTP13')
+
+
+class Skill(BaseModel):
+
+    class Meta:
+        verbose_name = _('MTA14')
+        verbose_name_plural = _('MTP14')

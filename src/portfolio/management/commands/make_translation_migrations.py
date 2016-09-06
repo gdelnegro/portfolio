@@ -42,7 +42,7 @@ def __load_data(**kwargs):
 
 def clear_data(apps, schema_editor):
     model = apps.get_model("portfolio", "Translation")
-    model.objects.all().delete()
+    model.objects.filter(tag__in=[%(tags_to_remove)s]).delete()
 
 
 def load_data(apps, schema_editor):
@@ -101,7 +101,8 @@ class Migration(migrations.Migration):
                         'django_version': django.get_version(),
                         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                         'translation_strings': "\n".join(new_lines),
-                        'dependency': dependency_migration
+                        'dependency': dependency_migration,
+                        'tags_to_remove': ",".join('"{0}"'.format(tag) for tag in self.updated_translations)
                     })
             else:
                 os.remove(last_migration_file)
