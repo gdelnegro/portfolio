@@ -2,15 +2,18 @@
  * Created by gdelnegro on 06/09/16.
  */
 
-id = "field-images"
-id = "submit-row"
-// todo: get all images from project, and build a gallery
 // todo: add CRUD methods to pictures
 
 document.onreadystatechange = function () {
     if (document.readyState === "complete") {
+        console.log("URL", document.URL.indexOf("projects/"));
         getProjectPictures()
     }
+};
+
+function getProjectId(){
+    return document.URL.substring(document.URL.indexOf("projects/")).replace(/\D/g,'');
+
 }
 
 function getProjectPictures(){
@@ -20,13 +23,14 @@ function getProjectPictures(){
     html += "</div>";
     html += "<table>";
     jQuery.ajax({
-        url: "/api/project/1",
+        url: "/api/project/" + getProjectId(),
+        // data: {id:getProjectId()},
         async:false,
         success: function (data){
             var result = data.images;
             if(Object.keys(result).length > 0){
                 for(var i=0;i<Object.keys(result).length;i++){
-                    if(i == 0){
+                    if(i == 0 || (i % 3 == 0)){
                         html += "<tr>";
                     }
                     html += '<td>';
@@ -41,8 +45,8 @@ function getProjectPictures(){
                     html += '</div>';
                     html += '<img src="data:'+result[i].mimetype+';base64,'+result[i].image_string+'" width="200px"/>';
                     html += '</div>';
-                    html += '<td>';
-                    if(i == Object.keys(result).length -1){
+                    html += '</td>';
+                    if(i == Object.keys(result).length -1 || (i % 3 == 2)){
                         html += "</tr>";
                     }
                     // jQuery(html_).insertBefore(".submit-row")
