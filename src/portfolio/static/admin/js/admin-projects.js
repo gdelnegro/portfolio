@@ -16,7 +16,32 @@ function getProjectId(){
 
 }
 
+function deleteImage(imgId){
+    if (confirm("Deseja excluir?") == true) {
+        jQuery.ajax({
+            url: "/delete_image/",
+            method: "POST",
+            data: {
+                img_id: imgId,
+                model: "project",
+                pk: getProjectId(),
+                csrfmiddlewaretoken:jQuery("#projects_form").find('input[name=csrfmiddlewaretoken]').val()
+            },
+            async: false,
+            success: function (data) {
+                getProjectPictures();
+            },
+            error: function (reason) {
+                console.log("error", reason)
+            }
+
+        });
+        return true;
+    }
+}
+
 function getProjectPictures(){
+    jQuery("#images-grid").remove();
     var html = "<div class='form-row' id='images-grid'>";
     html += "<div>";
     html += "<div>";
@@ -41,6 +66,9 @@ function getProjectPictures(){
                     html += '</a>';
                     html += '<a class="related-widget-wrapper-link add-related" id="" href="#" title="Add">';
                     html += '<img src="/static/admin/img/icon-changelink.svg" alt="Add">';
+                    html += '</a>';
+                    html += '<a class="" id="'+result[i].id+'" href="#" title="Del" onclick="deleteImage(this.id);return false;">';
+                    html += '<img src="/static/admin/img/icon-deletelink.svg" alt="Del">';
                     html += '</a>';
                     html += '</div>';
                     html += '<img src="data:'+result[i].mimetype+';base64,'+result[i].image_string+'" width="200px"/>';

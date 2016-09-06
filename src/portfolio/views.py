@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
 from portfolio.models import *
@@ -10,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from portfolio.utils.file_upload import image_upload
 from datetime import datetime
+from django.http import JsonResponse, HttpResponse
 
 
 def index(request):
@@ -82,6 +82,32 @@ class LastTranslationTagView(views.APIView):
         return Response(result, status=status.HTTP_200_OK)
 
 
+def view_image_delete(request, pk=None):
+    if 'img_id' in request.POST:
+        _request = request.POST.copy()
+        try:
+            img_model = Image.objects.get(pk=_request['img_id'])
+        except Image.DoesNotExist:
+            return HttpResponse(status=404)
+        else:
+            if _request['model'] == "project":
+                try:
+                    project = Projects.objects.get(pk=_request['pk'])
+                except Projects.DoesNotExist:
+                    return HttpResponse(status=404)
+                else:
+                    try:
+                        project.images.remove(img_model.id)
+                        project.save()
+                        img_model.delete()
+                    except Exception as error:
+                        return HttpResponse(status=500, reason=error)
+                    else:
+                        return HttpResponse(status=200)
+    else:
+        return HttpResponse(status=500)
+
+
 def view_image_upload(request, pk=None):
     if request.method == "POST" and request.FILES and 'img' in request.FILES and 'pk' in request.POST:
         form_image = request.FILES['img']
@@ -91,7 +117,7 @@ def view_image_upload(request, pk=None):
             try:
                 model = Projects.objects.get(pk=_request['pk'])
             except Projects.DoesNotExist:
-                return HttpResponse.code(status=404)
+                return HttpResponse(status=404)
             else:
                 img_id = _request.get('img_id', None)
                 if img_id:
@@ -101,7 +127,7 @@ def view_image_upload(request, pk=None):
                 image_id, image_error = image_upload(form_image=form_image, filename=filename, pk=img_id)
                 if image_id:
                     if img_id:
-                        return HttpResponse.code(status=200)
+                        return HttpResponse(status=200)
                     else:
                         try:
                             model.images.add(image_id)
@@ -119,7 +145,7 @@ def view_image_upload(request, pk=None):
             try:
                 model = User.objects.get(pk=_request['pk'])
             except User.DoesNotExist:
-                return HttpResponse.code(status=500, reason=_('ME17'))
+                return HttpResponse(status=500, reason=_('ME17'))
             if model.userextend.photo:
                 img_id = model.userextend.photo_id
                 filename = model.userextend.photo
