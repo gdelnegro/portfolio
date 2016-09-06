@@ -78,6 +78,26 @@ function getTranslationTypeDetails(){
                             hideFields();
                         }
                     }
+                }else{
+                    jQuery.ajax({
+                        url: "/api/translation_type",
+                        data:{id:jQuery("#id_type").val()},
+                        async:false,
+                        success: function (data){
+                            result = data[0]
+                            if(Object.keys(result).length > 0){
+                                if(!jQuery("#id_tag").prop("disabled")){
+                                    jQuery("#id_tag").val(result.tag + 1);
+                                }
+                                if (result.has_auxiliary_text){
+                                    showFields();
+                                    jQuery("#id_auxiliary_tag").val(result.auxiliary_tag+1)
+                                }else{
+                                    hideFields();
+                                }
+                            }
+                        }
+                    })
                 }
             }
         });
@@ -89,7 +109,6 @@ function getTranslationTypeDetails(){
 }
 
 function clearFields(){
-    console.log("clearFields");
     jQuery("#id_tag").val("");
     jQuery("#id_auxiliary_tag").val("");
     jQuery('[id*=" field-auxiliary_text_"]').val("");
