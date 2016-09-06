@@ -103,10 +103,10 @@ class BaseModel(models.Model):
         abstract = True
 
     def __str__(self):
-        return "%s" % self.title
+        return "%s" % self.name
 
     def __unicode__(self):
-        return "%s" % self.title
+        return "%s" % self.name
 
 
 class Image(BaseModel):
@@ -260,6 +260,7 @@ class SiteSettings(models.Model):
 
 
 class Skill(BaseModel):
+    proficiency = models.PositiveIntegerField(_('MDL10'), help_text=_('TTP10'))
 
     class Meta:
         verbose_name = _('MTA14')

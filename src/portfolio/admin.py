@@ -75,30 +75,35 @@ class WebServersAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
 
 
 @admin.register(TechnologyTypes)
-class TechnologyTypes(CustomModelAdminMixin, TabbedTranslationAdmin):
+class TechnologyTypesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
 
 
 @admin.register(Technologies)
-class TechnologiesTypes(CustomModelAdminMixin, TabbedTranslationAdmin):
+class TechnologiesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
 
 
 @admin.register(ProjectTypes)
-class ProjectTypes(CustomModelAdminMixin, TabbedTranslationAdmin):
+class ProjectTypesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
 
 
 @admin.register(Projects)
-class Projects(CustomModelAdminMixin, TabbedTranslationAdmin):
+class ProjectsAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
 
 
 @admin.register(Resume)
-class Resume(CustomModelAdminMixin, TabbedTranslationAdmin):
+class ResumeAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
 
 
 @admin.register(SiteSettings)
-class SiteSettings(CustomModelAdminMixin, TabbedTranslationAdmin):
+class SiteSettingsAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+    pass
+
+
+@admin.register(Skill)
+class SkillAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
     pass
