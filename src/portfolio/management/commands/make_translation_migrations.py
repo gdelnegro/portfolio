@@ -73,8 +73,8 @@ class Migration(migrations.Migration):
                     'text_pt': translation.text_pt_br,
                     'text_en': translation.text_en,
                     'aux_tag': translation.auxiliary_tag,
-                    'aux_text_pt': translation.auxiliary_text_pt_br,
-                    'aux_text_en': translation.auxiliary_text_en,
+                    'aux_text_pt': translation.auxiliary_text_pt_br if translation.auxiliary_text_pt_br else "",
+                    'aux_text_en': translation.auxiliary_text_en if translation.auxiliary_text_en else "",
                 }
             )
             self.updated_translations.append(translation.tag)
@@ -106,14 +106,17 @@ class Migration(migrations.Migration):
                     })
             else:
                 os.remove(last_migration_file)
+                raise Exception("There's no new translations to migrate")
         except Exception as error:
             os.remove(last_migration_file)
+            raise error
         else:
             import subprocess
             os.chdir(migrations_dir)
             subprocess.call(["git", "add", "."])
             subprocess.call(["git", 'commit', "-m", "Added new translation migration"])
             self.__update_translation()
+            subprocess.call(["git", "push"])
 
     def handle(self, *args, **options):
         self.__create_translation_migration()

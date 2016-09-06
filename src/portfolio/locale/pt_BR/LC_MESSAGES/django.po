@@ -18,7 +18,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# Aquivo gerado em: 2016-09-06 12:38:20 
+# Aquivo gerado em: 2016-09-06 13:00:27 
+
+msgid "GEN29"
+msgstr "TEste21"
 
 msgid "GEN2"
 msgstr "desenvolvedor"
@@ -37,9 +40,6 @@ msgstr "Anos de experiência"
 
 msgid "GEN14"
 msgstr "Endereço"
-
-msgid "GEN18"
-msgstr "assunto"
 
 msgid "GEN20"
 msgstr "Enviar mensagem"
@@ -70,6 +70,9 @@ msgstr "Proeficiência"
 
 msgid "TTP10"
 msgstr "Proeficiência - inteiro, de 0 a 10"
+
+msgid "GEN18"
+msgstr "Assunto"
 
 msgid "MDL1"
 msgstr "Data de criação"
@@ -374,6 +377,12 @@ msgstr "Configurações do site"
 msgid "GEN27"
 msgstr "Mensagem"
 
+msgid "GEN17"
+msgstr "Email"
+
+msgid "GEN28"
+msgstr "TESTE"
+
 msgid "GEN21"
 msgstr "Nacionalidade"
 
@@ -400,9 +409,6 @@ msgstr "Projetos concluídos"
 
 msgid "GEN15"
 msgstr "Telefone"
-
-msgid "GEN17"
-msgstr "email"
 
 msgid "GEN25"
 msgstr "Tudo"

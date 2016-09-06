@@ -18,7 +18,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# File generated in: 2016-09-06 12:38:20 
+# File generated in: 2016-09-06 13:00:27 
+
+msgid "GEN29"
+msgstr "Teste21"
 
 msgid "GEN2"
 msgstr "developer"
@@ -37,9 +40,6 @@ msgstr "Years of experience"
 
 msgid "GEN14"
 msgstr "Address/Street"
-
-msgid "GEN18"
-msgstr "subject"
 
 msgid "GEN20"
 msgstr "Send message"
@@ -70,6 +70,9 @@ msgstr "Proficiency"
 
 msgid "TTP10"
 msgstr "Proficiency - integer from 0 to 10"
+
+msgid "GEN18"
+msgstr "Subject"
 
 msgid "MDL1"
 msgstr "Creation date"
@@ -374,6 +377,12 @@ msgstr "Site settings"
 msgid "GEN27"
 msgstr "Message"
 
+msgid "GEN17"
+msgstr "Email"
+
+msgid "GEN28"
+msgstr "TESTE"
+
 msgid "GEN21"
 msgstr "Nationality"
 
@@ -400,9 +409,6 @@ msgstr "Done projects"
 
 msgid "GEN15"
 msgstr "Phone Number"
-
-msgid "GEN17"
-msgstr "email"
 
 msgid "GEN25"
 msgstr "All"

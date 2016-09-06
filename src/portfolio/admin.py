@@ -21,6 +21,7 @@ class TranslationTypeAdmin(TabbedTranslationAdmin):
 
 @admin.register(Translation)
 class TranslationAdmin(TabbedTranslationAdmin):
+    form = TranslationAdminForm
     fieldsets = (
         ('Translation type', {
             'fields': ('type',)

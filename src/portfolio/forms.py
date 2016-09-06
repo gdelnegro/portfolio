@@ -60,3 +60,16 @@ class OrganizationImageAdminForm(forms.ModelForm):
         model = Image
         fields = '__all__'
         widgets = {'organization': forms.HiddenInput()}
+
+
+class TranslationAdminForm(forms.ModelForm):
+    def save(self, commit=False):
+        translation = super(TranslationAdminForm, self).save(commit=commit)
+        translation.save()
+        translation.migration_created = False
+        translation.save()
+        return translation
+
+    class Meta:
+        model = Translation
+        fields = "__all__"
