@@ -14,6 +14,12 @@ class CustomModelAdminMixin(object):
         super(CustomModelAdminMixin, self).__init__(model, admin_site)
 
 
+class TechnologyAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+    form = TechnologyImageAdminForm
+    exclude = ('logo',)
+    readonly_fields = ('logo_thumbnail',)
+
+
 @admin.register(TranslationType)
 class TranslationTypeAdmin(TabbedTranslationAdmin):
     pass
@@ -56,34 +62,32 @@ class ImageAdmin(admin.ModelAdmin):
 
 
 @admin.register(ProgrammingLanguages)
-class ProgrammingLanguagesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+class ProgrammingLanguagesAdmin(TechnologyAdmin):
     pass
 
 
 @admin.register(Frameworks)
-class FrameworksAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+class FrameworksAdmin(TechnologyAdmin):
     pass
 
 
 @admin.register(Databases)
-class DatabasesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
-    form = DatabaseImageAdminForm
-    exclude = ('logo', )
-    readonly_fields = ('logo_thumbnail', )
+class DatabasesAdmin(TechnologyAdmin):
+    pass
 
 
 @admin.register(WebServers)
-class WebServersAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+class WebServersAdmin(TechnologyAdmin):
     pass
 
 
 @admin.register(TechnologyTypes)
-class TechnologyTypesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+class TechnologyTypesAdmin(TechnologyAdmin):
     pass
 
 
 @admin.register(Technologies)
-class TechnologiesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
+class TechnologiesAdmin(TechnologyAdmin):
     pass
 
 

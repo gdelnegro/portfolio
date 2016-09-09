@@ -26,30 +26,29 @@ class ProjectsImageAdminForm(forms.ModelForm):
         fields = '__all__'
 
 
-class DatabaseImageAdminForm(forms.ModelForm):
+class TechnologyImageAdminForm(forms.ModelForm):
     image_upload = forms.ImageField(required=False, label=_('MDL44'), help_text=_('TTP44'))
 
     def save(self, commit=False):
-        database = super(DatabaseImageAdminForm, self).save(commit=commit)
-        database.save()
+        model = super(TechnologyImageAdminForm, self).save(commit=commit)
+        model.save()
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-        if database.logo:
-            image_pk = database.logo.id
-            filename = database.logo.title
+        if model.logo:
+            image_pk = model.logo.id
+            filename = model.logo.title
         else:
-            filename = "%s logo - %s" % (database.name, timestamp)
+            filename = "%s logo - %s" % (model.name, timestamp)
             image_pk = None
         form_image = self.cleaned_data.get('image_upload')
         image_id, image_error = image_upload(form_image=form_image, filename=filename, pk=image_pk)
         if image_id:
-            database.logo = Image.objects.get(pk=image_id)
-            database.save()
-        return database
+            model.logo = Image.objects.get(pk=image_id)
+            model.save()
+        return model
 
     class Meta:
         model = Image
         fields = '__all__'
-
 
 
 class TranslationAdminForm(forms.ModelForm):
