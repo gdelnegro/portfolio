@@ -23,7 +23,7 @@ class TranslationType(models.Model):
     created_at = models.DateTimeField(_('MDL1'), auto_now_add=True, null=True, blank=True, help_text=_('TTP1'))
     updated_at = models.DateTimeField(_('MDL2'), auto_now=True, null=True, blank=True, help_text=_('TTP2'))
     tag = models.CharField(_('MDL32'), help_text=_('TTP32'), max_length=20, unique=True)
-    name = models.TextField(_('MDL34'), help_text=_('TTP34'))
+    name = models.TextField(_('MDL3'), help_text=_('TTP3'))
     has_auxiliary_text = models.BooleanField(_('Texto Auxiliar'), default=True)
     auxiliary_tag = models.CharField(_('MDL32'), help_text=_('TTP32'), max_length=20, unique=True)
 
