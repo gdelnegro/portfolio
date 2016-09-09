@@ -3,7 +3,7 @@ from django.core.validators import RegexValidator, MinValueValidator, MaxValueVa
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
-from portfolio.utils import base64_image
+from portfolio.utils.base64_image import base64_image
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.conf import settings

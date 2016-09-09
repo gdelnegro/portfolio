@@ -67,7 +67,9 @@ class FrameworksAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
 
 @admin.register(Databases)
 class DatabasesAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):
-    pass
+    form = DatabaseImageAdminForm
+    exclude = ('logo', )
+    readonly_fields = ('logo_thumbnail', )
 
 
 @admin.register(WebServers)
