@@ -18,16 +18,16 @@ function getCRFToken() {
 }
 
 function uploadImage(input){
-    var formdata = new FormData();
-    formdata.append('img_id', jQuery("#upload-form-image-id").val())
-    formdata.append('model', "project");
-    formdata.append('pk', getProjectId());
-    formdata.append("img",input.files[0]);
-    formdata.append('csrfmiddlewaretoken', getCRFToken());
+    var formData = new FormData();
+    formData.append('img_id', jQuery("#upload-form-image-id").val())
+    formData.append('model', "project");
+    formData.append('pk', getProjectId());
+    formData.append("img",input.files[0]);
+    formData.append('csrfmiddlewaretoken', getCRFToken());
     jQuery.ajax({
         url: "/upload_image/",
         method: "POST",
-        data: formdata,
+        data: formData,
         processData: false,
         contentType: false,
         async:false,
@@ -39,6 +39,7 @@ function uploadImage(input){
         }
     });
 }
+
 function updateImage(imgId){
     jQuery("#upload-form-image-id").val(imgId);
     jQuery("#upload-form-image").trigger("click");
@@ -77,7 +78,6 @@ function getProjectPictures(){
     html += "<table>";
     jQuery.ajax({
         url: "/api/project/" + getProjectId(),
-        // data: {id:getProjectId()},
         async:false,
         success: function (data){
             var result = data.images;
@@ -89,15 +89,9 @@ function getProjectPictures(){
                     html += '<td>';
                     html += '<div class="image-cell">';
                     html += '<div class="image-toolbar">';
-                    // html += '<a class="related-widget-wrapper-link add-related" id="" href="#" title="Add">';
-                    // html += '<img src="/static/admin/img/icon-addlink.svg" alt="Add">';
-                    // html += '</a>';
                     html += '<a class="" id="'+result[i].id+'" href="#" title="Del" onclick="updateImage(this.id);return false;">';
                     html += '<img src="/static/admin/img/icon-changelink.svg" alt="Update">';
                     html += '</a>';
-                    // html += '<a class="related-widget-wrapper-link add-related" id="" href="#" title="Add">';
-                    // html += '<img src="/static/admin/img/icon-changelink.svg" alt="Add">';
-                    // html += '</a>';
                     html += '<a class="" id="'+result[i].id+'" href="#" title="Del" onclick="deleteImage(this.id);return false;">';
                     html += '<img src="/static/admin/img/icon-deletelink.svg" alt="Del">';
                     html += '</a>';
@@ -108,7 +102,6 @@ function getProjectPictures(){
                     if(i == Object.keys(result).length -1 || (i % 3 == 2)){
                         html += "</tr>";
                     }
-                    // jQuery(html_).insertBefore(".submit-row")
                 }
             }
         }
