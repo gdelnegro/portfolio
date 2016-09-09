@@ -1,6 +1,7 @@
 {% extends "portfolio/base.html" %}
 {% load staticfiles %}
 {% load i18n %}
+{% load base64_image %}
 {% block  content %}
 <!-- Preloader -->
 <div id="tt-preloader">
@@ -273,20 +274,20 @@
     <div class="row">
       <div id="grid">
           {% for project in  projects %}
-            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "{{ project.type.name }}" ]'>
+            <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identity", "{{ project.type.name }}" ]'>
               <div class="portfolio-bg">
                 <div class="portfolio">
                   <div class="tt-overlay"></div>
                   <div class="links">
                       {% if project.images.count > 0 %}
-                        <a class="image-link" href="static/images/works/portfolio-1.jpg"><i class="fa fa-search-plus"></i></a>
+                        <a class="image-link" href="{{ project.images.all.first.id|base64_image }}"><i class="fa fa-search-plus"></i></a>
                       {% else %}
                         <a class="image-link" href="{{ setting.PLACEHOLDER_B64_STRING }}"><i class="fa fa-search-plus"></i></a>
                       {% endif %}
                     <a href="#"><i class="fa fa-link"></i></a>
                   </div><!-- /.links -->
                   {% if project.images.count > 0 %}
-                    <img src="static/images/works/portfolio-1.jpg" alt="image">
+                    <img src="{{ project.images.all.first.id|base64_image }}" alt="image">
                   {% else %}
                     <img src="static/images/works/portfolio-1.jpg" alt="image">
                   {% endif %}
@@ -297,113 +298,6 @@
               </div><!-- /.portfolio-bg -->
             </div><!-- /.portfolio-item -->
           {% endfor %}
-
-
-        <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "web"]'>
-          <div class="portfolio-bg">
-            <div class="portfolio">
-              <div class="tt-overlay"></div>
-              <div class="links">
-                <a class="image-link" href="static/images/works/portfolio-2.jpg"><i class="fa fa-search-plus"></i></a>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div><!-- /.links -->
-              <img src="static/images/works/portfolio-2.jpg" alt="image">
-              <div class="portfolio-info">
-                <h3>Portfolio Title</h3>
-              </div><!-- /.portfolio-info -->
-            </div><!-- /.portfolio -->
-          </div><!-- /.portfolio-bg -->
-        </div><!-- /.portfolio-item -->
-        <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "interface"]'>
-          <div class="portfolio-bg">
-            <div class="portfolio">
-              <div class="tt-overlay"></div>
-              <div class="links">
-                <a class="image-link" href="static/images/works/portfolio-3.jpg"><i class="fa fa-search-plus"></i></a>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div><!-- /.links -->
-              <img src="static/images/works/portfolio-3.jpg" alt="image">
-              <div class="portfolio-info">
-                <h3>Portfolio Title</h3>
-              </div><!-- /.portfolio-info -->
-            </div><!-- /.portfolio -->
-          </div><!-- /.portfolio-bg -->
-        </div><!-- /.portfolio-item -->
-        <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
-          <div class="portfolio-bg">
-            <div class="portfolio">
-              <div class="tt-overlay"></div>
-              <div class="links">
-                <a class="image-link" href="static/images/works/portfolio-4.jpg"><i class="fa fa-search-plus"></i></a>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div><!-- /.links -->
-              <img src="static/images/works/portfolio-4.jpg" alt="image">
-              <div class="portfolio-info">
-                <h3>Portfolio Title</h3>
-              </div><!-- /.portfolio-info -->
-            </div><!-- /.portfolio -->
-          </div><!-- /.portfolio-bg -->
-        </div><!-- /.portfolio-item -->
-        <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
-          <div class="portfolio-bg">
-            <div class="portfolio">
-              <div class="tt-overlay"></div>
-              <div class="links">
-                <a class="image-link" href="static/images/works/portfolio-5.jpg"><i class="fa fa-search-plus"></i></a>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div><!-- /.links -->
-              <img src="static/images/works/portfolio-5.jpg" alt="image">
-              <div class="portfolio-info">
-                <h3>Portfolio Title</h3>
-              </div><!-- /.portfolio-info -->
-            </div><!-- /.portfolio -->
-          </div><!-- /.portfolio-bg -->
-        </div><!-- /.portfolio-item -->
-        <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "design"]'>
-          <div class="portfolio-bg">
-            <div class="portfolio">
-              <div class="tt-overlay"></div>
-              <div class="links">
-                <a class="image-link" href="static/images/works/portfolio-6.jpg"><i class="fa fa-search-plus"></i></a>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div><!-- /.links -->
-              <img src="static/images/works/portfolio-6.jpg" alt="image">
-              <div class="portfolio-info">
-                <h3>Portfolio Title</h3>
-              </div><!-- /.portfolio-info -->
-            </div><!-- /.portfolio -->
-          </div><!-- /.portfolio-bg -->
-        </div><!-- /.portfolio-item -->
-        <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "identety", "web"]'>
-          <div class="portfolio-bg">
-            <div class="portfolio">
-              <div class="tt-overlay"></div>
-              <div class="links">
-                <a class="image-link" href="static/images/works/portfolio-7.jpg"><i class="fa fa-search-plus"></i></a>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div><!-- /.links -->
-              <img src="static/images/works/portfolio-7.jpg" alt="image">
-              <div class="portfolio-info">
-                <h3>Portfolio Title</h3>
-              </div><!-- /.portfolio-info -->
-            </div><!-- /.portfolio -->
-          </div><!-- /.portfolio-bg -->
-        </div><!-- /.portfolio-item -->
-        <div class="portfolio-item col-xs-12 col-sm-4 col-md-3" data-groups='["all", "design"]'>
-          <div class="portfolio-bg">
-            <div class="portfolio">
-              <div class="tt-overlay"></div>
-              <div class="links">
-                <a class="image-link" href="static/images/works/portfolio-8.jpg"><i class="fa fa-search-plus"></i></a>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div><!-- /.links -->
-              <img src="static/images/works/portfolio-8.jpg" alt="image">
-              <div class="portfolio-info">
-                <h3>Portfolio Title</h3>
-              </div><!-- /.portfolio-info -->
-            </div><!-- /.portfolio -->
-          </div><!-- /.portfolio-bg -->
-        </div><!-- /.portfolio-item -->
       </div><!-- /#grid -->
     </div><!-- /.row -->
   </div><!-- /.container -->
