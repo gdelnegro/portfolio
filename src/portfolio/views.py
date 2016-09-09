@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 from portfolio.models import *
 from portfolio.serializers import *
@@ -127,7 +128,7 @@ def view_image_upload(request, pk=None):
                 image_id, image_error = image_upload(form_image=form_image, filename=filename, pk=img_id)
                 if image_id:
                     if img_id:
-                        return HttpResponse(status=200)
+                        return HttpResponse(status=200, reason=_('ME5'))
                     else:
                         try:
                             model.images.add(image_id)

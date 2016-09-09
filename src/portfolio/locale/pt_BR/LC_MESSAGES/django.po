@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# Aquivo gerado em: 2016-09-06 18:21:11 
+# Aquivo gerado em: 2016-09-09 12:02:43 
 
 msgid "GEN29"
 msgstr "TEste21"
@@ -106,6 +106,9 @@ msgstr "Upload"
 
 msgid "GEN18"
 msgstr "Assunto"
+
+msgid "ME5"
+msgstr "Arquivo inserido com sucesso"
 
 msgid "ME4"
 msgstr "Erro no decodificador da imagem"

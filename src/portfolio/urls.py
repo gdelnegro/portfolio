@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^api/last_translation_tag/(?P<tag>\w+)[/]?$', LastTranslationTagView.as_view(), name='get_last_translation_tag'),
     url(r'^delete_image/$', view_image_delete, name="view_image_delete"),
     url(r'^delete_image/(?P<pk>[0-9]+)/$', view_image_delete, name="view_image_delete"),
+    url(r'^upload_image/$', view_image_upload, name="view_image_upload"),
+    url(r'^upload_image/(?P<pk>[0-9]+)/$', view_image_upload, name="view_image_upload"),
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
 ]
