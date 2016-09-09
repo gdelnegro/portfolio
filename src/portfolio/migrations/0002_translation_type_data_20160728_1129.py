@@ -7,10 +7,10 @@ from django.db import migrations
 
 def load_data(apps, schema_editor):
     translation = apps.get_model("portfolio", "TranslationType")
-    translation(tag='MDL', text_pt_br="Modelo", text_en="Model", has_auxiliary_text=True, auxiliary_tag="TTP").save()
-    translation(tag='MTA', text_pt_br="Meta", text_en="Meta", has_auxiliary_text=True, auxiliary_tag="MTP").save()
-    translation(tag='GEN', text_pt_br="Texto", text_en="General Text", has_auxiliary_text="", auxiliary_tag="GTP").save()
-    translation(tag='ME', text_pt_br="Mensagem de erro", text_en="Error message", has_auxiliary_text="",
+    translation(tag='MDL', name_pt_br="Modelo", name_en="Model", has_auxiliary_text=True, auxiliary_tag="TTP").save()
+    translation(tag='MTA', name_pt_br="Meta", name_en="Meta", has_auxiliary_text=True, auxiliary_tag="MTP").save()
+    translation(tag='GEN', name_pt_br="Texto", name_en="General Text", has_auxiliary_text="", auxiliary_tag="GTP").save()
+    translation(tag='ME', name_pt_br="Mensagem de erro", name_en="Error message", has_auxiliary_text="",
                 auxiliary_tag="MEE").save()
 
 
