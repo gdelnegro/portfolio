@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k@f9+qfao*hwbtxleg&^&balf3e8(@r468ve-f&85le5#eg0xw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'admin_portfolio',                      # Or path to database file if using sqlite3.
         'USER': 'admin_portfolio',
-        'PASSWORD': 'gustavo123',
+        'PASSWORD': 'U4FPjtyWvqGkrW72',
         'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
         'PORT': '',                      # Set to empty string for default.
     }
@@ -136,7 +136,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIR = [
     STATIC_ROOT,
-    '/static',
     '/portfolio/static'
 ]
 
