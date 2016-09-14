@@ -65,11 +65,11 @@ class TranslationAdmin(TabbedTranslationAdmin):
         )
 
 
-@admin.register(Image)
-class ImageAdmin(admin.ModelAdmin):
-    list_display = ('title', 'created_at')
-    fields = ('image_tag', 'title', 'description',)
-    readonly_fields = ('image_tag',)
+# @admin.register(Image)
+# class ImageAdmin(admin.ModelAdmin):
+#     list_display = ('title', 'created_at')
+#     fields = ('image_tag', 'title', 'description')
+#     readonly_fields = ('image_tag',)
 
 
 @admin.register(ProgrammingLanguages)

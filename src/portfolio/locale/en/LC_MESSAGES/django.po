@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# File generated in: 2016-09-09 12:02:43 
+# File generated in: 2016-09-14 22:14:51 
 
 msgid "GEN29"
 msgstr "Teste21"
@@ -115,6 +115,24 @@ msgstr "Error on base64 encode"
 
 msgid "GEN33"
 msgstr "New"
+
+msgid "MDL45"
+msgstr "Title"
+
+msgid "TTP45"
+msgstr "Image title"
+
+msgid "MDL46"
+msgstr "Image string"
+
+msgid "TTP46"
+msgstr "Image binary string"
+
+msgid "MDL47"
+msgstr "Image preview"
+
+msgid "TTP47"
+msgstr "Uploaded image preview"
 
 msgid "MDL1"
 msgstr "Creation date"

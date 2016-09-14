@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# Aquivo gerado em: 2016-09-09 12:02:43 
+# Aquivo gerado em: 2016-09-14 22:14:51 
 
 msgid "GEN29"
 msgstr "TEste21"
@@ -115,6 +115,24 @@ msgstr "Erro no decodificador da imagem"
 
 msgid "GEN33"
 msgstr "Novo"
+
+msgid "MDL45"
+msgstr "Título"
+
+msgid "TTP45"
+msgstr "Título da imagem"
+
+msgid "MDL46"
+msgstr "String binária"
+
+msgid "TTP46"
+msgstr "String binária da imagem"
+
+msgid "MDL47"
+msgstr "Visualização da imagem"
+
+msgid "TTP47"
+msgstr "Visualização da imagem salva"
 
 msgid "MDL1"
 msgstr "Data de criação"
