@@ -12,7 +12,17 @@ class CustomModelAdminMixin(object):
     def __init__(self, model, admin_site):
         self.list_display = [field.name for field in model._meta.fields if field.name != "id"]
         super(CustomModelAdminMixin, self).__init__(model, admin_site)
-        self.filter_horizontal = [field.name for field in model._meta.get_fields() if field.many_to_many]
+        m2m_fields = [field for field in model._meta.get_fields() if field.many_to_many]
+        fields_to_remove = []
+        for field in m2m_fields:
+            if field.model.__name__ == model.__name__:
+                fields_to_remove.append(field)
+        if len(fields_to_remove) > 0:
+            for field in fields_to_remove:
+                if field in m2m_fields:
+                    m2m_fields.remove(field)
+        if len(m2m_fields) > 0:
+            self.filter_horizontal = [field.name for field in m2m_fields]
 
 
 class TechnologyAdmin(CustomModelAdminMixin, TabbedTranslationAdmin):

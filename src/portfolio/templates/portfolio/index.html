@@ -18,7 +18,6 @@
         {% else %}
             <h1> Full Stack <span>{% trans "GEN2" %}</span></h1>
         {% endif %}
-        {% trans "about_me" %}
   <div class="social-icons">
     <ul class="list-inline">
       <li><a href="{{ settings.OWNER_INFO.git }}" target="_blank"><i class="fa fa-github"></i></a></li>
@@ -42,7 +41,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="static/images/logo.png" alt=""></a>
+                <a class="navbar-brand" href="{% url 'index' %}"><img src="static/images/logo.png" alt=""></a>
             </div>
 
             <div class="collapse navbar-collapse" id="custom-collapse">
