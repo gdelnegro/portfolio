@@ -174,3 +174,4 @@ OWNER_INFO = {
 }
 
 DEVELOPER_NAME = "Gustavo Del Negro"
+GOOGLE_API_KEY = "AIzaSyCvfiNC-Xpf_1JbY1qNd6_3qEpjppKiM2A"
