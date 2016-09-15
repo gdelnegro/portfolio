@@ -16,5 +16,4 @@ myvenv/
 jsconfig.json
 node_modules
 dist
-portfolio/static/*
 src/static/*
