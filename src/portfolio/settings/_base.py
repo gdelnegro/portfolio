@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+# Created by Gustavo Del Negro <gustavodelnegro@gmail.com> on 14/09/16.
+
+# -*- coding: utf-8 -*-
+# Created by Gustavo Del Negro <gustavodelnegro@gmail.com> on 14/09/16.
+
 """
 Django settings for portfolio project.
 

@@ -1,19 +1,23 @@
 #!/bin/bash
 
 NAME="portfolio"                                  # Name of the application
-DJANGODIR=/home/gdelnegro/projects/gdelnegro/portfolio/src             # Django project directory
-SOCKFILE=/home/gdelnegro/projects/gdelnegro/portfolio/src/portfolio.sock  # we will communicte using this unix socket
+BASEDIR=/home/gdelnegro/projects/gdelnegro/portfolio
+DJANGODIR="$BASEDIR/src"             # Django project directory
+SOCKFILE="$DJANGODIR/portfolio.sock"  # we will communicte using this unix socket
 USER=gdelnegro                                        # the user to run as
 GROUP=gdelnegro                                    # the group to run as
 NUM_WORKERS=1                                     # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=portfolio.settings             # which settings file should Django use
 DJANGO_WSGI_MODULE=portfolio.wsgi                     # WSGI module name
+LOGFILE=/var/log/web/portfolio/gunicorn.log
+
+#export SERVER_ENV=DEVEL
 
 echo "Starting $NAME as `whoami`"
 
 # Activate the virtual environment
 cd $DJANGODIR
-source ../bin/activate
+source $BASEDIR/env/bin/activate
 export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
 export PYTHONPATH=$DJANGODIR:$PYTHONPATH
 
@@ -23,9 +27,9 @@ test -d $RUNDIR || mkdir -p $RUNDIR
 
 # Start your Django Unicorn
 # Programs meant to be run under supervisor should not daemonize themselves (do not use --daemon)
-exec ../bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+exec $BASEDIR/env/bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
   --name $NAME \
   --workers $NUM_WORKERS \
   --user=$USER --group=$GROUP \
   --bind=unix:$SOCKFILE \
-  --log-file=-
+  --log-file=$LOGFILE\
