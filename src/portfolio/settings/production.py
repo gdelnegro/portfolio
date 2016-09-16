@@ -34,4 +34,5 @@ DATABASES = {
     }
 }
 
+STATIC_ROOT = "/srv/portfolio/src/static/"
 ENV = "PROD"
