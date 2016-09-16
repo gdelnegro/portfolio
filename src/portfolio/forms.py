@@ -62,3 +62,10 @@ class TranslationAdminForm(forms.ModelForm):
     class Meta:
         model = Translation
         fields = "__all__"
+
+
+class ContactForm(forms.Form):
+    contact_name = forms.CharField(required=True, label=_("GEN16"))
+    contact_email = forms.EmailField(required=True, label=_("GEN17"))
+    subject = forms.CharField(required=True, label=_("GEN18"))
+    message = forms.CharField(required=True, widget=forms.Textarea, label=_("GEN27"))

@@ -11,6 +11,10 @@ from rest_framework import status
 from portfolio.utils.file_upload import image_upload
 from datetime import datetime
 from django.http import JsonResponse, HttpResponse
+from portfolio.forms import ContactForm
+from django.template.loader import get_template
+from django.core.mail import EmailMessage
+from django.template import Context
 
 
 def index(request):
@@ -33,8 +37,50 @@ def index(request):
         'years': years_of_experience,
         'bar_skills': Skill.objects.filter(chart_type="bar"),
         'gauge_skills': Skill.objects.filter(chart_type="gauge"),
-        'keywords': Keyword.objects.all()
+        'keywords': Keyword.objects.all(),
+        'contact_form': ContactForm,
     })
+
+
+def contact(request):
+    form_class = ContactForm
+    if request.method == 'POST':
+        form = form_class(data=request.POST)
+
+        if form.is_valid():
+            contact_name = request.POST.get('contact_name', '')
+            contact_email = request.POST.get('contact_email', '')
+            subject = request.POST.get('subject', '')
+            message = request.POST.get('message', '')
+
+            # Email the profile with the
+            # contact information
+            template = get_template('contact_template.txt')
+            context = Context({
+                'contact_name': contact_name,
+                'contact_email': contact_email,
+                'subject': subject,
+                'message': message,
+            })
+            content = template.render(context)
+
+            email = EmailMessage(
+                "New contact form submission",
+                content,
+                "Your website" + '',
+                ['youremail@gmail.com'],
+                headers={'Reply-To': contact_email}
+            )
+            try:
+                email.send()
+            except Exception as error:
+                return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            else:
+                return Response(status=status.HTTP_200_OK)
+        else:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+    else:
+        return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
 class TranslationViewSet(viewsets.ReadOnlyModelViewSet):
