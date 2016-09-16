@@ -18,6 +18,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from portfolio.views import *
 from rest_framework import routers
+from django.http import HttpResponse
 
 router = routers.DefaultRouter()
 router.register(r'translation', TranslationViewSet)
@@ -34,6 +35,8 @@ urlpatterns = [
     url(r'^upload_image/(?P<pk>[0-9]+)/$', view_image_upload, name="view_image_upload"),
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
+    url(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"),
+        name="robots_file"),
 ]
 
 #urlpatterns = i18n_patterns('',
