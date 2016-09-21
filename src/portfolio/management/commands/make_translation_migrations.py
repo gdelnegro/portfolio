@@ -88,7 +88,7 @@ class Migration(migrations.Migration):
 
     def __create_translation_migration(self):
         """ Create an empty migration """
-        migrations_dir = settings.BASE_DIR + '/portfolio/migrations/'
+        migrations_dir = settings.BASE_DIR + '/migrations/'
         dependency_migration = os.path.basename(max(glob.iglob(migrations_dir + '*.py'), key=os.path.getctime)).replace(".py", "")
         call_command('makemigrations', 'portfolio', "--empty")
         """ Get last migration name and edit it, adding the new code """

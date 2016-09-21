@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# Aquivo gerado em: 2016-09-14 22:14:51 
+# Aquivo gerado em: 2016-09-21 23:20:47 
 
 msgid "GEN29"
 msgstr "TEste21"
@@ -133,6 +133,12 @@ msgstr "Visualização da imagem"
 
 msgid "TTP47"
 msgstr "Visualização da imagem salva"
+
+msgid "GEN34"
+msgstr "Estou disponível para um projeto como freelancer"
+
+msgid "GEN35"
+msgstr "Entre em contato"
 
 msgid "MDL1"
 msgstr "Data de criação"
@@ -499,4 +505,10 @@ msgstr "Texto auxiliar"
 
 msgid "ME2"
 msgstr "Imagem não existe"
+
+msgid "ME6"
+msgstr "Houve um erro ao processar sua requisição, por favor tente novamente mais tarde"
+
+msgid "ME7"
+msgstr "Email enviado com sucesso"
 

@@ -172,7 +172,8 @@ OWNER_INFO = {
     'region': "PR",
     'country': "BR",
     'LAT': "41.372641",
-    'LONG': "-74.687387"
+    'LONG': "-74.687387",
+    'start_year': 2010
 }
 
 DEVELOPER_NAME = "Gustavo Del Negro"

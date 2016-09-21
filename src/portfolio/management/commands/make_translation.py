@@ -10,8 +10,8 @@ class Command(BaseCommand):
 
     @staticmethod
     def __create_translation_files():
-        dir_en_us = settings.BASE_DIR + '/portfolio/locale/en/LC_MESSAGES/'
-        dir_pt_br = settings.BASE_DIR + '/portfolio/locale/pt_BR/LC_MESSAGES/'
+        dir_en_us = settings.BASE_DIR + '/locale/en/LC_MESSAGES/'
+        dir_pt_br = settings.BASE_DIR + '/locale/pt_BR/LC_MESSAGES/'
         file_en_us = open(dir_en_us + "django.po", "w+")
         file_pt_br = open(dir_pt_br + "django.po", "w+")
         header = """

@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-# File generated in: 2016-09-14 22:14:51 
+# File generated in: 2016-09-21 23:20:47 
 
 msgid "GEN29"
 msgstr "Teste21"
@@ -133,6 +133,12 @@ msgstr "Image preview"
 
 msgid "TTP47"
 msgstr "Uploaded image preview"
+
+msgid "GEN34"
+msgstr "I'm available for freelance project"
+
+msgid "GEN35"
+msgstr "Contact-me"
 
 msgid "MDL1"
 msgstr "Creation date"
@@ -499,4 +505,10 @@ msgstr "Auxiliary text"
 
 msgid "ME2"
 msgstr "Image does not exist"
+
+msgid "ME6"
+msgstr "There was an error processing your request, please try again later"
+
+msgid "ME7"
+msgstr "Email sent successfully"
 
