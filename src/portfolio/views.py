@@ -15,6 +15,7 @@ from portfolio.forms import ContactForm
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
 from django.template import Context
+from rest_framework.permissions import AllowAny
 
 
 def index(request):
@@ -25,7 +26,7 @@ def index(request):
     else:
         pt_br = None
 
-    years_of_experience = date.today().year - 2008
+    years_of_experience = date.today().year - settings.OWNER_INFO['start_year']
     return render(request, 'portfolio/index.html', {
         "appActive": "portfolio",
         'settings': settings,
@@ -40,6 +41,49 @@ def index(request):
         'keywords': Keyword.objects.all(),
         'contact_form': ContactForm,
     })
+
+
+class ContactApiView(views.APIView):
+    permission_classes = (AllowAny,)
+
+    def handle(self, request, *args, **kwargs):
+        if request.method == 'POST':
+            contact_name = request.POST.get('name', '')
+            contact_email = request.POST.get('email', '')
+            subject = request.POST.get('subject', '')
+            message = request.POST.get('message', '')
+
+            # Email the profile with the contact information
+            template = get_template('portfolio/contact_template.txt')
+            context = Context({
+                'contact_name': contact_name,
+                'contact_email': contact_email,
+                'subject': subject,
+                'message': message,
+            })
+            content = template.render(context)
+
+            email = EmailMessage(
+                "New contact form submission",
+                content,
+                "Your website" + 'Portfolio',
+                ['youremail@gmail.com'],
+                headers={'Reply-To': contact_email}
+            )
+            try:
+                email.send()
+            except Exception as error:
+                return Response(error, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+            else:
+                return Response(status=status.HTTP_200_OK)
+        else:
+            return Response(status=status.HTTP_400_BAD_REQUEST)
+
+    def get(self, request, *args, **kwargs):
+        return self.handle(request, args, kwargs)
+
+    def post(self, request, *args, **kwargs):
+        return self.handle(request, args, kwargs)
 
 
 def contact(request):
