@@ -1,15 +1,15 @@
 #!/bin/bash
 
 NAME="portfolio"                                  # Name of the application
-BASEDIR=/home/gdelnegro/projects/gdelnegro/portfolio
+BASEDIR=/opt/portfolio
 DJANGODIR="$BASEDIR/src"             # Django project directory
 SOCKFILE="$DJANGODIR/portfolio.sock"  # we will communicte using this unix socket
 USER=gdelnegro                                        # the user to run as
-GROUP=gdelnegro                                    # the group to run as
+GROUP=webapps                                    # the group to run as
 NUM_WORKERS=1                                     # how many worker processes should Gunicorn spawn
 DJANGO_SETTINGS_MODULE=portfolio.settings             # which settings file should Django use
 DJANGO_WSGI_MODULE=portfolio.wsgi                     # WSGI module name
-LOGFILE=/var/log/web/portfolio/gunicorn.log
+LOGFILE=/opt/portfolio/logs/gunicorn.log
 
 #export SERVER_ENV=DEVEL
 
