@@ -1,0 +1,28 @@
+[2017-06-21 14:23:29 +0000] [31823] [INFO] Starting gunicorn 19.6.0
+[2017-06-21 14:23:29 +0000] [31823] [INFO] Listening at: unix:/opt/portfolio/src/portfolio.sock (31823)
+[2017-06-21 14:23:29 +0000] [31823] [INFO] Using worker: sync
+[2017-06-21 14:23:29 +0000] [31830] [INFO] Booting worker with pid: 31830
+[2017-06-21 14:24:42 +0000] [31823] [INFO] Handling signal: int
+[2017-06-21 14:24:43 +0000] [31830] [INFO] Worker exiting (pid: 31830)
+[2017-06-21 14:24:43 +0000] [31823] [INFO] Shutting down: Master
+[2017-06-21 14:28:11 +0000] [32081] [INFO] Starting gunicorn 19.6.0
+[2017-06-21 14:28:11 +0000] [32081] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:12 +0000] [32081] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:13 +0000] [32081] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:14 +0000] [32081] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:15 +0000] [32081] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:16 +0000] [32081] [ERROR] Can't connect to /opt/portfolio/src/portfolio.sock
+[2017-06-21 14:28:17 +0000] [32100] [INFO] Starting gunicorn 19.6.0
+[2017-06-21 14:28:17 +0000] [32100] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:18 +0000] [32100] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:19 +0000] [32100] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:20 +0000] [32100] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:21 +0000] [32100] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:22 +0000] [32100] [ERROR] Can't connect to /opt/portfolio/src/portfolio.sock
+[2017-06-21 14:28:23 +0000] [32127] [INFO] Starting gunicorn 19.6.0
+[2017-06-21 14:28:23 +0000] [32127] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:24 +0000] [32127] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:25 +0000] [32127] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:26 +0000] [32127] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:27 +0000] [32127] [ERROR] Retrying in 1 second.
+[2017-06-21 14:28:27 +0000] [32127] [ERROR] Can't connect to /opt/portfolio/src/portfolio.sock
